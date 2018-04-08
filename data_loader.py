@@ -5,6 +5,7 @@ import tensorflow as tf
 
 def get_loader(root, batch_size, scale_size, data_format, split=None, is_grayscale=False, seed=None):
     dataset_name = os.path.basename(root)
+    print dataset_name, root
     if dataset_name in ['CelebA'] and split:
         root = os.path.join(root, 'splits', split)
 
@@ -18,7 +19,7 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
         
         if len(paths) != 0:
             break
-
+    print paths
     with Image.open(paths[0]) as img:
         w, h = img.size
         shape = [h, w, 3]
