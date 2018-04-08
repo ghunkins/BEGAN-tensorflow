@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH -p gpu
 #SBATCH -t 3-00:00:00
-#SBATCH --mem 30GB
 #SBATCH --job-name=began
 #SBATCH --output=output_began_%j.txt
 #SBATCH -e error_began_%j.txt
