@@ -1,0 +1,1 @@
+scp -r ghunkins@bh25fen.circ.rochester.edu:/scratch/ghunkins/BEGAN-tensorflow/logs/* .

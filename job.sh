@@ -1,10 +1,9 @@
 #!/bin/bash
 #SBATCH -p gpu
-#SBATCH -t 3-00:00:00
-#SBATCH --mem 30GB
+#SBATCH -t 14-00:00:00
 #SBATCH --job-name=began
-#SBATCH --output=output_began_%j.txt
-#SBATCH -e error_began_%j.txt
+#SBATCH --output=output_beganII_%j.txt
+#SBATCH -e error_beganII_%j.txt
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
