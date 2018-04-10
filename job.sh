@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -p gpu
-#SBATCH -t 14-00:00:00
+#SBATCH -t 9-23:59:59
 #SBATCH --job-name=began
 #SBATCH --output=output_beganII_%j.txt
 #SBATCH -e error_beganII_%j.txt
