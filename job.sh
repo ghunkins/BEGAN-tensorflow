@@ -8,4 +8,4 @@
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
-python main.py --input_scale_size=128
+python main.py --batch_size 4 --input_scale_size=128
