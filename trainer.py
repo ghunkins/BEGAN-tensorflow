@@ -303,12 +303,17 @@ class Trainer(object):
         save_image(batch_generated, os.path.join(root_path, 'test{}_interp_G.png'.format(step)), nrow=10)
 
     def interpolate_D(self, real1_batch, real2_batch, step=0, root_path="."):
-        real1_encode = self.encode(real1_batch)
-        real2_encode = self.encode(real2_batch)
+        # =============
+        tf_real1_batch = to_nchw_numpy(real1_batch)
+        tf_real2_batch = to_nchw_numpy(real2_batch)
+        # =============
+        real1_encode = self.encode(tf_real1_batch)
+        real2_encode = self.encode(tf_real2_batch)
 
         decodes = []
         for idx, ratio in enumerate(np.linspace(0, 1, 10)):
             z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(real1_encode, real2_encode)])
+            #z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(real1_batch, real2_batch)])
             z_decode = self.decode(z)
             decodes.append(z_decode)
 
