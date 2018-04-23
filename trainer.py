@@ -268,8 +268,8 @@ class Trainer(object):
             print("[*] Samples saved: {}".format(x_path))
 
     def encode(self, inputs):
-        if inputs.shape[3] in [1, 3]:
-            inputs = inputs.transpose([0, 3, 1, 2])
+        #if inputs.shape[3] in [1, 3]:
+        #    inputs = inputs.transpose([0, 3, 1, 2])
         return self.sess.run(self.D_z, {self.x: inputs})
 
     def decode(self, z):
@@ -304,11 +304,12 @@ class Trainer(object):
 
     def interpolate_D(self, real1_batch, real2_batch, step=0, root_path="."):
         # =============
-        tf_real1_batch = to_nchw_numpy(real1_batch)
-        tf_real2_batch = to_nchw_numpy(real2_batch)
+        #tf_real1_batch = to_nchw_numpy(real1_batch)
+        #nchw_to_nhwc
+        #tf_real2_batch = to_nchw_numpy(real2_batch)
         # =============
-        real1_encode = self.encode(tf_real1_batch)
-        real2_encode = self.encode(tf_real2_batch)
+        real1_encode = self.encode(real1_batch)
+        real2_encode = self.encode(real2_batch)
 
         decodes = []
         for idx, ratio in enumerate(np.linspace(0, 1, 10)):
