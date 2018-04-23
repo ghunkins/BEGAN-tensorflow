@@ -1,0 +1,1790 @@
+[*] MODEL dir: logs/CelebA_0409_000055
+[*] PARAM path: logs/CelebA_0409_000055/params.json
+[0/500000] Loss_D: 0.490664 Loss_G: 0.047870 measure: 0.6881, k_t: 0.0000
+[*] Samples saved: logs/CelebA_0409_000055/0_G.png
+[*] Samples saved: logs/CelebA_0409_000055/0_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/0_D_fake.png
+[50/500000] Loss_D: 0.245132 Loss_G: 0.050850 measure: 0.3173, k_t: 0.0054
+[100/500000] Loss_D: 0.212337 Loss_G: 0.057197 measure: 0.2620, k_t: 0.0084
+[150/500000] Loss_D: 0.211747 Loss_G: 0.071056 measure: 0.2477, k_t: 0.0106
+[200/500000] Loss_D: 0.180370 Loss_G: 0.078515 measure: 0.1934, k_t: 0.0117
+[250/500000] Loss_D: 0.185710 Loss_G: 0.084922 measure: 0.1952, k_t: 0.0120
+[300/500000] Loss_D: 0.170001 Loss_G: 0.085711 measure: 0.1712, k_t: 0.0123
+[350/500000] Loss_D: 0.192096 Loss_G: 0.077317 measure: 0.2122, k_t: 0.0121
+[400/500000] Loss_D: 0.166134 Loss_G: 0.082033 measure: 0.1688, k_t: 0.0130
+[450/500000] Loss_D: 0.169087 Loss_G: 0.052981 measure: 0.2018, k_t: 0.0139
+[500/500000] Loss_D: 0.156286 Loss_G: 0.064510 measure: 0.1714, k_t: 0.0148
+[*] Samples saved: logs/CelebA_0409_000055/500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/500_D_fake.png
+[550/500000] Loss_D: 0.162176 Loss_G: 0.077325 measure: 0.1678, k_t: 0.0157
+[600/500000] Loss_D: 0.166895 Loss_G: 0.060837 measure: 0.1910, k_t: 0.0164
+[650/500000] Loss_D: 0.161018 Loss_G: 0.056750 measure: 0.1862, k_t: 0.0172
+[700/500000] Loss_D: 0.148309 Loss_G: 0.066983 measure: 0.1573, k_t: 0.0178
+[750/500000] Loss_D: 0.158529 Loss_G: 0.072398 measure: 0.1674, k_t: 0.0185
+[800/500000] Loss_D: 0.172228 Loss_G: 0.076162 measure: 0.1844, k_t: 0.0190
+[850/500000] Loss_D: 0.164439 Loss_G: 0.056449 measure: 0.1919, k_t: 0.0197
+[900/500000] Loss_D: 0.154098 Loss_G: 0.066827 measure: 0.1664, k_t: 0.0205
+[950/500000] Loss_D: 0.157051 Loss_G: 0.062078 measure: 0.1755, k_t: 0.0213
+[1000/500000] Loss_D: 0.148216 Loss_G: 0.080201 measure: 0.1552, k_t: 0.0217
+[*] Samples saved: logs/CelebA_0409_000055/1000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/1000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/1000_D_fake.png
+[1050/500000] Loss_D: 0.143058 Loss_G: 0.082946 measure: 0.1554, k_t: 0.0222
+[1100/500000] Loss_D: 0.149658 Loss_G: 0.058692 measure: 0.1678, k_t: 0.0228
+[1150/500000] Loss_D: 0.148634 Loss_G: 0.070948 measure: 0.1545, k_t: 0.0232
+[1200/500000] Loss_D: 0.145911 Loss_G: 0.052640 measure: 0.1681, k_t: 0.0237
+[1250/500000] Loss_D: 0.155136 Loss_G: 0.053491 measure: 0.1812, k_t: 0.0243
+[1300/500000] Loss_D: 0.139180 Loss_G: 0.052703 measure: 0.1580, k_t: 0.0248
+[1350/500000] Loss_D: 0.147235 Loss_G: 0.060476 measure: 0.1627, k_t: 0.0254
+[1400/500000] Loss_D: 0.137468 Loss_G: 0.052543 measure: 0.1557, k_t: 0.0262
+[1450/500000] Loss_D: 0.136859 Loss_G: 0.044898 measure: 0.1622, k_t: 0.0269
+[1500/500000] Loss_D: 0.138215 Loss_G: 0.057568 measure: 0.1521, k_t: 0.0276
+[*] Samples saved: logs/CelebA_0409_000055/1500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/1500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/1500_D_fake.png
+[1550/500000] Loss_D: 0.158055 Loss_G: 0.053716 measure: 0.1856, k_t: 0.0281
+[1600/500000] Loss_D: 0.147193 Loss_G: 0.064396 measure: 0.1592, k_t: 0.0289
+[1650/500000] Loss_D: 0.133624 Loss_G: 0.054264 measure: 0.1486, k_t: 0.0294
+[1700/500000] Loss_D: 0.140224 Loss_G: 0.071908 measure: 0.1431, k_t: 0.0301
+[1750/500000] Loss_D: 0.150426 Loss_G: 0.083750 measure: 0.1602, k_t: 0.0306
+[1800/500000] Loss_D: 0.138710 Loss_G: 0.053675 measure: 0.1569, k_t: 0.0311
+[1850/500000] Loss_D: 0.149550 Loss_G: 0.060582 measure: 0.1666, k_t: 0.0318
+[1900/500000] Loss_D: 0.152059 Loss_G: 0.068996 measure: 0.1624, k_t: 0.0322
+[1950/500000] Loss_D: 0.136016 Loss_G: 0.057044 measure: 0.1498, k_t: 0.0329
+[2000/500000] Loss_D: 0.137275 Loss_G: 0.061604 measure: 0.1474, k_t: 0.0337
+[*] Samples saved: logs/CelebA_0409_000055/2000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/2000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/2000_D_fake.png
+[2050/500000] Loss_D: 0.132389 Loss_G: 0.063167 measure: 0.1387, k_t: 0.0342
+[2100/500000] Loss_D: 0.146329 Loss_G: 0.069471 measure: 0.1537, k_t: 0.0349
+[2150/500000] Loss_D: 0.150210 Loss_G: 0.050274 measure: 0.1777, k_t: 0.0356
+[2200/500000] Loss_D: 0.144612 Loss_G: 0.062589 measure: 0.1577, k_t: 0.0363
+[2250/500000] Loss_D: 0.153587 Loss_G: 0.052675 measure: 0.1806, k_t: 0.0371
+[2300/500000] Loss_D: 0.141601 Loss_G: 0.085157 measure: 0.1576, k_t: 0.0379
+[2350/500000] Loss_D: 0.134824 Loss_G: 0.052296 measure: 0.1530, k_t: 0.0385
+[2400/500000] Loss_D: 0.143638 Loss_G: 0.061827 measure: 0.1573, k_t: 0.0394
+[2450/500000] Loss_D: 0.136807 Loss_G: 0.056112 measure: 0.1525, k_t: 0.0403
+[2500/500000] Loss_D: 0.136518 Loss_G: 0.049333 measure: 0.1585, k_t: 0.0412
+[*] Samples saved: logs/CelebA_0409_000055/2500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/2500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/2500_D_fake.png
+[2550/500000] Loss_D: 0.144021 Loss_G: 0.063622 measure: 0.1564, k_t: 0.0419
+[2600/500000] Loss_D: 0.130584 Loss_G: 0.060994 measure: 0.1388, k_t: 0.0424
+[2650/500000] Loss_D: 0.144497 Loss_G: 0.065991 measure: 0.1550, k_t: 0.0428
+[2700/500000] Loss_D: 0.134525 Loss_G: 0.050568 measure: 0.1545, k_t: 0.0436
+[2750/500000] Loss_D: 0.135976 Loss_G: 0.054746 measure: 0.1529, k_t: 0.0443
+[2800/500000] Loss_D: 0.142836 Loss_G: 0.074507 measure: 0.1476, k_t: 0.0449
+[2850/500000] Loss_D: 0.133366 Loss_G: 0.049537 measure: 0.1539, k_t: 0.0457
+[2900/500000] Loss_D: 0.139422 Loss_G: 0.053528 measure: 0.1593, k_t: 0.0465
+[2950/500000] Loss_D: 0.131800 Loss_G: 0.046660 measure: 0.1543, k_t: 0.0472
+[3000/500000] Loss_D: 0.155837 Loss_G: 0.059527 measure: 0.1785, k_t: 0.0479
+[*] Samples saved: logs/CelebA_0409_000055/3000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/3000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/3000_D_fake.png
+[3050/500000] Loss_D: 0.142037 Loss_G: 0.047940 measure: 0.1686, k_t: 0.0486
+[3100/500000] Loss_D: 0.127812 Loss_G: 0.044800 measure: 0.1502, k_t: 0.0493
+[3150/500000] Loss_D: 0.140873 Loss_G: 0.049423 measure: 0.1656, k_t: 0.0502
+[3200/500000] Loss_D: 0.136906 Loss_G: 0.058755 measure: 0.1511, k_t: 0.0509
+[3250/500000] Loss_D: 0.134565 Loss_G: 0.045922 measure: 0.1595, k_t: 0.0517
+[3300/500000] Loss_D: 0.129183 Loss_G: 0.057638 measure: 0.1407, k_t: 0.0525
+[3350/500000] Loss_D: 0.138433 Loss_G: 0.058358 measure: 0.1539, k_t: 0.0532
+[3400/500000] Loss_D: 0.132852 Loss_G: 0.065178 measure: 0.1394, k_t: 0.0537
+[3450/500000] Loss_D: 0.146223 Loss_G: 0.060645 measure: 0.1636, k_t: 0.0540
+[3500/500000] Loss_D: 0.123439 Loss_G: 0.070781 measure: 0.1344, k_t: 0.0546
+[*] Samples saved: logs/CelebA_0409_000055/3500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/3500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/3500_D_fake.png
+[3550/500000] Loss_D: 0.133632 Loss_G: 0.048300 measure: 0.1561, k_t: 0.0552
+[3600/500000] Loss_D: 0.137795 Loss_G: 0.049813 measure: 0.1611, k_t: 0.0560
+[3650/500000] Loss_D: 0.131879 Loss_G: 0.074830 measure: 0.1429, k_t: 0.0567
+[3700/500000] Loss_D: 0.141978 Loss_G: 0.056576 measure: 0.1613, k_t: 0.0573
+[3750/500000] Loss_D: 0.133353 Loss_G: 0.047171 measure: 0.1570, k_t: 0.0580
+[3800/500000] Loss_D: 0.143663 Loss_G: 0.054720 measure: 0.1656, k_t: 0.0587
+[3850/500000] Loss_D: 0.145340 Loss_G: 0.049871 measure: 0.1726, k_t: 0.0595
+[3900/500000] Loss_D: 0.127540 Loss_G: 0.049194 measure: 0.1466, k_t: 0.0602
+[3950/500000] Loss_D: 0.136597 Loss_G: 0.062002 measure: 0.1486, k_t: 0.0610
+[4000/500000] Loss_D: 0.140488 Loss_G: 0.062659 measure: 0.1539, k_t: 0.0617
+[*] Samples saved: logs/CelebA_0409_000055/4000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/4000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/4000_D_fake.png
+[4050/500000] Loss_D: 0.141195 Loss_G: 0.069261 measure: 0.1490, k_t: 0.0623
+[4100/500000] Loss_D: 0.136316 Loss_G: 0.041065 measure: 0.1673, k_t: 0.0630
+[4150/500000] Loss_D: 0.124341 Loss_G: 0.043695 measure: 0.1470, k_t: 0.0637
+[4200/500000] Loss_D: 0.133568 Loss_G: 0.051523 measure: 0.1538, k_t: 0.0644
+[4250/500000] Loss_D: 0.143188 Loss_G: 0.052448 measure: 0.1675, k_t: 0.0652
+[4300/500000] Loss_D: 0.144764 Loss_G: 0.051673 measure: 0.1706, k_t: 0.0658
+[4350/500000] Loss_D: 0.132155 Loss_G: 0.042589 measure: 0.1599, k_t: 0.0665
+[4400/500000] Loss_D: 0.136478 Loss_G: 0.071730 measure: 0.1424, k_t: 0.0671
+[4450/500000] Loss_D: 0.132824 Loss_G: 0.061606 measure: 0.1439, k_t: 0.0675
+[4500/500000] Loss_D: 0.122703 Loss_G: 0.068431 measure: 0.1321, k_t: 0.0682
+[*] Samples saved: logs/CelebA_0409_000055/4500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/4500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/4500_D_fake.png
+[4550/500000] Loss_D: 0.119511 Loss_G: 0.060544 measure: 0.1250, k_t: 0.0689
+[4600/500000] Loss_D: 0.127187 Loss_G: 0.059541 measure: 0.1375, k_t: 0.0696
+[4650/500000] Loss_D: 0.131287 Loss_G: 0.051964 measure: 0.1504, k_t: 0.0700
+[4700/500000] Loss_D: 0.133561 Loss_G: 0.055847 measure: 0.1504, k_t: 0.0704
+[4750/500000] Loss_D: 0.137011 Loss_G: 0.046592 measure: 0.1639, k_t: 0.0711
+[4800/500000] Loss_D: 0.122773 Loss_G: 0.053279 measure: 0.1366, k_t: 0.0719
+[4850/500000] Loss_D: 0.122251 Loss_G: 0.055018 measure: 0.1343, k_t: 0.0724
+[4900/500000] Loss_D: 0.142153 Loss_G: 0.056925 measure: 0.1625, k_t: 0.0731
+[4950/500000] Loss_D: 0.129686 Loss_G: 0.055867 measure: 0.1448, k_t: 0.0738
+[5000/500000] Loss_D: 0.130890 Loss_G: 0.061157 measure: 0.1420, k_t: 0.0745
+[*] Samples saved: logs/CelebA_0409_000055/5000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/5000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/5000_D_fake.png
+[5050/500000] Loss_D: 0.128409 Loss_G: 0.053095 measure: 0.1455, k_t: 0.0754
+[5100/500000] Loss_D: 0.134859 Loss_G: 0.048904 measure: 0.1590, k_t: 0.0759
+[5150/500000] Loss_D: 0.130565 Loss_G: 0.060740 measure: 0.1421, k_t: 0.0768
+[5200/500000] Loss_D: 0.134708 Loss_G: 0.047250 measure: 0.1603, k_t: 0.0776
+[5250/500000] Loss_D: 0.126060 Loss_G: 0.064078 measure: 0.1325, k_t: 0.0782
+[5300/500000] Loss_D: 0.137508 Loss_G: 0.079168 measure: 0.1510, k_t: 0.0786
+[5350/500000] Loss_D: 0.145505 Loss_G: 0.048576 measure: 0.1754, k_t: 0.0791
+[5400/500000] Loss_D: 0.131012 Loss_G: 0.055100 measure: 0.1480, k_t: 0.0797
+[5450/500000] Loss_D: 0.117316 Loss_G: 0.045851 measure: 0.1357, k_t: 0.0805
+[5500/500000] Loss_D: 0.120510 Loss_G: 0.056515 measure: 0.1311, k_t: 0.0812
+[*] Samples saved: logs/CelebA_0409_000055/5500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/5500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/5500_D_fake.png
+[5550/500000] Loss_D: 0.117178 Loss_G: 0.049152 measure: 0.1326, k_t: 0.0818
+[5600/500000] Loss_D: 0.125872 Loss_G: 0.051338 measure: 0.1438, k_t: 0.0823
+[5650/500000] Loss_D: 0.127611 Loss_G: 0.060000 measure: 0.1389, k_t: 0.0830
+[5700/500000] Loss_D: 0.131162 Loss_G: 0.064639 measure: 0.1402, k_t: 0.0835
+[5750/500000] Loss_D: 0.130741 Loss_G: 0.055009 measure: 0.1480, k_t: 0.0840
+[5800/500000] Loss_D: 0.135645 Loss_G: 0.051429 measure: 0.1586, k_t: 0.0846
+[5850/500000] Loss_D: 0.125166 Loss_G: 0.057039 measure: 0.1380, k_t: 0.0850
+[5900/500000] Loss_D: 0.129027 Loss_G: 0.046595 measure: 0.1529, k_t: 0.0855
+[5950/500000] Loss_D: 0.125572 Loss_G: 0.046466 measure: 0.1479, k_t: 0.0862
+[6000/500000] Loss_D: 0.120149 Loss_G: 0.044946 measure: 0.1411, k_t: 0.0868
+[*] Samples saved: logs/CelebA_0409_000055/6000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/6000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/6000_D_fake.png
+[6050/500000] Loss_D: 0.132241 Loss_G: 0.055998 measure: 0.1497, k_t: 0.0873
+[6100/500000] Loss_D: 0.129972 Loss_G: 0.056378 measure: 0.1460, k_t: 0.0877
+[6150/500000] Loss_D: 0.115454 Loss_G: 0.061172 measure: 0.1216, k_t: 0.0880
+[6200/500000] Loss_D: 0.127878 Loss_G: 0.064816 measure: 0.1356, k_t: 0.0884
+[6250/500000] Loss_D: 0.128826 Loss_G: 0.056812 measure: 0.1440, k_t: 0.0887
+[6300/500000] Loss_D: 0.133317 Loss_G: 0.052034 measure: 0.1549, k_t: 0.0891
+[6350/500000] Loss_D: 0.136386 Loss_G: 0.051207 measure: 0.1603, k_t: 0.0896
+[6400/500000] Loss_D: 0.141975 Loss_G: 0.079830 measure: 0.1544, k_t: 0.0902
+[6450/500000] Loss_D: 0.124510 Loss_G: 0.051123 measure: 0.1426, k_t: 0.0904
+[6500/500000] Loss_D: 0.126096 Loss_G: 0.065929 measure: 0.1322, k_t: 0.0907
+[*] Samples saved: logs/CelebA_0409_000055/6500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/6500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/6500_D_fake.png
+[6550/500000] Loss_D: 0.119978 Loss_G: 0.054046 measure: 0.1333, k_t: 0.0910
+[6600/500000] Loss_D: 0.128653 Loss_G: 0.054846 measure: 0.1456, k_t: 0.0914
+[6650/500000] Loss_D: 0.127783 Loss_G: 0.060553 measure: 0.1394, k_t: 0.0916
+[6700/500000] Loss_D: 0.129193 Loss_G: 0.053573 measure: 0.1476, k_t: 0.0920
+[6750/500000] Loss_D: 0.114835 Loss_G: 0.087770 measure: 0.1492, k_t: 0.0922
+[6800/500000] Loss_D: 0.123286 Loss_G: 0.049047 measure: 0.1427, k_t: 0.0924
+[6850/500000] Loss_D: 0.124361 Loss_G: 0.061626 measure: 0.1335, k_t: 0.0924
+[6900/500000] Loss_D: 0.130731 Loss_G: 0.066169 measure: 0.1391, k_t: 0.0927
+[6950/500000] Loss_D: 0.132225 Loss_G: 0.059315 measure: 0.1473, k_t: 0.0929
+[7000/500000] Loss_D: 0.141037 Loss_G: 0.061724 measure: 0.1584, k_t: 0.0930
+[*] Samples saved: logs/CelebA_0409_000055/7000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/7000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/7000_D_fake.png
+[7050/500000] Loss_D: 0.119022 Loss_G: 0.077138 measure: 0.1402, k_t: 0.0931
+[7100/500000] Loss_D: 0.131525 Loss_G: 0.056722 measure: 0.1485, k_t: 0.0931
+[7150/500000] Loss_D: 0.129908 Loss_G: 0.076012 measure: 0.1445, k_t: 0.0931
+[7200/500000] Loss_D: 0.120414 Loss_G: 0.065183 measure: 0.1284, k_t: 0.0934
+[7250/500000] Loss_D: 0.122637 Loss_G: 0.075729 measure: 0.1406, k_t: 0.0934
+[7300/500000] Loss_D: 0.131182 Loss_G: 0.061254 measure: 0.1441, k_t: 0.0929
+[7350/500000] Loss_D: 0.137335 Loss_G: 0.063180 measure: 0.1516, k_t: 0.0929
+[7400/500000] Loss_D: 0.120683 Loss_G: 0.077821 measure: 0.1418, k_t: 0.0931
+[7450/500000] Loss_D: 0.121709 Loss_G: 0.067701 measure: 0.1317, k_t: 0.0931
+[7500/500000] Loss_D: 0.136554 Loss_G: 0.071297 measure: 0.1435, k_t: 0.0929
+[*] Samples saved: logs/CelebA_0409_000055/7500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/7500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/7500_D_fake.png
+[7550/500000] Loss_D: 0.122304 Loss_G: 0.065915 measure: 0.1301, k_t: 0.0928
+[7600/500000] Loss_D: 0.117591 Loss_G: 0.077489 measure: 0.1399, k_t: 0.0927
+[7650/500000] Loss_D: 0.129275 Loss_G: 0.093846 measure: 0.1628, k_t: 0.0926
+[7700/500000] Loss_D: 0.133265 Loss_G: 0.075291 measure: 0.1454, k_t: 0.0924
+[7750/500000] Loss_D: 0.117330 Loss_G: 0.057718 measure: 0.1263, k_t: 0.0923
+[7800/500000] Loss_D: 0.127967 Loss_G: 0.071782 measure: 0.1391, k_t: 0.0919
+[7850/500000] Loss_D: 0.120023 Loss_G: 0.082591 measure: 0.1464, k_t: 0.0917
+[7900/500000] Loss_D: 0.124343 Loss_G: 0.067446 measure: 0.1327, k_t: 0.0914
+[7950/500000] Loss_D: 0.134087 Loss_G: 0.068389 measure: 0.1421, k_t: 0.0910
+[8000/500000] Loss_D: 0.128238 Loss_G: 0.066971 measure: 0.1345, k_t: 0.0908
+[*] Samples saved: logs/CelebA_0409_000055/8000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/8000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/8000_D_fake.png
+[8050/500000] Loss_D: 0.128089 Loss_G: 0.070392 measure: 0.1376, k_t: 0.0907
+[8100/500000] Loss_D: 0.122332 Loss_G: 0.087661 measure: 0.1528, k_t: 0.0904
+[8150/500000] Loss_D: 0.125719 Loss_G: 0.060031 measure: 0.1367, k_t: 0.0902
+[8200/500000] Loss_D: 0.131632 Loss_G: 0.080718 measure: 0.1502, k_t: 0.0901
+[8250/500000] Loss_D: 0.119894 Loss_G: 0.059933 measure: 0.1280, k_t: 0.0899
+[8300/500000] Loss_D: 0.120952 Loss_G: 0.069053 measure: 0.1326, k_t: 0.0893
+[8350/500000] Loss_D: 0.115025 Loss_G: 0.070857 measure: 0.1315, k_t: 0.0891
+[8400/500000] Loss_D: 0.134824 Loss_G: 0.065744 measure: 0.1453, k_t: 0.0889
+[8450/500000] Loss_D: 0.139020 Loss_G: 0.087802 measure: 0.1612, k_t: 0.0885
+[8500/500000] Loss_D: 0.122787 Loss_G: 0.064573 measure: 0.1288, k_t: 0.0881
+[*] Samples saved: logs/CelebA_0409_000055/8500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/8500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/8500_D_fake.png
+[8550/500000] Loss_D: 0.125523 Loss_G: 0.074209 measure: 0.1402, k_t: 0.0878
+[8600/500000] Loss_D: 0.125306 Loss_G: 0.066535 measure: 0.1321, k_t: 0.0875
+[8650/500000] Loss_D: 0.129347 Loss_G: 0.071813 measure: 0.1396, k_t: 0.0870
+[8700/500000] Loss_D: 0.118291 Loss_G: 0.068893 measure: 0.1310, k_t: 0.0867
+[8750/500000] Loss_D: 0.121707 Loss_G: 0.087305 measure: 0.1519, k_t: 0.0866
+[8800/500000] Loss_D: 0.118458 Loss_G: 0.085208 measure: 0.1481, k_t: 0.0862
+[8850/500000] Loss_D: 0.117281 Loss_G: 0.055746 measure: 0.1274, k_t: 0.0860
+[8900/500000] Loss_D: 0.134560 Loss_G: 0.066431 measure: 0.1439, k_t: 0.0856
+[8950/500000] Loss_D: 0.134582 Loss_G: 0.068031 measure: 0.1425, k_t: 0.0853
+[9000/500000] Loss_D: 0.114499 Loss_G: 0.076684 measure: 0.1372, k_t: 0.0850
+[*] Samples saved: logs/CelebA_0409_000055/9000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/9000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/9000_D_fake.png
+[9050/500000] Loss_D: 0.119922 Loss_G: 0.082219 measure: 0.1457, k_t: 0.0846
+[9100/500000] Loss_D: 0.124930 Loss_G: 0.066894 measure: 0.1322, k_t: 0.0843
+[9150/500000] Loss_D: 0.118713 Loss_G: 0.079341 measure: 0.1420, k_t: 0.0838
+[9200/500000] Loss_D: 0.120116 Loss_G: 0.067146 measure: 0.1300, k_t: 0.0836
+[9250/500000] Loss_D: 0.141216 Loss_G: 0.065846 measure: 0.1542, k_t: 0.0831
+[9300/500000] Loss_D: 0.122357 Loss_G: 0.077671 measure: 0.1421, k_t: 0.0828
+[9350/500000] Loss_D: 0.130380 Loss_G: 0.065861 measure: 0.1378, k_t: 0.0821
+[9400/500000] Loss_D: 0.119984 Loss_G: 0.070563 measure: 0.1334, k_t: 0.0817
+[9450/500000] Loss_D: 0.130603 Loss_G: 0.074217 measure: 0.1425, k_t: 0.0816
+[9500/500000] Loss_D: 0.128308 Loss_G: 0.085219 measure: 0.1528, k_t: 0.0811
+[*] Samples saved: logs/CelebA_0409_000055/9500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/9500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/9500_D_fake.png
+[9550/500000] Loss_D: 0.119773 Loss_G: 0.071203 measure: 0.1340, k_t: 0.0806
+[9600/500000] Loss_D: 0.119765 Loss_G: 0.058906 measure: 0.1278, k_t: 0.0804
+[9650/500000] Loss_D: 0.132726 Loss_G: 0.072037 measure: 0.1413, k_t: 0.0799
+[9700/500000] Loss_D: 0.120087 Loss_G: 0.071481 measure: 0.1344, k_t: 0.0795
+[9750/500000] Loss_D: 0.144774 Loss_G: 0.068832 measure: 0.1565, k_t: 0.0791
+[9800/500000] Loss_D: 0.123733 Loss_G: 0.068977 measure: 0.1336, k_t: 0.0788
+[9850/500000] Loss_D: 0.125354 Loss_G: 0.064182 measure: 0.1314, k_t: 0.0784
+[9900/500000] Loss_D: 0.129699 Loss_G: 0.063194 measure: 0.1388, k_t: 0.0783
+[9950/500000] Loss_D: 0.123601 Loss_G: 0.068199 measure: 0.1327, k_t: 0.0778
+[10000/500000] Loss_D: 0.124375 Loss_G: 0.067369 measure: 0.1322, k_t: 0.0772
+[*] Samples saved: logs/CelebA_0409_000055/10000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/10000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/10000_D_fake.png
+[10050/500000] Loss_D: 0.110972 Loss_G: 0.066806 measure: 0.1249, k_t: 0.0768
+[10100/500000] Loss_D: 0.119402 Loss_G: 0.075302 measure: 0.1379, k_t: 0.0762
+[10150/500000] Loss_D: 0.118730 Loss_G: 0.067473 measure: 0.1294, k_t: 0.0756
+[10200/500000] Loss_D: 0.109222 Loss_G: 0.067897 measure: 0.1251, k_t: 0.0753
+[10250/500000] Loss_D: 0.132080 Loss_G: 0.069951 measure: 0.1386, k_t: 0.0750
+[10300/500000] Loss_D: 0.120145 Loss_G: 0.064423 measure: 0.1269, k_t: 0.0745
+[10350/500000] Loss_D: 0.119288 Loss_G: 0.089635 measure: 0.1526, k_t: 0.0741
+[10400/500000] Loss_D: 0.125449 Loss_G: 0.077161 measure: 0.1427, k_t: 0.0734
+[10450/500000] Loss_D: 0.131361 Loss_G: 0.062783 measure: 0.1411, k_t: 0.0729
+[10500/500000] Loss_D: 0.126285 Loss_G: 0.086415 measure: 0.1527, k_t: 0.0721
+[*] Samples saved: logs/CelebA_0409_000055/10500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/10500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/10500_D_fake.png
+[10550/500000] Loss_D: 0.124255 Loss_G: 0.100923 measure: 0.1667, k_t: 0.0714
+[10600/500000] Loss_D: 0.131000 Loss_G: 0.073575 measure: 0.1417, k_t: 0.0709
+[10650/500000] Loss_D: 0.113120 Loss_G: 0.069993 measure: 0.1290, k_t: 0.0703
+[10700/500000] Loss_D: 0.109117 Loss_G: 0.086693 measure: 0.1443, k_t: 0.0697
+[10750/500000] Loss_D: 0.134696 Loss_G: 0.074443 measure: 0.1444, k_t: 0.0689
+[10800/500000] Loss_D: 0.117698 Loss_G: 0.077054 measure: 0.1385, k_t: 0.0685
+[10850/500000] Loss_D: 0.126234 Loss_G: 0.070869 measure: 0.1364, k_t: 0.0679
+[10900/500000] Loss_D: 0.124228 Loss_G: 0.065945 measure: 0.1303, k_t: 0.0675
+[10950/500000] Loss_D: 0.122735 Loss_G: 0.069219 measure: 0.1329, k_t: 0.0672
+[11000/500000] Loss_D: 0.117532 Loss_G: 0.073270 measure: 0.1345, k_t: 0.0668
+[*] Samples saved: logs/CelebA_0409_000055/11000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/11000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/11000_D_fake.png
+[11050/500000] Loss_D: 0.120434 Loss_G: 0.096957 measure: 0.1604, k_t: 0.0662
+[11100/500000] Loss_D: 0.136035 Loss_G: 0.065852 measure: 0.1447, k_t: 0.0656
+[11150/500000] Loss_D: 0.114707 Loss_G: 0.071247 measure: 0.1309, k_t: 0.0653
+[11200/500000] Loss_D: 0.131676 Loss_G: 0.070324 measure: 0.1384, k_t: 0.0646
+[11250/500000] Loss_D: 0.119841 Loss_G: 0.062608 measure: 0.1245, k_t: 0.0643
+[11300/500000] Loss_D: 0.126018 Loss_G: 0.074585 measure: 0.1400, k_t: 0.0640
+[11350/500000] Loss_D: 0.116998 Loss_G: 0.062494 measure: 0.1230, k_t: 0.0634
+[11400/500000] Loss_D: 0.120851 Loss_G: 0.070902 measure: 0.1336, k_t: 0.0631
+[11450/500000] Loss_D: 0.129154 Loss_G: 0.061456 measure: 0.1381, k_t: 0.0627
+[11500/500000] Loss_D: 0.126293 Loss_G: 0.064749 measure: 0.1307, k_t: 0.0624
+[*] Samples saved: logs/CelebA_0409_000055/11500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/11500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/11500_D_fake.png
+[11550/500000] Loss_D: 0.119086 Loss_G: 0.063586 measure: 0.1251, k_t: 0.0620
+[11600/500000] Loss_D: 0.131710 Loss_G: 0.057096 measure: 0.1457, k_t: 0.0613
+[11650/500000] Loss_D: 0.124594 Loss_G: 0.068590 measure: 0.1330, k_t: 0.0611
+[11700/500000] Loss_D: 0.127247 Loss_G: 0.088240 measure: 0.1545, k_t: 0.0606
+[11750/500000] Loss_D: 0.117174 Loss_G: 0.063087 measure: 0.1236, k_t: 0.0604
+[11800/500000] Loss_D: 0.118597 Loss_G: 0.055928 measure: 0.1270, k_t: 0.0603
+[11850/500000] Loss_D: 0.130625 Loss_G: 0.077549 measure: 0.1452, k_t: 0.0602
+[11900/500000] Loss_D: 0.116281 Loss_G: 0.068594 measure: 0.1288, k_t: 0.0600
+[11950/500000] Loss_D: 0.114726 Loss_G: 0.064077 measure: 0.1233, k_t: 0.0596
+[12000/500000] Loss_D: 0.117105 Loss_G: 0.064688 measure: 0.1252, k_t: 0.0596
+[*] Samples saved: logs/CelebA_0409_000055/12000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/12000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/12000_D_fake.png
+[12050/500000] Loss_D: 0.131516 Loss_G: 0.089069 measure: 0.1575, k_t: 0.0593
+[12100/500000] Loss_D: 0.132029 Loss_G: 0.076133 measure: 0.1444, k_t: 0.0588
+[12150/500000] Loss_D: 0.132936 Loss_G: 0.055471 measure: 0.1488, k_t: 0.0587
+[12200/500000] Loss_D: 0.127008 Loss_G: 0.066969 measure: 0.1324, k_t: 0.0583
+[12250/500000] Loss_D: 0.123732 Loss_G: 0.070889 measure: 0.1348, k_t: 0.0581
+[12300/500000] Loss_D: 0.121219 Loss_G: 0.072956 measure: 0.1357, k_t: 0.0579
+[12350/500000] Loss_D: 0.139928 Loss_G: 0.055094 measure: 0.1596, k_t: 0.0577
+[12400/500000] Loss_D: 0.110351 Loss_G: 0.081230 measure: 0.1387, k_t: 0.0577
+[12450/500000] Loss_D: 0.118426 Loss_G: 0.061803 measure: 0.1228, k_t: 0.0573
+[12500/500000] Loss_D: 0.135185 Loss_G: 0.059240 measure: 0.1486, k_t: 0.0572
+[*] Samples saved: logs/CelebA_0409_000055/12500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/12500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/12500_D_fake.png
+[12550/500000] Loss_D: 0.126353 Loss_G: 0.072244 measure: 0.1375, k_t: 0.0571
+[12600/500000] Loss_D: 0.123763 Loss_G: 0.063788 measure: 0.1275, k_t: 0.0570
+[12650/500000] Loss_D: 0.117549 Loss_G: 0.069322 measure: 0.1301, k_t: 0.0568
+[12700/500000] Loss_D: 0.118742 Loss_G: 0.068634 measure: 0.1299, k_t: 0.0566
+[12750/500000] Loss_D: 0.123638 Loss_G: 0.062149 measure: 0.1286, k_t: 0.0565
+[12800/500000] Loss_D: 0.125398 Loss_G: 0.075372 measure: 0.1402, k_t: 0.0563
+[12850/500000] Loss_D: 0.123249 Loss_G: 0.057302 measure: 0.1324, k_t: 0.0563
+[12900/500000] Loss_D: 0.124437 Loss_G: 0.057946 measure: 0.1336, k_t: 0.0561
+[12950/500000] Loss_D: 0.118666 Loss_G: 0.063608 measure: 0.1247, k_t: 0.0558
+[13000/500000] Loss_D: 0.134181 Loss_G: 0.079490 measure: 0.1488, k_t: 0.0555
+[*] Samples saved: logs/CelebA_0409_000055/13000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/13000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/13000_D_fake.png
+[13050/500000] Loss_D: 0.123991 Loss_G: 0.060792 measure: 0.1302, k_t: 0.0552
+[13100/500000] Loss_D: 0.125261 Loss_G: 0.067296 measure: 0.1318, k_t: 0.0553
+[13150/500000] Loss_D: 0.120428 Loss_G: 0.073985 measure: 0.1362, k_t: 0.0551
+[13200/500000] Loss_D: 0.113789 Loss_G: 0.060749 measure: 0.1193, k_t: 0.0548
+[13250/500000] Loss_D: 0.123927 Loss_G: 0.062829 measure: 0.1282, k_t: 0.0548
+[13300/500000] Loss_D: 0.126437 Loss_G: 0.063303 measure: 0.1316, k_t: 0.0548
+[13350/500000] Loss_D: 0.127643 Loss_G: 0.062533 measure: 0.1341, k_t: 0.0547
+[13400/500000] Loss_D: 0.136275 Loss_G: 0.050321 measure: 0.1582, k_t: 0.0546
+[13450/500000] Loss_D: 0.116597 Loss_G: 0.056660 measure: 0.1229, k_t: 0.0546
+[13500/500000] Loss_D: 0.121776 Loss_G: 0.068818 measure: 0.1316, k_t: 0.0544
+[*] Samples saved: logs/CelebA_0409_000055/13500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/13500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/13500_D_fake.png
+[13550/500000] Loss_D: 0.118084 Loss_G: 0.058931 measure: 0.1230, k_t: 0.0543
+[13600/500000] Loss_D: 0.126071 Loss_G: 0.081985 measure: 0.1473, k_t: 0.0544
+[13650/500000] Loss_D: 0.127530 Loss_G: 0.071319 measure: 0.1370, k_t: 0.0543
+[13700/500000] Loss_D: 0.118236 Loss_G: 0.065067 measure: 0.1259, k_t: 0.0541
+[13750/500000] Loss_D: 0.120903 Loss_G: 0.065585 measure: 0.1278, k_t: 0.0541
+[13800/500000] Loss_D: 0.128439 Loss_G: 0.057544 measure: 0.1398, k_t: 0.0542
+[13850/500000] Loss_D: 0.113817 Loss_G: 0.062103 measure: 0.1207, k_t: 0.0542
+[13900/500000] Loss_D: 0.118851 Loss_G: 0.061076 measure: 0.1222, k_t: 0.0542
+[13950/500000] Loss_D: 0.130063 Loss_G: 0.063633 measure: 0.1366, k_t: 0.0543
+[14000/500000] Loss_D: 0.122395 Loss_G: 0.065863 measure: 0.1288, k_t: 0.0540
+[*] Samples saved: logs/CelebA_0409_000055/14000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/14000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/14000_D_fake.png
+[14050/500000] Loss_D: 0.114406 Loss_G: 0.061487 measure: 0.1204, k_t: 0.0541
+[14100/500000] Loss_D: 0.117836 Loss_G: 0.075068 measure: 0.1360, k_t: 0.0536
+[14150/500000] Loss_D: 0.129853 Loss_G: 0.057235 measure: 0.1421, k_t: 0.0534
+[14200/500000] Loss_D: 0.122924 Loss_G: 0.055864 measure: 0.1330, k_t: 0.0533
+[14250/500000] Loss_D: 0.123074 Loss_G: 0.068690 measure: 0.1320, k_t: 0.0529
+[14300/500000] Loss_D: 0.117032 Loss_G: 0.057331 measure: 0.1228, k_t: 0.0529
+[14350/500000] Loss_D: 0.135110 Loss_G: 0.071693 measure: 0.1411, k_t: 0.0528
+[14400/500000] Loss_D: 0.122822 Loss_G: 0.065632 measure: 0.1288, k_t: 0.0528
+[14450/500000] Loss_D: 0.127712 Loss_G: 0.072424 measure: 0.1382, k_t: 0.0527
+[14500/500000] Loss_D: 0.122248 Loss_G: 0.060596 measure: 0.1276, k_t: 0.0528
+[*] Samples saved: logs/CelebA_0409_000055/14500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/14500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/14500_D_fake.png
+[14550/500000] Loss_D: 0.121548 Loss_G: 0.073180 measure: 0.1359, k_t: 0.0526
+[14600/500000] Loss_D: 0.119889 Loss_G: 0.073478 measure: 0.1354, k_t: 0.0527
+[14650/500000] Loss_D: 0.129391 Loss_G: 0.063378 measure: 0.1357, k_t: 0.0524
+[14700/500000] Loss_D: 0.115370 Loss_G: 0.058460 measure: 0.1192, k_t: 0.0525
+[14750/500000] Loss_D: 0.131616 Loss_G: 0.063192 measure: 0.1392, k_t: 0.0523
+[14800/500000] Loss_D: 0.114020 Loss_G: 0.073655 measure: 0.1326, k_t: 0.0522
+[14850/500000] Loss_D: 0.118630 Loss_G: 0.075478 measure: 0.1368, k_t: 0.0522
+[14900/500000] Loss_D: 0.130248 Loss_G: 0.069659 measure: 0.1366, k_t: 0.0521
+[14950/500000] Loss_D: 0.118255 Loss_G: 0.059466 measure: 0.1226, k_t: 0.0521
+[15000/500000] Loss_D: 0.111989 Loss_G: 0.062578 measure: 0.1202, k_t: 0.0517
+[*] Samples saved: logs/CelebA_0409_000055/15000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/15000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/15000_D_fake.png
+[15050/500000] Loss_D: 0.134011 Loss_G: 0.057673 measure: 0.1478, k_t: 0.0516
+[15100/500000] Loss_D: 0.128993 Loss_G: 0.062568 measure: 0.1357, k_t: 0.0514
+[15150/500000] Loss_D: 0.116844 Loss_G: 0.065139 measure: 0.1252, k_t: 0.0511
+[15200/500000] Loss_D: 0.119157 Loss_G: 0.062287 measure: 0.1235, k_t: 0.0511
+[15250/500000] Loss_D: 0.120551 Loss_G: 0.071545 measure: 0.1336, k_t: 0.0510
+[15300/500000] Loss_D: 0.113931 Loss_G: 0.072802 measure: 0.1316, k_t: 0.0510
+[15350/500000] Loss_D: 0.139698 Loss_G: 0.059299 measure: 0.1548, k_t: 0.0509
+[15400/500000] Loss_D: 0.138713 Loss_G: 0.060186 measure: 0.1525, k_t: 0.0508
+[15450/500000] Loss_D: 0.132951 Loss_G: 0.053665 measure: 0.1499, k_t: 0.0508
+[15500/500000] Loss_D: 0.101938 Loss_G: 0.065452 measure: 0.1181, k_t: 0.0506
+[*] Samples saved: logs/CelebA_0409_000055/15500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/15500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/15500_D_fake.png
+[15550/500000] Loss_D: 0.115079 Loss_G: 0.073433 measure: 0.1328, k_t: 0.0504
+[15600/500000] Loss_D: 0.112524 Loss_G: 0.061237 measure: 0.1190, k_t: 0.0501
+[15650/500000] Loss_D: 0.111679 Loss_G: 0.061191 measure: 0.1186, k_t: 0.0501
+[15700/500000] Loss_D: 0.117613 Loss_G: 0.056101 measure: 0.1245, k_t: 0.0500
+[15750/500000] Loss_D: 0.116820 Loss_G: 0.080976 measure: 0.1414, k_t: 0.0501
+[15800/500000] Loss_D: 0.119637 Loss_G: 0.062209 measure: 0.1236, k_t: 0.0498
+[15850/500000] Loss_D: 0.125764 Loss_G: 0.053430 measure: 0.1392, k_t: 0.0497
+[15900/500000] Loss_D: 0.112867 Loss_G: 0.061505 measure: 0.1195, k_t: 0.0498
+[15950/500000] Loss_D: 0.128785 Loss_G: 0.070929 measure: 0.1371, k_t: 0.0499
+[16000/500000] Loss_D: 0.117896 Loss_G: 0.061274 measure: 0.1218, k_t: 0.0499
+[*] Samples saved: logs/CelebA_0409_000055/16000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/16000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/16000_D_fake.png
+[16050/500000] Loss_D: 0.112463 Loss_G: 0.066949 measure: 0.1249, k_t: 0.0500
+[16100/500000] Loss_D: 0.103647 Loss_G: 0.053150 measure: 0.1063, k_t: 0.0500
+[16150/500000] Loss_D: 0.127357 Loss_G: 0.053470 measure: 0.1416, k_t: 0.0499
+[16200/500000] Loss_D: 0.105910 Loss_G: 0.071424 measure: 0.1262, k_t: 0.0498
+[16250/500000] Loss_D: 0.117608 Loss_G: 0.056564 measure: 0.1241, k_t: 0.0497
+[16300/500000] Loss_D: 0.132248 Loss_G: 0.052980 measure: 0.1493, k_t: 0.0497
+[16350/500000] Loss_D: 0.118888 Loss_G: 0.063906 measure: 0.1249, k_t: 0.0498
+[16400/500000] Loss_D: 0.114632 Loss_G: 0.092911 measure: 0.1525, k_t: 0.0496
+[16450/500000] Loss_D: 0.122169 Loss_G: 0.081663 measure: 0.1448, k_t: 0.0495
+[16500/500000] Loss_D: 0.124758 Loss_G: 0.063993 measure: 0.1280, k_t: 0.0494
+[*] Samples saved: logs/CelebA_0409_000055/16500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/16500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/16500_D_fake.png
+[16550/500000] Loss_D: 0.108639 Loss_G: 0.053033 measure: 0.1138, k_t: 0.0491
+[16600/500000] Loss_D: 0.122069 Loss_G: 0.066824 measure: 0.1295, k_t: 0.0491
+[16650/500000] Loss_D: 0.117670 Loss_G: 0.058434 measure: 0.1224, k_t: 0.0489
+[16700/500000] Loss_D: 0.122269 Loss_G: 0.071034 measure: 0.1339, k_t: 0.0487
+[16750/500000] Loss_D: 0.117030 Loss_G: 0.058439 measure: 0.1214, k_t: 0.0485
+[16800/500000] Loss_D: 0.129204 Loss_G: 0.061994 measure: 0.1363, k_t: 0.0486
+[16850/500000] Loss_D: 0.115783 Loss_G: 0.060271 measure: 0.1196, k_t: 0.0486
+[16900/500000] Loss_D: 0.120249 Loss_G: 0.051191 measure: 0.1329, k_t: 0.0485
+[16950/500000] Loss_D: 0.116264 Loss_G: 0.059624 measure: 0.1192, k_t: 0.0486
+[17000/500000] Loss_D: 0.120387 Loss_G: 0.060534 measure: 0.1245, k_t: 0.0487
+[*] Samples saved: logs/CelebA_0409_000055/17000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/17000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/17000_D_fake.png
+[17050/500000] Loss_D: 0.121152 Loss_G: 0.062958 measure: 0.1251, k_t: 0.0486
+[17100/500000] Loss_D: 0.107990 Loss_G: 0.064315 measure: 0.1199, k_t: 0.0487
+[17150/500000] Loss_D: 0.111708 Loss_G: 0.063059 measure: 0.1205, k_t: 0.0488
+[17200/500000] Loss_D: 0.129923 Loss_G: 0.061477 measure: 0.1379, k_t: 0.0487
+[17250/500000] Loss_D: 0.122970 Loss_G: 0.063983 measure: 0.1270, k_t: 0.0487
+[17300/500000] Loss_D: 0.126108 Loss_G: 0.062446 measure: 0.1313, k_t: 0.0487
+[17350/500000] Loss_D: 0.115125 Loss_G: 0.065153 measure: 0.1243, k_t: 0.0488
+[17400/500000] Loss_D: 0.130828 Loss_G: 0.056652 measure: 0.1437, k_t: 0.0489
+[17450/500000] Loss_D: 0.122855 Loss_G: 0.052008 measure: 0.1361, k_t: 0.0491
+[17500/500000] Loss_D: 0.120639 Loss_G: 0.063654 measure: 0.1255, k_t: 0.0492
+[*] Samples saved: logs/CelebA_0409_000055/17500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/17500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/17500_D_fake.png
+[17550/500000] Loss_D: 0.111317 Loss_G: 0.073355 measure: 0.1308, k_t: 0.0490
+[17600/500000] Loss_D: 0.124153 Loss_G: 0.080957 measure: 0.1450, k_t: 0.0490
+[17650/500000] Loss_D: 0.130884 Loss_G: 0.058134 measure: 0.1425, k_t: 0.0491
+[17700/500000] Loss_D: 0.114094 Loss_G: 0.062942 measure: 0.1215, k_t: 0.0491
+[17750/500000] Loss_D: 0.122181 Loss_G: 0.054426 measure: 0.1328, k_t: 0.0490
+[17800/500000] Loss_D: 0.112523 Loss_G: 0.062369 measure: 0.1202, k_t: 0.0491
+[17850/500000] Loss_D: 0.124529 Loss_G: 0.060554 measure: 0.1307, k_t: 0.0491
+[17900/500000] Loss_D: 0.120506 Loss_G: 0.075750 measure: 0.1379, k_t: 0.0491
+[17950/500000] Loss_D: 0.132558 Loss_G: 0.064499 measure: 0.1391, k_t: 0.0491
+[18000/500000] Loss_D: 0.116376 Loss_G: 0.060727 measure: 0.1204, k_t: 0.0491
+[*] Samples saved: logs/CelebA_0409_000055/18000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/18000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/18000_D_fake.png
+[18050/500000] Loss_D: 0.117923 Loss_G: 0.060769 measure: 0.1212, k_t: 0.0493
+[18100/500000] Loss_D: 0.124276 Loss_G: 0.074333 measure: 0.1383, k_t: 0.0492
+[18150/500000] Loss_D: 0.121300 Loss_G: 0.068988 measure: 0.1313, k_t: 0.0492
+[18200/500000] Loss_D: 0.125760 Loss_G: 0.057440 measure: 0.1354, k_t: 0.0493
+[18250/500000] Loss_D: 0.122677 Loss_G: 0.053475 measure: 0.1345, k_t: 0.0493
+[18300/500000] Loss_D: 0.107827 Loss_G: 0.056296 measure: 0.1116, k_t: 0.0494
+[18350/500000] Loss_D: 0.123799 Loss_G: 0.052372 measure: 0.1372, k_t: 0.0495
+[18400/500000] Loss_D: 0.117854 Loss_G: 0.053634 measure: 0.1271, k_t: 0.0496
+[18450/500000] Loss_D: 0.119325 Loss_G: 0.057292 measure: 0.1260, k_t: 0.0499
+[18500/500000] Loss_D: 0.123144 Loss_G: 0.065879 measure: 0.1291, k_t: 0.0498
+[*] Samples saved: logs/CelebA_0409_000055/18500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/18500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/18500_D_fake.png
+[18550/500000] Loss_D: 0.116025 Loss_G: 0.055007 measure: 0.1231, k_t: 0.0498
+[18600/500000] Loss_D: 0.129853 Loss_G: 0.056044 measure: 0.1429, k_t: 0.0498
+[18650/500000] Loss_D: 0.125586 Loss_G: 0.059234 measure: 0.1336, k_t: 0.0497
+[18700/500000] Loss_D: 0.126309 Loss_G: 0.064399 measure: 0.1299, k_t: 0.0497
+[18750/500000] Loss_D: 0.123587 Loss_G: 0.067509 measure: 0.1310, k_t: 0.0498
+[18800/500000] Loss_D: 0.123929 Loss_G: 0.059585 measure: 0.1308, k_t: 0.0498
+[18850/500000] Loss_D: 0.113225 Loss_G: 0.051584 measure: 0.1221, k_t: 0.0497
+[18900/500000] Loss_D: 0.123607 Loss_G: 0.074313 measure: 0.1380, k_t: 0.0499
+[18950/500000] Loss_D: 0.125491 Loss_G: 0.060702 measure: 0.1321, k_t: 0.0498
+[19000/500000] Loss_D: 0.108628 Loss_G: 0.056047 measure: 0.1118, k_t: 0.0499
+[*] Samples saved: logs/CelebA_0409_000055/19000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/19000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/19000_D_fake.png
+[19050/500000] Loss_D: 0.124865 Loss_G: 0.057762 measure: 0.1339, k_t: 0.0499
+[19100/500000] Loss_D: 0.108983 Loss_G: 0.052740 measure: 0.1147, k_t: 0.0501
+[19150/500000] Loss_D: 0.116268 Loss_G: 0.061170 measure: 0.1208, k_t: 0.0503
+[19200/500000] Loss_D: 0.117562 Loss_G: 0.058280 measure: 0.1225, k_t: 0.0503
+[19250/500000] Loss_D: 0.120494 Loss_G: 0.055118 measure: 0.1298, k_t: 0.0503
+[19300/500000] Loss_D: 0.128816 Loss_G: 0.060381 measure: 0.1374, k_t: 0.0505
+[19350/500000] Loss_D: 0.130375 Loss_G: 0.062598 measure: 0.1377, k_t: 0.0505
+[19400/500000] Loss_D: 0.115836 Loss_G: 0.054823 measure: 0.1231, k_t: 0.0506
+[19450/500000] Loss_D: 0.124027 Loss_G: 0.065951 measure: 0.1296, k_t: 0.0507
+[19500/500000] Loss_D: 0.122386 Loss_G: 0.059836 measure: 0.1283, k_t: 0.0506
+[*] Samples saved: logs/CelebA_0409_000055/19500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/19500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/19500_D_fake.png
+[19550/500000] Loss_D: 0.107472 Loss_G: 0.057013 measure: 0.1122, k_t: 0.0504
+[19600/500000] Loss_D: 0.118068 Loss_G: 0.064489 measure: 0.1251, k_t: 0.0502
+[19650/500000] Loss_D: 0.115989 Loss_G: 0.063486 measure: 0.1231, k_t: 0.0503
+[19700/500000] Loss_D: 0.109721 Loss_G: 0.060513 measure: 0.1169, k_t: 0.0503
+[19750/500000] Loss_D: 0.125601 Loss_G: 0.067516 measure: 0.1320, k_t: 0.0504
+[19800/500000] Loss_D: 0.112771 Loss_G: 0.144154 measure: 0.2042, k_t: 0.0503
+[19850/500000] Loss_D: 0.117439 Loss_G: 0.066236 measure: 0.1266, k_t: 0.0502
+[19900/500000] Loss_D: 0.120560 Loss_G: 0.074889 measure: 0.1370, k_t: 0.0501
+[19950/500000] Loss_D: 0.114668 Loss_G: 0.055801 measure: 0.1204, k_t: 0.0499
+[20000/500000] Loss_D: 0.108099 Loss_G: 0.056355 measure: 0.1118, k_t: 0.0500
+[*] Samples saved: logs/CelebA_0409_000055/20000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/20000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/20000_D_fake.png
+[20050/500000] Loss_D: 0.116977 Loss_G: 0.057257 measure: 0.1225, k_t: 0.0500
+[20100/500000] Loss_D: 0.110583 Loss_G: 0.053503 measure: 0.1164, k_t: 0.0500
+[20150/500000] Loss_D: 0.116902 Loss_G: 0.052785 measure: 0.1265, k_t: 0.0500
+[20200/500000] Loss_D: 0.122391 Loss_G: 0.051293 measure: 0.1361, k_t: 0.0500
+[20250/500000] Loss_D: 0.117854 Loss_G: 0.063284 measure: 0.1238, k_t: 0.0501
+[20300/500000] Loss_D: 0.116990 Loss_G: 0.068988 measure: 0.1292, k_t: 0.0502
+[20350/500000] Loss_D: 0.124236 Loss_G: 0.060809 measure: 0.1301, k_t: 0.0502
+[20400/500000] Loss_D: 0.122699 Loss_G: 0.052538 measure: 0.1355, k_t: 0.0503
+[20450/500000] Loss_D: 0.123091 Loss_G: 0.061291 measure: 0.1280, k_t: 0.0504
+[20500/500000] Loss_D: 0.134817 Loss_G: 0.050756 measure: 0.1553, k_t: 0.0504
+[*] Samples saved: logs/CelebA_0409_000055/20500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/20500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/20500_D_fake.png
+[20550/500000] Loss_D: 0.126765 Loss_G: 0.063536 measure: 0.1314, k_t: 0.0505
+[20600/500000] Loss_D: 0.121150 Loss_G: 0.065045 measure: 0.1273, k_t: 0.0504
+[20650/500000] Loss_D: 0.121298 Loss_G: 0.056238 measure: 0.1300, k_t: 0.0505
+[20700/500000] Loss_D: 0.126213 Loss_G: 0.071044 measure: 0.1359, k_t: 0.0506
+[20750/500000] Loss_D: 0.108350 Loss_G: 0.061546 measure: 0.1173, k_t: 0.0506
+[20800/500000] Loss_D: 0.122568 Loss_G: 0.065058 measure: 0.1280, k_t: 0.0504
+[20850/500000] Loss_D: 0.120797 Loss_G: 0.055137 measure: 0.1302, k_t: 0.0504
+[20900/500000] Loss_D: 0.118147 Loss_G: 0.052708 measure: 0.1285, k_t: 0.0505
+[20950/500000] Loss_D: 0.142697 Loss_G: 0.056335 measure: 0.1620, k_t: 0.0506
+[21000/500000] Loss_D: 0.119521 Loss_G: 0.051282 measure: 0.1319, k_t: 0.0506
+[*] Samples saved: logs/CelebA_0409_000055/21000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/21000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/21000_D_fake.png
+[21050/500000] Loss_D: 0.114918 Loss_G: 0.061260 measure: 0.1203, k_t: 0.0507
+[21100/500000] Loss_D: 0.104741 Loss_G: 0.057301 measure: 0.1111, k_t: 0.0507
+[21150/500000] Loss_D: 0.125239 Loss_G: 0.058382 measure: 0.1339, k_t: 0.0507
+[21200/500000] Loss_D: 0.120212 Loss_G: 0.056327 measure: 0.1283, k_t: 0.0507
+[21250/500000] Loss_D: 0.121891 Loss_G: 0.056763 measure: 0.1304, k_t: 0.0508
+[21300/500000] Loss_D: 0.116242 Loss_G: 0.056255 measure: 0.1224, k_t: 0.0509
+[21350/500000] Loss_D: 0.114498 Loss_G: 0.065328 measure: 0.1242, k_t: 0.0509
+[21400/500000] Loss_D: 0.102447 Loss_G: 0.073014 measure: 0.1261, k_t: 0.0509
+[21450/500000] Loss_D: 0.117953 Loss_G: 0.056476 measure: 0.1248, k_t: 0.0509
+[21500/500000] Loss_D: 0.112087 Loss_G: 0.063879 measure: 0.1215, k_t: 0.0509
+[*] Samples saved: logs/CelebA_0409_000055/21500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/21500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/21500_D_fake.png
+[21550/500000] Loss_D: 0.120210 Loss_G: 0.063675 measure: 0.1254, k_t: 0.0507
+[21600/500000] Loss_D: 0.120251 Loss_G: 0.057287 measure: 0.1274, k_t: 0.0507
+[21650/500000] Loss_D: 0.124765 Loss_G: 0.052639 measure: 0.1385, k_t: 0.0508
+[21700/500000] Loss_D: 0.104813 Loss_G: 0.051451 measure: 0.1097, k_t: 0.0509
+[21750/500000] Loss_D: 0.123741 Loss_G: 0.055959 measure: 0.1339, k_t: 0.0509
+[21800/500000] Loss_D: 0.114819 Loss_G: 0.049152 measure: 0.1268, k_t: 0.0511
+[21850/500000] Loss_D: 0.123996 Loss_G: 0.060492 measure: 0.1301, k_t: 0.0511
+[21900/500000] Loss_D: 0.114564 Loss_G: 0.060152 measure: 0.1190, k_t: 0.0511
+[21950/500000] Loss_D: 0.113876 Loss_G: 0.069087 measure: 0.1278, k_t: 0.0509
+[22000/500000] Loss_D: 0.110424 Loss_G: 0.072527 measure: 0.1296, k_t: 0.0507
+[*] Samples saved: logs/CelebA_0409_000055/22000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/22000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/22000_D_fake.png
+[22050/500000] Loss_D: 0.109713 Loss_G: 0.071910 measure: 0.1286, k_t: 0.0507
+[22100/500000] Loss_D: 0.114054 Loss_G: 0.052884 measure: 0.1222, k_t: 0.0505
+[22150/500000] Loss_D: 0.118880 Loss_G: 0.056663 measure: 0.1260, k_t: 0.0506
+[22200/500000] Loss_D: 0.119448 Loss_G: 0.058104 measure: 0.1255, k_t: 0.0507
+[22250/500000] Loss_D: 0.127575 Loss_G: 0.054584 measure: 0.1409, k_t: 0.0506
+[22300/500000] Loss_D: 0.116697 Loss_G: 0.053484 measure: 0.1256, k_t: 0.0506
+[22350/500000] Loss_D: 0.107279 Loss_G: 0.064061 measure: 0.1193, k_t: 0.0506
+[22400/500000] Loss_D: 0.109784 Loss_G: 0.054091 measure: 0.1147, k_t: 0.0506
+[22450/500000] Loss_D: 0.114221 Loss_G: 0.055863 measure: 0.1197, k_t: 0.0505
+[22500/500000] Loss_D: 0.120764 Loss_G: 0.056675 measure: 0.1288, k_t: 0.0507
+[*] Samples saved: logs/CelebA_0409_000055/22500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/22500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/22500_D_fake.png
+[22550/500000] Loss_D: 0.111782 Loss_G: 0.066374 measure: 0.1239, k_t: 0.0507
+[22600/500000] Loss_D: 0.123269 Loss_G: 0.064874 measure: 0.1281, k_t: 0.0505
+[22650/500000] Loss_D: 0.129575 Loss_G: 0.064375 measure: 0.1349, k_t: 0.0504
+[22700/500000] Loss_D: 0.116774 Loss_G: 0.057976 measure: 0.1216, k_t: 0.0505
+[22750/500000] Loss_D: 0.121807 Loss_G: 0.061845 measure: 0.1256, k_t: 0.0506
+[22800/500000] Loss_D: 0.121951 Loss_G: 0.053818 measure: 0.1332, k_t: 0.0506
+[22850/500000] Loss_D: 0.125497 Loss_G: 0.062914 measure: 0.1301, k_t: 0.0506
+[22900/500000] Loss_D: 0.131353 Loss_G: 0.053126 measure: 0.1479, k_t: 0.0507
+[22950/500000] Loss_D: 0.106198 Loss_G: 0.054170 measure: 0.1092, k_t: 0.0506
+[23000/500000] Loss_D: 0.114824 Loss_G: 0.053228 measure: 0.1230, k_t: 0.0505
+[*] Samples saved: logs/CelebA_0409_000055/23000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/23000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/23000_D_fake.png
+[23050/500000] Loss_D: 0.121492 Loss_G: 0.059887 measure: 0.1269, k_t: 0.0502
+[23100/500000] Loss_D: 0.128402 Loss_G: 0.056055 measure: 0.1408, k_t: 0.0502
+[23150/500000] Loss_D: 0.117282 Loss_G: 0.074402 measure: 0.1349, k_t: 0.0502
+[23200/500000] Loss_D: 0.108341 Loss_G: 0.060824 measure: 0.1165, k_t: 0.0501
+[23250/500000] Loss_D: 0.126288 Loss_G: 0.065507 measure: 0.1303, k_t: 0.0501
+[23300/500000] Loss_D: 0.125829 Loss_G: 0.061026 measure: 0.1323, k_t: 0.0501
+[23350/500000] Loss_D: 0.111498 Loss_G: 0.055573 measure: 0.1158, k_t: 0.0501
+[23400/500000] Loss_D: 0.106110 Loss_G: 0.065281 measure: 0.1200, k_t: 0.0501
+[23450/500000] Loss_D: 0.117724 Loss_G: 0.069191 measure: 0.1298, k_t: 0.0499
+[23500/500000] Loss_D: 0.108824 Loss_G: 0.070092 measure: 0.1263, k_t: 0.0500
+[*] Samples saved: logs/CelebA_0409_000055/23500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/23500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/23500_D_fake.png
+[23550/500000] Loss_D: 0.109241 Loss_G: 0.073128 measure: 0.1296, k_t: 0.0499
+[23600/500000] Loss_D: 0.121430 Loss_G: 0.064085 measure: 0.1264, k_t: 0.0498
+[23650/500000] Loss_D: 0.131449 Loss_G: 0.057954 measure: 0.1436, k_t: 0.0498
+[23700/500000] Loss_D: 0.120005 Loss_G: 0.059119 measure: 0.1253, k_t: 0.0498
+[23750/500000] Loss_D: 0.119340 Loss_G: 0.060097 measure: 0.1234, k_t: 0.0498
+[23800/500000] Loss_D: 0.144155 Loss_G: 0.058644 measure: 0.1620, k_t: 0.0496
+[23850/500000] Loss_D: 0.108800 Loss_G: 0.059332 measure: 0.1152, k_t: 0.0495
+[23900/500000] Loss_D: 0.111890 Loss_G: 0.063296 measure: 0.1208, k_t: 0.0495
+[23950/500000] Loss_D: 0.127985 Loss_G: 0.055563 measure: 0.1405, k_t: 0.0493
+[24000/500000] Loss_D: 0.118107 Loss_G: 0.064894 measure: 0.1255, k_t: 0.0494
+[*] Samples saved: logs/CelebA_0409_000055/24000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/24000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/24000_D_fake.png
+[24050/500000] Loss_D: 0.113097 Loss_G: 0.057541 measure: 0.1164, k_t: 0.0492
+[24100/500000] Loss_D: 0.117535 Loss_G: 0.054026 measure: 0.1263, k_t: 0.0493
+[24150/500000] Loss_D: 0.121609 Loss_G: 0.055581 measure: 0.1309, k_t: 0.0493
+[24200/500000] Loss_D: 0.116616 Loss_G: 0.060803 measure: 0.1206, k_t: 0.0491
+[24250/500000] Loss_D: 0.115881 Loss_G: 0.059491 measure: 0.1189, k_t: 0.0491
+[24300/500000] Loss_D: 0.118854 Loss_G: 0.053875 measure: 0.1284, k_t: 0.0492
+[24350/500000] Loss_D: 0.125946 Loss_G: 0.055686 measure: 0.1373, k_t: 0.0493
+[24400/500000] Loss_D: 0.122845 Loss_G: 0.059217 measure: 0.1294, k_t: 0.0492
+[24450/500000] Loss_D: 0.124503 Loss_G: 0.057105 measure: 0.1339, k_t: 0.0492
+[24500/500000] Loss_D: 0.134175 Loss_G: 0.063811 measure: 0.1422, k_t: 0.0493
+[*] Samples saved: logs/CelebA_0409_000055/24500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/24500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/24500_D_fake.png
+[24550/500000] Loss_D: 0.105889 Loss_G: 0.055213 measure: 0.1095, k_t: 0.0491
+[24600/500000] Loss_D: 0.114648 Loss_G: 0.051651 measure: 0.1241, k_t: 0.0490
+[24650/500000] Loss_D: 0.111382 Loss_G: 0.061686 measure: 0.1189, k_t: 0.0489
+[24700/500000] Loss_D: 0.111533 Loss_G: 0.056794 measure: 0.1147, k_t: 0.0488
+[24750/500000] Loss_D: 0.122954 Loss_G: 0.062390 measure: 0.1266, k_t: 0.0489
+[24800/500000] Loss_D: 0.123654 Loss_G: 0.061279 measure: 0.1287, k_t: 0.0488
+[24850/500000] Loss_D: 0.118354 Loss_G: 0.053051 measure: 0.1284, k_t: 0.0488
+[24900/500000] Loss_D: 0.110774 Loss_G: 0.052567 measure: 0.1174, k_t: 0.0488
+[24950/500000] Loss_D: 0.111900 Loss_G: 0.051873 measure: 0.1198, k_t: 0.0489
+[25000/500000] Loss_D: 0.110092 Loss_G: 0.050070 measure: 0.1187, k_t: 0.0488
+[*] Samples saved: logs/CelebA_0409_000055/25000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/25000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/25000_D_fake.png
+[25050/500000] Loss_D: 0.104844 Loss_G: 0.047274 measure: 0.1134, k_t: 0.0488
+[25100/500000] Loss_D: 0.113065 Loss_G: 0.047688 measure: 0.1254, k_t: 0.0487
+[25150/500000] Loss_D: 0.114288 Loss_G: 0.065839 measure: 0.1246, k_t: 0.0487
+[25200/500000] Loss_D: 0.118392 Loss_G: 0.060476 measure: 0.1215, k_t: 0.0486
+[25250/500000] Loss_D: 0.117655 Loss_G: 0.064380 measure: 0.1248, k_t: 0.0483
+[25300/500000] Loss_D: 0.109933 Loss_G: 0.067834 measure: 0.1244, k_t: 0.0480
+[25350/500000] Loss_D: 0.115460 Loss_G: 0.059058 measure: 0.1184, k_t: 0.0481
+[25400/500000] Loss_D: 0.124837 Loss_G: 0.082504 measure: 0.1469, k_t: 0.0479
+[25450/500000] Loss_D: 0.112857 Loss_G: 0.054454 measure: 0.1187, k_t: 0.0478
+[25500/500000] Loss_D: 0.114052 Loss_G: 0.063023 measure: 0.1216, k_t: 0.0477
+[*] Samples saved: logs/CelebA_0409_000055/25500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/25500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/25500_D_fake.png
+[25550/500000] Loss_D: 0.110378 Loss_G: 0.058640 measure: 0.1152, k_t: 0.0478
+[25600/500000] Loss_D: 0.120135 Loss_G: 0.053370 measure: 0.1307, k_t: 0.0478
+[25650/500000] Loss_D: 0.119912 Loss_G: 0.053517 measure: 0.1302, k_t: 0.0480
+[25700/500000] Loss_D: 0.109091 Loss_G: 0.053389 measure: 0.1141, k_t: 0.0481
+[25750/500000] Loss_D: 0.115920 Loss_G: 0.055935 measure: 0.1220, k_t: 0.0481
+[25800/500000] Loss_D: 0.124456 Loss_G: 0.059367 measure: 0.1316, k_t: 0.0483
+[25850/500000] Loss_D: 0.118441 Loss_G: 0.058673 measure: 0.1232, k_t: 0.0482
+[25900/500000] Loss_D: 0.113680 Loss_G: 0.079284 measure: 0.1380, k_t: 0.0484
+[25950/500000] Loss_D: 0.114198 Loss_G: 0.067588 measure: 0.1263, k_t: 0.0483
+[26000/500000] Loss_D: 0.124774 Loss_G: 0.068269 measure: 0.1323, k_t: 0.0480
+[*] Samples saved: logs/CelebA_0409_000055/26000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/26000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/26000_D_fake.png
+[26050/500000] Loss_D: 0.112576 Loss_G: 0.058732 measure: 0.1164, k_t: 0.0478
+[26100/500000] Loss_D: 0.115044 Loss_G: 0.057604 measure: 0.1191, k_t: 0.0479
+[26150/500000] Loss_D: 0.115204 Loss_G: 0.051079 measure: 0.1254, k_t: 0.0478
+[26200/500000] Loss_D: 0.119103 Loss_G: 0.069731 measure: 0.1309, k_t: 0.0476
+[26250/500000] Loss_D: 0.138060 Loss_G: 0.061188 measure: 0.1503, k_t: 0.0475
+[26300/500000] Loss_D: 0.129396 Loss_G: 0.055143 measure: 0.1429, k_t: 0.0476
+[26350/500000] Loss_D: 0.129366 Loss_G: 0.050725 measure: 0.1470, k_t: 0.0477
+[26400/500000] Loss_D: 0.102855 Loss_G: 0.051270 measure: 0.1067, k_t: 0.0478
+[26450/500000] Loss_D: 0.106528 Loss_G: 0.058647 measure: 0.1133, k_t: 0.0478
+[26500/500000] Loss_D: 0.100654 Loss_G: 0.070626 measure: 0.1226, k_t: 0.0478
+[*] Samples saved: logs/CelebA_0409_000055/26500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/26500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/26500_D_fake.png
+[26550/500000] Loss_D: 0.122611 Loss_G: 0.047951 measure: 0.1394, k_t: 0.0480
+[26600/500000] Loss_D: 0.128726 Loss_G: 0.052712 measure: 0.1442, k_t: 0.0481
+[26650/500000] Loss_D: 0.119226 Loss_G: 0.053586 measure: 0.1291, k_t: 0.0482
+[26700/500000] Loss_D: 0.130474 Loss_G: 0.054205 measure: 0.1454, k_t: 0.0483
+[26750/500000] Loss_D: 0.106763 Loss_G: 0.053966 measure: 0.1101, k_t: 0.0483
+[26800/500000] Loss_D: 0.104761 Loss_G: 0.056480 measure: 0.1102, k_t: 0.0484
+[26850/500000] Loss_D: 0.117079 Loss_G: 0.061901 measure: 0.1219, k_t: 0.0484
+[26900/500000] Loss_D: 0.112976 Loss_G: 0.050472 measure: 0.1227, k_t: 0.0485
+[26950/500000] Loss_D: 0.117696 Loss_G: 0.051951 measure: 0.1284, k_t: 0.0483
+[27000/500000] Loss_D: 0.118204 Loss_G: 0.053634 measure: 0.1275, k_t: 0.0480
+[*] Samples saved: logs/CelebA_0409_000055/27000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/27000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/27000_D_fake.png
+[27050/500000] Loss_D: 0.116195 Loss_G: 0.068045 measure: 0.1278, k_t: 0.0478
+[27100/500000] Loss_D: 0.127579 Loss_G: 0.054906 measure: 0.1404, k_t: 0.0478
+[27150/500000] Loss_D: 0.119321 Loss_G: 0.054351 measure: 0.1285, k_t: 0.0480
+[27200/500000] Loss_D: 0.101566 Loss_G: 0.052863 measure: 0.1049, k_t: 0.0481
+[27250/500000] Loss_D: 0.108569 Loss_G: 0.063561 measure: 0.1194, k_t: 0.0480
+[27300/500000] Loss_D: 0.110072 Loss_G: 0.056629 measure: 0.1130, k_t: 0.0480
+[27350/500000] Loss_D: 0.113802 Loss_G: 0.050560 measure: 0.1238, k_t: 0.0480
+[27400/500000] Loss_D: 0.116214 Loss_G: 0.057056 measure: 0.1214, k_t: 0.0480
+[27450/500000] Loss_D: 0.118958 Loss_G: 0.055798 measure: 0.1267, k_t: 0.0480
+[27500/500000] Loss_D: 0.121642 Loss_G: 0.069908 measure: 0.1324, k_t: 0.0477
+[*] Samples saved: logs/CelebA_0409_000055/27500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/27500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/27500_D_fake.png
+[27550/500000] Loss_D: 0.117593 Loss_G: 0.060607 measure: 0.1208, k_t: 0.0475
+[27600/500000] Loss_D: 0.123829 Loss_G: 0.056869 measure: 0.1329, k_t: 0.0475
+[27650/500000] Loss_D: 0.120988 Loss_G: 0.054365 measure: 0.1310, k_t: 0.0474
+[27700/500000] Loss_D: 0.117685 Loss_G: 0.051125 measure: 0.1290, k_t: 0.0473
+[27750/500000] Loss_D: 0.121870 Loss_G: 0.061351 measure: 0.1258, k_t: 0.0473
+[27800/500000] Loss_D: 0.115854 Loss_G: 0.061662 measure: 0.1210, k_t: 0.0473
+[27850/500000] Loss_D: 0.122729 Loss_G: 0.060328 measure: 0.1280, k_t: 0.0473
+[27900/500000] Loss_D: 0.108971 Loss_G: 0.051520 measure: 0.1156, k_t: 0.0474
+[27950/500000] Loss_D: 0.118116 Loss_G: 0.055373 measure: 0.1257, k_t: 0.0474
+[28000/500000] Loss_D: 0.118850 Loss_G: 0.068436 measure: 0.1295, k_t: 0.0475
+[*] Samples saved: logs/CelebA_0409_000055/28000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/28000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/28000_D_fake.png
+[28050/500000] Loss_D: 0.121028 Loss_G: 0.068058 measure: 0.1302, k_t: 0.0475
+[28100/500000] Loss_D: 0.101530 Loss_G: 0.069430 measure: 0.1218, k_t: 0.0475
+[28150/500000] Loss_D: 0.113399 Loss_G: 0.050483 measure: 0.1232, k_t: 0.0475
+[28200/500000] Loss_D: 0.110623 Loss_G: 0.066161 measure: 0.1230, k_t: 0.0475
+[28250/500000] Loss_D: 0.122624 Loss_G: 0.059128 measure: 0.1290, k_t: 0.0474
+[28300/500000] Loss_D: 0.113749 Loss_G: 0.052918 measure: 0.1215, k_t: 0.0475
+[28350/500000] Loss_D: 0.113375 Loss_G: 0.054697 measure: 0.1193, k_t: 0.0474
+[28400/500000] Loss_D: 0.130748 Loss_G: 0.054580 measure: 0.1454, k_t: 0.0473
+[28450/500000] Loss_D: 0.112666 Loss_G: 0.061580 measure: 0.1194, k_t: 0.0474
+[28500/500000] Loss_D: 0.113292 Loss_G: 0.056350 measure: 0.1176, k_t: 0.0474
+[*] Samples saved: logs/CelebA_0409_000055/28500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/28500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/28500_D_fake.png
+[28550/500000] Loss_D: 0.113206 Loss_G: 0.059576 measure: 0.1176, k_t: 0.0475
+[28600/500000] Loss_D: 0.110610 Loss_G: 0.060092 measure: 0.1168, k_t: 0.0475
+[28650/500000] Loss_D: 0.112188 Loss_G: 0.055544 measure: 0.1167, k_t: 0.0476
+[28700/500000] Loss_D: 0.122127 Loss_G: 0.058274 measure: 0.1291, k_t: 0.0475
+[28750/500000] Loss_D: 0.109699 Loss_G: 0.086285 measure: 0.1432, k_t: 0.0475
+[28800/500000] Loss_D: 0.117472 Loss_G: 0.046194 measure: 0.1333, k_t: 0.0476
+[28850/500000] Loss_D: 0.113776 Loss_G: 0.060307 measure: 0.1186, k_t: 0.0476
+[28900/500000] Loss_D: 0.111816 Loss_G: 0.059476 measure: 0.1168, k_t: 0.0475
+[28950/500000] Loss_D: 0.108555 Loss_G: 0.062452 measure: 0.1182, k_t: 0.0476
+[29000/500000] Loss_D: 0.113180 Loss_G: 0.054381 measure: 0.1193, k_t: 0.0477
+[*] Samples saved: logs/CelebA_0409_000055/29000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/29000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/29000_D_fake.png
+[29050/500000] Loss_D: 0.115856 Loss_G: 0.054377 measure: 0.1233, k_t: 0.0478
+[29100/500000] Loss_D: 0.108714 Loss_G: 0.055163 measure: 0.1119, k_t: 0.0479
+[29150/500000] Loss_D: 0.119957 Loss_G: 0.054050 measure: 0.1298, k_t: 0.0478
+[29200/500000] Loss_D: 0.110802 Loss_G: 0.051886 measure: 0.1180, k_t: 0.0478
+[29250/500000] Loss_D: 0.113395 Loss_G: 0.049934 measure: 0.1237, k_t: 0.0479
+[29300/500000] Loss_D: 0.122634 Loss_G: 0.051590 measure: 0.1361, k_t: 0.0480
+[29350/500000] Loss_D: 0.117076 Loss_G: 0.053922 measure: 0.1256, k_t: 0.0478
+[29400/500000] Loss_D: 0.115200 Loss_G: 0.057068 measure: 0.1198, k_t: 0.0479
+[29450/500000] Loss_D: 0.111379 Loss_G: 0.056857 measure: 0.1143, k_t: 0.0478
+[29500/500000] Loss_D: 0.125983 Loss_G: 0.079000 measure: 0.1439, k_t: 0.0477
+[*] Samples saved: logs/CelebA_0409_000055/29500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/29500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/29500_D_fake.png
+[29550/500000] Loss_D: 0.115137 Loss_G: 0.074526 measure: 0.1339, k_t: 0.0475
+[29600/500000] Loss_D: 0.116324 Loss_G: 0.057245 measure: 0.1213, k_t: 0.0473
+[29650/500000] Loss_D: 0.117626 Loss_G: 0.048389 measure: 0.1315, k_t: 0.0473
+[29700/500000] Loss_D: 0.108588 Loss_G: 0.057799 measure: 0.1135, k_t: 0.0474
+[29750/500000] Loss_D: 0.106800 Loss_G: 0.050454 measure: 0.1133, k_t: 0.0474
+[29800/500000] Loss_D: 0.121923 Loss_G: 0.049011 measure: 0.1374, k_t: 0.0474
+[29850/500000] Loss_D: 0.118796 Loss_G: 0.053356 measure: 0.1286, k_t: 0.0474
+[29900/500000] Loss_D: 0.117608 Loss_G: 0.053243 measure: 0.1270, k_t: 0.0476
+[29950/500000] Loss_D: 0.110165 Loss_G: 0.056189 measure: 0.1131, k_t: 0.0475
+[30000/500000] Loss_D: 0.110091 Loss_G: 0.055993 measure: 0.1131, k_t: 0.0475
+[*] Samples saved: logs/CelebA_0409_000055/30000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/30000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/30000_D_fake.png
+[30050/500000] Loss_D: 0.114691 Loss_G: 0.050654 measure: 0.1250, k_t: 0.0475
+[30100/500000] Loss_D: 0.122226 Loss_G: 0.051776 measure: 0.1353, k_t: 0.0475
+[30150/500000] Loss_D: 0.125725 Loss_G: 0.057652 measure: 0.1350, k_t: 0.0475
+[30200/500000] Loss_D: 0.111979 Loss_G: 0.054493 measure: 0.1174, k_t: 0.0475
+[30250/500000] Loss_D: 0.117173 Loss_G: 0.056637 measure: 0.1232, k_t: 0.0475
+[30300/500000] Loss_D: 0.126302 Loss_G: 0.056877 measure: 0.1366, k_t: 0.0476
+[30350/500000] Loss_D: 0.119493 Loss_G: 0.058325 measure: 0.1251, k_t: 0.0477
+[30400/500000] Loss_D: 0.127927 Loss_G: 0.050095 measure: 0.1454, k_t: 0.0475
+[30450/500000] Loss_D: 0.112709 Loss_G: 0.056384 measure: 0.1167, k_t: 0.0476
+[30500/500000] Loss_D: 0.112390 Loss_G: 0.051725 measure: 0.1206, k_t: 0.0477
+[*] Samples saved: logs/CelebA_0409_000055/30500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/30500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/30500_D_fake.png
+[30550/500000] Loss_D: 0.118640 Loss_G: 0.053146 measure: 0.1286, k_t: 0.0477
+[30600/500000] Loss_D: 0.110752 Loss_G: 0.072409 measure: 0.1295, k_t: 0.0477
+[30650/500000] Loss_D: 0.115143 Loss_G: 0.062141 measure: 0.1212, k_t: 0.0477
+[30700/500000] Loss_D: 0.112558 Loss_G: 0.063561 measure: 0.1214, k_t: 0.0476
+[30750/500000] Loss_D: 0.109255 Loss_G: 0.061402 measure: 0.1175, k_t: 0.0476
+[30800/500000] Loss_D: 0.124805 Loss_G: 0.063231 measure: 0.1285, k_t: 0.0476
+[30850/500000] Loss_D: 0.117453 Loss_G: 0.065176 measure: 0.1255, k_t: 0.0475
+[30900/500000] Loss_D: 0.104097 Loss_G: 0.070498 measure: 0.1242, k_t: 0.0473
+[30950/500000] Loss_D: 0.116233 Loss_G: 0.066156 measure: 0.1258, k_t: 0.0470
+[31000/500000] Loss_D: 0.114116 Loss_G: 0.071012 measure: 0.1297, k_t: 0.0467
+[*] Samples saved: logs/CelebA_0409_000055/31000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/31000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/31000_D_fake.png
+[31050/500000] Loss_D: 0.112198 Loss_G: 0.070766 measure: 0.1285, k_t: 0.0464
+[31100/500000] Loss_D: 0.113334 Loss_G: 0.069578 measure: 0.1279, k_t: 0.0465
+[31150/500000] Loss_D: 0.130322 Loss_G: 0.061308 measure: 0.1384, k_t: 0.0463
+[31200/500000] Loss_D: 0.109217 Loss_G: 0.059137 measure: 0.1151, k_t: 0.0464
+[31250/500000] Loss_D: 0.116913 Loss_G: 0.061204 measure: 0.1211, k_t: 0.0466
+[31300/500000] Loss_D: 0.128704 Loss_G: 0.060252 measure: 0.1370, k_t: 0.0465
+[31350/500000] Loss_D: 0.118964 Loss_G: 0.052837 measure: 0.1293, k_t: 0.0466
+[31400/500000] Loss_D: 0.107942 Loss_G: 0.054167 measure: 0.1115, k_t: 0.0466
+[31450/500000] Loss_D: 0.109316 Loss_G: 0.053065 measure: 0.1146, k_t: 0.0467
+[31500/500000] Loss_D: 0.117630 Loss_G: 0.055441 measure: 0.1249, k_t: 0.0468
+[*] Samples saved: logs/CelebA_0409_000055/31500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/31500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/31500_D_fake.png
+[31550/500000] Loss_D: 0.109199 Loss_G: 0.054199 measure: 0.1134, k_t: 0.0468
+[31600/500000] Loss_D: 0.116520 Loss_G: 0.048692 measure: 0.1295, k_t: 0.0469
+[31650/500000] Loss_D: 0.116175 Loss_G: 0.052280 measure: 0.1257, k_t: 0.0470
+[31700/500000] Loss_D: 0.111394 Loss_G: 0.060938 measure: 0.1181, k_t: 0.0471
+[31750/500000] Loss_D: 0.119355 Loss_G: 0.053691 measure: 0.1291, k_t: 0.0471
+[31800/500000] Loss_D: 0.104722 Loss_G: 0.054912 measure: 0.1086, k_t: 0.0471
+[31850/500000] Loss_D: 0.122355 Loss_G: 0.065934 measure: 0.1287, k_t: 0.0472
+[31900/500000] Loss_D: 0.114785 Loss_G: 0.058342 measure: 0.1180, k_t: 0.0471
+[31950/500000] Loss_D: 0.112005 Loss_G: 0.057929 measure: 0.1153, k_t: 0.0472
+[32000/500000] Loss_D: 0.112163 Loss_G: 0.053737 measure: 0.1183, k_t: 0.0473
+[*] Samples saved: logs/CelebA_0409_000055/32000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/32000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/32000_D_fake.png
+[32050/500000] Loss_D: 0.115013 Loss_G: 0.064351 measure: 0.1234, k_t: 0.0472
+[32100/500000] Loss_D: 0.103077 Loss_G: 0.061463 measure: 0.1144, k_t: 0.0471
+[32150/500000] Loss_D: 0.112627 Loss_G: 0.066202 measure: 0.1241, k_t: 0.0471
+[32200/500000] Loss_D: 0.116128 Loss_G: 0.065130 measure: 0.1247, k_t: 0.0470
+[32250/500000] Loss_D: 0.130208 Loss_G: 0.061057 measure: 0.1386, k_t: 0.0470
+[32300/500000] Loss_D: 0.107598 Loss_G: 0.054717 measure: 0.1105, k_t: 0.0470
+[32350/500000] Loss_D: 0.116636 Loss_G: 0.055858 measure: 0.1230, k_t: 0.0470
+[32400/500000] Loss_D: 0.104502 Loss_G: 0.052647 measure: 0.1078, k_t: 0.0471
+[32450/500000] Loss_D: 0.103049 Loss_G: 0.058235 measure: 0.1111, k_t: 0.0471
+[32500/500000] Loss_D: 0.103783 Loss_G: 0.057747 measure: 0.1110, k_t: 0.0471
+[*] Samples saved: logs/CelebA_0409_000055/32500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/32500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/32500_D_fake.png
+[32550/500000] Loss_D: 0.109488 Loss_G: 0.054401 measure: 0.1137, k_t: 0.0470
+[32600/500000] Loss_D: 0.105103 Loss_G: 0.050432 measure: 0.1108, k_t: 0.0471
+[32650/500000] Loss_D: 0.110741 Loss_G: 0.054040 measure: 0.1159, k_t: 0.0471
+[32700/500000] Loss_D: 0.113979 Loss_G: 0.056814 measure: 0.1182, k_t: 0.0472
+[32750/500000] Loss_D: 0.125516 Loss_G: 0.056464 measure: 0.1358, k_t: 0.0472
+[32800/500000] Loss_D: 0.107726 Loss_G: 0.059078 measure: 0.1143, k_t: 0.0472
+[32850/500000] Loss_D: 0.119177 Loss_G: 0.064836 measure: 0.1259, k_t: 0.0469
+[32900/500000] Loss_D: 0.111408 Loss_G: 0.053302 measure: 0.1176, k_t: 0.0469
+[32950/500000] Loss_D: 0.114970 Loss_G: 0.059966 measure: 0.1189, k_t: 0.0468
+[33000/500000] Loss_D: 0.108484 Loss_G: 0.061532 measure: 0.1172, k_t: 0.0469
+[*] Samples saved: logs/CelebA_0409_000055/33000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/33000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/33000_D_fake.png
+[33050/500000] Loss_D: 0.101003 Loss_G: 0.065409 measure: 0.1174, k_t: 0.0470
+[33100/500000] Loss_D: 0.111821 Loss_G: 0.069101 measure: 0.1266, k_t: 0.0470
+[33150/500000] Loss_D: 0.113527 Loss_G: 0.061999 measure: 0.1202, k_t: 0.0471
+[33200/500000] Loss_D: 0.119536 Loss_G: 0.064196 measure: 0.1255, k_t: 0.0472
+[33250/500000] Loss_D: 0.114903 Loss_G: 0.058239 measure: 0.1182, k_t: 0.0471
+[33300/500000] Loss_D: 0.116944 Loss_G: 0.063365 measure: 0.1233, k_t: 0.0472
+[33350/500000] Loss_D: 0.124077 Loss_G: 0.063964 measure: 0.1275, k_t: 0.0471
+[33400/500000] Loss_D: 0.124120 Loss_G: 0.059344 measure: 0.1310, k_t: 0.0471
+[33450/500000] Loss_D: 0.118396 Loss_G: 0.055902 measure: 0.1256, k_t: 0.0469
+[33500/500000] Loss_D: 0.103650 Loss_G: 0.061385 measure: 0.1146, k_t: 0.0469
+[*] Samples saved: logs/CelebA_0409_000055/33500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/33500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/33500_D_fake.png
+[33550/500000] Loss_D: 0.108523 Loss_G: 0.060606 measure: 0.1163, k_t: 0.0470
+[33600/500000] Loss_D: 0.116236 Loss_G: 0.072860 measure: 0.1327, k_t: 0.0469
+[33650/500000] Loss_D: 0.113807 Loss_G: 0.054799 measure: 0.1198, k_t: 0.0467
+[33700/500000] Loss_D: 0.119132 Loss_G: 0.062328 measure: 0.1234, k_t: 0.0468
+[33750/500000] Loss_D: 0.110343 Loss_G: 0.070610 measure: 0.1274, k_t: 0.0467
+[33800/500000] Loss_D: 0.117705 Loss_G: 0.050039 measure: 0.1300, k_t: 0.0467
+[33850/500000] Loss_D: 0.129076 Loss_G: 0.057497 measure: 0.1401, k_t: 0.0468
+[33900/500000] Loss_D: 0.110221 Loss_G: 0.060895 measure: 0.1174, k_t: 0.0467
+[33950/500000] Loss_D: 0.126264 Loss_G: 0.054147 measure: 0.1390, k_t: 0.0466
+[34000/500000] Loss_D: 0.108967 Loss_G: 0.045097 measure: 0.1215, k_t: 0.0467
+[*] Samples saved: logs/CelebA_0409_000055/34000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/34000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/34000_D_fake.png
+[34050/500000] Loss_D: 0.117073 Loss_G: 0.054661 measure: 0.1248, k_t: 0.0467
+[34100/500000] Loss_D: 0.109820 Loss_G: 0.054087 measure: 0.1144, k_t: 0.0467
+[34150/500000] Loss_D: 0.118692 Loss_G: 0.052343 measure: 0.1294, k_t: 0.0468
+[34200/500000] Loss_D: 0.119967 Loss_G: 0.053554 measure: 0.1302, k_t: 0.0469
+[34250/500000] Loss_D: 0.126888 Loss_G: 0.050685 measure: 0.1432, k_t: 0.0469
+[34300/500000] Loss_D: 0.114103 Loss_G: 0.056932 measure: 0.1182, k_t: 0.0467
+[34350/500000] Loss_D: 0.101757 Loss_G: 0.062966 measure: 0.1153, k_t: 0.0467
+[34400/500000] Loss_D: 0.122060 Loss_G: 0.064931 measure: 0.1275, k_t: 0.0465
+[34450/500000] Loss_D: 0.114068 Loss_G: 0.058023 measure: 0.1171, k_t: 0.0466
+[34500/500000] Loss_D: 0.120914 Loss_G: 0.061837 measure: 0.1239, k_t: 0.0466
+[*] Samples saved: logs/CelebA_0409_000055/34500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/34500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/34500_D_fake.png
+[34550/500000] Loss_D: 0.119391 Loss_G: 0.053261 measure: 0.1295, k_t: 0.0466
+[34600/500000] Loss_D: 0.118017 Loss_G: 0.057799 measure: 0.1233, k_t: 0.0466
+[34650/500000] Loss_D: 0.111242 Loss_G: 0.064260 measure: 0.1214, k_t: 0.0467
+[34700/500000] Loss_D: 0.103141 Loss_G: 0.065165 measure: 0.1183, k_t: 0.0467
+[34750/500000] Loss_D: 0.105124 Loss_G: 0.060046 measure: 0.1140, k_t: 0.0467
+[34800/500000] Loss_D: 0.114098 Loss_G: 0.064167 measure: 0.1227, k_t: 0.0467
+[34850/500000] Loss_D: 0.118375 Loss_G: 0.062587 measure: 0.1232, k_t: 0.0467
+[34900/500000] Loss_D: 0.118243 Loss_G: 0.059781 measure: 0.1218, k_t: 0.0468
+[34950/500000] Loss_D: 0.100003 Loss_G: 0.066049 measure: 0.1176, k_t: 0.0468
+[35000/500000] Loss_D: 0.114943 Loss_G: 0.059116 measure: 0.1180, k_t: 0.0467
+[*] Samples saved: logs/CelebA_0409_000055/35000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/35000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/35000_D_fake.png
+[35050/500000] Loss_D: 0.101572 Loss_G: 0.060257 measure: 0.1125, k_t: 0.0467
+[35100/500000] Loss_D: 0.108902 Loss_G: 0.063270 measure: 0.1192, k_t: 0.0468
+[35150/500000] Loss_D: 0.108324 Loss_G: 0.061702 measure: 0.1173, k_t: 0.0466
+[35200/500000] Loss_D: 0.105347 Loss_G: 0.051849 measure: 0.1098, k_t: 0.0464
+[35250/500000] Loss_D: 0.107430 Loss_G: 0.054371 measure: 0.1105, k_t: 0.0463
+[35300/500000] Loss_D: 0.108609 Loss_G: 0.055450 measure: 0.1113, k_t: 0.0461
+[35350/500000] Loss_D: 0.114202 Loss_G: 0.053123 measure: 0.1218, k_t: 0.0460
+[35400/500000] Loss_D: 0.110704 Loss_G: 0.055876 measure: 0.1140, k_t: 0.0461
+[35450/500000] Loss_D: 0.105949 Loss_G: 0.053313 measure: 0.1093, k_t: 0.0461
+[35500/500000] Loss_D: 0.114983 Loss_G: 0.058932 measure: 0.1178, k_t: 0.0461
+[*] Samples saved: logs/CelebA_0409_000055/35500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/35500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/35500_D_fake.png
+[35550/500000] Loss_D: 0.110315 Loss_G: 0.055115 measure: 0.1142, k_t: 0.0462
+[35600/500000] Loss_D: 0.105173 Loss_G: 0.052852 measure: 0.1086, k_t: 0.0463
+[35650/500000] Loss_D: 0.110172 Loss_G: 0.052781 measure: 0.1161, k_t: 0.0463
+[35700/500000] Loss_D: 0.116683 Loss_G: 0.056160 measure: 0.1228, k_t: 0.0464
+[35750/500000] Loss_D: 0.120122 Loss_G: 0.050600 measure: 0.1331, k_t: 0.0462
+[35800/500000] Loss_D: 0.110694 Loss_G: 0.055768 measure: 0.1141, k_t: 0.0462
+[35850/500000] Loss_D: 0.117815 Loss_G: 0.049953 measure: 0.1302, k_t: 0.0460
+[35900/500000] Loss_D: 0.111317 Loss_G: 0.049825 measure: 0.1206, k_t: 0.0460
+[35950/500000] Loss_D: 0.115165 Loss_G: 0.057701 measure: 0.1190, k_t: 0.0459
+[36000/500000] Loss_D: 0.123100 Loss_G: 0.050232 measure: 0.1379, k_t: 0.0459
+[*] Samples saved: logs/CelebA_0409_000055/36000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/36000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/36000_D_fake.png
+[36050/500000] Loss_D: 0.125060 Loss_G: 0.062466 measure: 0.1294, k_t: 0.0460
+[36100/500000] Loss_D: 0.113273 Loss_G: 0.053072 measure: 0.1205, k_t: 0.0461
+[36150/500000] Loss_D: 0.121757 Loss_G: 0.052697 measure: 0.1336, k_t: 0.0461
+[36200/500000] Loss_D: 0.105337 Loss_G: 0.052116 measure: 0.1095, k_t: 0.0462
+[36250/500000] Loss_D: 0.114173 Loss_G: 0.050289 measure: 0.1245, k_t: 0.0463
+[36300/500000] Loss_D: 0.129246 Loss_G: 0.056603 measure: 0.1412, k_t: 0.0464
+[36350/500000] Loss_D: 0.127269 Loss_G: 0.059210 measure: 0.1358, k_t: 0.0465
+[36400/500000] Loss_D: 0.098725 Loss_G: 0.069458 measure: 0.1204, k_t: 0.0466
+[36450/500000] Loss_D: 0.107121 Loss_G: 0.066390 measure: 0.1215, k_t: 0.0465
+[36500/500000] Loss_D: 0.115765 Loss_G: 0.062661 measure: 0.1220, k_t: 0.0462
+[*] Samples saved: logs/CelebA_0409_000055/36500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/36500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/36500_D_fake.png
+[36550/500000] Loss_D: 0.118205 Loss_G: 0.072869 measure: 0.1337, k_t: 0.0461
+[36600/500000] Loss_D: 0.124867 Loss_G: 0.063260 measure: 0.1284, k_t: 0.0461
+[36650/500000] Loss_D: 0.118403 Loss_G: 0.073851 measure: 0.1348, k_t: 0.0461
+[36700/500000] Loss_D: 0.112709 Loss_G: 0.060684 measure: 0.1184, k_t: 0.0461
+[36750/500000] Loss_D: 0.116487 Loss_G: 0.061498 measure: 0.1212, k_t: 0.0462
+[36800/500000] Loss_D: 0.109328 Loss_G: 0.057659 measure: 0.1137, k_t: 0.0461
+[36850/500000] Loss_D: 0.116152 Loss_G: 0.053721 measure: 0.1242, k_t: 0.0462
+[36900/500000] Loss_D: 0.104932 Loss_G: 0.054711 measure: 0.1084, k_t: 0.0462
+[36950/500000] Loss_D: 0.120589 Loss_G: 0.059078 measure: 0.1259, k_t: 0.0463
+[37000/500000] Loss_D: 0.105893 Loss_G: 0.068292 measure: 0.1228, k_t: 0.0463
+[*] Samples saved: logs/CelebA_0409_000055/37000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/37000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/37000_D_fake.png
+[37050/500000] Loss_D: 0.116087 Loss_G: 0.056152 measure: 0.1219, k_t: 0.0463
+[37100/500000] Loss_D: 0.137921 Loss_G: 0.052460 measure: 0.1581, k_t: 0.0462
+[37150/500000] Loss_D: 0.118416 Loss_G: 0.056810 measure: 0.1248, k_t: 0.0463
+[37200/500000] Loss_D: 0.103253 Loss_G: 0.053953 measure: 0.1068, k_t: 0.0463
+[37250/500000] Loss_D: 0.115164 Loss_G: 0.059324 measure: 0.1183, k_t: 0.0462
+[37300/500000] Loss_D: 0.115966 Loss_G: 0.053765 measure: 0.1239, k_t: 0.0461
+[37350/500000] Loss_D: 0.112314 Loss_G: 0.059656 measure: 0.1172, k_t: 0.0462
+[37400/500000] Loss_D: 0.114123 Loss_G: 0.057010 measure: 0.1181, k_t: 0.0462
+[37450/500000] Loss_D: 0.111550 Loss_G: 0.051094 measure: 0.1198, k_t: 0.0461
+[37500/500000] Loss_D: 0.109118 Loss_G: 0.057203 measure: 0.1131, k_t: 0.0462
+[*] Samples saved: logs/CelebA_0409_000055/37500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/37500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/37500_D_fake.png
+[37550/500000] Loss_D: 0.115264 Loss_G: 0.050133 measure: 0.1262, k_t: 0.0461
+[37600/500000] Loss_D: 0.108029 Loss_G: 0.048530 measure: 0.1169, k_t: 0.0462
+[37650/500000] Loss_D: 0.115130 Loss_G: 0.063015 measure: 0.1220, k_t: 0.0452
+[37700/500000] Loss_D: 0.123896 Loss_G: 0.065730 measure: 0.1292, k_t: 0.0452
+[37750/500000] Loss_D: 0.116662 Loss_G: 0.066055 measure: 0.1259, k_t: 0.0450
+[37800/500000] Loss_D: 0.118718 Loss_G: 0.071577 measure: 0.1325, k_t: 0.0450
+[37850/500000] Loss_D: 0.121455 Loss_G: 0.051096 measure: 0.1345, k_t: 0.0450
+[37900/500000] Loss_D: 0.109256 Loss_G: 0.057686 measure: 0.1136, k_t: 0.0451
+[37950/500000] Loss_D: 0.114554 Loss_G: 0.053059 measure: 0.1224, k_t: 0.0452
+[38000/500000] Loss_D: 0.125312 Loss_G: 0.057160 measure: 0.1347, k_t: 0.0453
+[*] Samples saved: logs/CelebA_0409_000055/38000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/38000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/38000_D_fake.png
+[38050/500000] Loss_D: 0.116847 Loss_G: 0.063944 measure: 0.1238, k_t: 0.0452
+[38100/500000] Loss_D: 0.117306 Loss_G: 0.056053 measure: 0.1237, k_t: 0.0453
+[38150/500000] Loss_D: 0.116391 Loss_G: 0.053370 measure: 0.1248, k_t: 0.0453
+[38200/500000] Loss_D: 0.122785 Loss_G: 0.050606 measure: 0.1370, k_t: 0.0453
+[38250/500000] Loss_D: 0.104181 Loss_G: 0.060638 measure: 0.1141, k_t: 0.0453
+[38300/500000] Loss_D: 0.118658 Loss_G: 0.056875 measure: 0.1250, k_t: 0.0452
+[38350/500000] Loss_D: 0.108903 Loss_G: 0.056521 measure: 0.1122, k_t: 0.0451
+[38400/500000] Loss_D: 0.100819 Loss_G: 0.053929 measure: 0.1056, k_t: 0.0452
+[38450/500000] Loss_D: 0.112256 Loss_G: 0.059976 measure: 0.1175, k_t: 0.0452
+[38500/500000] Loss_D: 0.105843 Loss_G: 0.062154 measure: 0.1165, k_t: 0.0452
+[*] Samples saved: logs/CelebA_0409_000055/38500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/38500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/38500_D_fake.png
+[38550/500000] Loss_D: 0.110077 Loss_G: 0.054328 measure: 0.1145, k_t: 0.0451
+[38600/500000] Loss_D: 0.107345 Loss_G: 0.062437 measure: 0.1175, k_t: 0.0450
+[38650/500000] Loss_D: 0.112597 Loss_G: 0.049224 measure: 0.1230, k_t: 0.0451
+[38700/500000] Loss_D: 0.114070 Loss_G: 0.055328 measure: 0.1195, k_t: 0.0451
+[38750/500000] Loss_D: 0.103429 Loss_G: 0.047783 measure: 0.1106, k_t: 0.0450
+[38800/500000] Loss_D: 0.121151 Loss_G: 0.050785 measure: 0.1343, k_t: 0.0447
+[38850/500000] Loss_D: 0.116597 Loss_G: 0.065578 measure: 0.1253, k_t: 0.0446
+[38900/500000] Loss_D: 0.108571 Loss_G: 0.062690 measure: 0.1184, k_t: 0.0444
+[38950/500000] Loss_D: 0.108771 Loss_G: 0.056964 measure: 0.1126, k_t: 0.0443
+[39000/500000] Loss_D: 0.113247 Loss_G: 0.058026 measure: 0.1159, k_t: 0.0444
+[*] Samples saved: logs/CelebA_0409_000055/39000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/39000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/39000_D_fake.png
+[39050/500000] Loss_D: 0.104458 Loss_G: 0.062273 measure: 0.1159, k_t: 0.0445
+[39100/500000] Loss_D: 0.106237 Loss_G: 0.060432 measure: 0.1149, k_t: 0.0444
+[39150/500000] Loss_D: 0.104517 Loss_G: 0.065163 measure: 0.1189, k_t: 0.0445
+[39200/500000] Loss_D: 0.116372 Loss_G: 0.063899 measure: 0.1235, k_t: 0.0445
+[39250/500000] Loss_D: 0.114334 Loss_G: 0.061078 measure: 0.1196, k_t: 0.0446
+[39300/500000] Loss_D: 0.128573 Loss_G: 0.064707 measure: 0.1325, k_t: 0.0445
+[39350/500000] Loss_D: 0.108215 Loss_G: 0.064284 measure: 0.1198, k_t: 0.0444
+[39400/500000] Loss_D: 0.117759 Loss_G: 0.061463 measure: 0.1217, k_t: 0.0444
+[39450/500000] Loss_D: 0.107575 Loss_G: 0.057120 measure: 0.1122, k_t: 0.0442
+[39500/500000] Loss_D: 0.126099 Loss_G: 0.059506 measure: 0.1336, k_t: 0.0442
+[*] Samples saved: logs/CelebA_0409_000055/39500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/39500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/39500_D_fake.png
+[39550/500000] Loss_D: 0.106564 Loss_G: 0.054212 measure: 0.1092, k_t: 0.0443
+[39600/500000] Loss_D: 0.096471 Loss_G: 0.055322 measure: 0.1048, k_t: 0.0443
+[39650/500000] Loss_D: 0.115703 Loss_G: 0.058498 measure: 0.1189, k_t: 0.0443
+[39700/500000] Loss_D: 0.108474 Loss_G: 0.049424 measure: 0.1166, k_t: 0.0443
+[39750/500000] Loss_D: 0.115781 Loss_G: 0.059794 measure: 0.1190, k_t: 0.0443
+[39800/500000] Loss_D: 0.119688 Loss_G: 0.058946 measure: 0.1245, k_t: 0.0442
+[39850/500000] Loss_D: 0.107870 Loss_G: 0.047666 measure: 0.1173, k_t: 0.0441
+[39900/500000] Loss_D: 0.111402 Loss_G: 0.049657 measure: 0.1207, k_t: 0.0440
+[39950/500000] Loss_D: 0.118753 Loss_G: 0.052316 measure: 0.1293, k_t: 0.0440
+[40000/500000] Loss_D: 0.113614 Loss_G: 0.054156 measure: 0.1198, k_t: 0.0440
+[*] Samples saved: logs/CelebA_0409_000055/40000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/40000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/40000_D_fake.png
+[40050/500000] Loss_D: 0.108359 Loss_G: 0.052417 measure: 0.1136, k_t: 0.0440
+[40100/500000] Loss_D: 0.116670 Loss_G: 0.054191 measure: 0.1244, k_t: 0.0439
+[40150/500000] Loss_D: 0.112488 Loss_G: 0.055190 measure: 0.1172, k_t: 0.0437
+[40200/500000] Loss_D: 0.110136 Loss_G: 0.047418 measure: 0.1209, k_t: 0.0436
+[40250/500000] Loss_D: 0.112655 Loss_G: 0.054636 measure: 0.1179, k_t: 0.0435
+[40300/500000] Loss_D: 0.117246 Loss_G: 0.055750 measure: 0.1238, k_t: 0.0435
+[40350/500000] Loss_D: 0.106992 Loss_G: 0.063863 measure: 0.1187, k_t: 0.0435
+[40400/500000] Loss_D: 0.121872 Loss_G: 0.056462 measure: 0.1300, k_t: 0.0436
+[40450/500000] Loss_D: 0.098992 Loss_G: 0.061646 measure: 0.1125, k_t: 0.0436
+[40500/500000] Loss_D: 0.111549 Loss_G: 0.059476 measure: 0.1165, k_t: 0.0435
+[*] Samples saved: logs/CelebA_0409_000055/40500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/40500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/40500_D_fake.png
+[40550/500000] Loss_D: 0.107769 Loss_G: 0.062287 measure: 0.1175, k_t: 0.0433
+[40600/500000] Loss_D: 0.107512 Loss_G: 0.060911 measure: 0.1160, k_t: 0.0433
+[40650/500000] Loss_D: 0.109652 Loss_G: 0.063848 measure: 0.1201, k_t: 0.0433
+[40700/500000] Loss_D: 0.117216 Loss_G: 0.071894 measure: 0.1321, k_t: 0.0432
+[40750/500000] Loss_D: 0.105508 Loss_G: 0.094982 measure: 0.1498, k_t: 0.0430
+[40800/500000] Loss_D: 0.117717 Loss_G: 0.064728 measure: 0.1250, k_t: 0.0429
+[40850/500000] Loss_D: 0.112723 Loss_G: 0.054717 measure: 0.1179, k_t: 0.0425
+[40900/500000] Loss_D: 0.120055 Loss_G: 0.054177 measure: 0.1294, k_t: 0.0425
+[40950/500000] Loss_D: 0.109345 Loss_G: 0.057335 measure: 0.1132, k_t: 0.0424
+[41000/500000] Loss_D: 0.114239 Loss_G: 0.061052 measure: 0.1195, k_t: 0.0426
+[*] Samples saved: logs/CelebA_0409_000055/41000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/41000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/41000_D_fake.png
+[41050/500000] Loss_D: 0.119942 Loss_G: 0.059347 measure: 0.1243, k_t: 0.0425
+[41100/500000] Loss_D: 0.110291 Loss_G: 0.057507 measure: 0.1139, k_t: 0.0425
+[41150/500000] Loss_D: 0.124233 Loss_G: 0.059047 measure: 0.1311, k_t: 0.0425
+[41200/500000] Loss_D: 0.110990 Loss_G: 0.062123 measure: 0.1189, k_t: 0.0425
+[41250/500000] Loss_D: 0.115012 Loss_G: 0.051441 measure: 0.1244, k_t: 0.0425
+[41300/500000] Loss_D: 0.125569 Loss_G: 0.050229 measure: 0.1413, k_t: 0.0426
+[41350/500000] Loss_D: 0.113658 Loss_G: 0.049241 measure: 0.1244, k_t: 0.0425
+[41400/500000] Loss_D: 0.102228 Loss_G: 0.050674 measure: 0.1059, k_t: 0.0425
+[41450/500000] Loss_D: 0.112264 Loss_G: 0.058031 measure: 0.1154, k_t: 0.0426
+[41500/500000] Loss_D: 0.114624 Loss_G: 0.064207 measure: 0.1229, k_t: 0.0427
+[*] Samples saved: logs/CelebA_0409_000055/41500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/41500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/41500_D_fake.png
+[41550/500000] Loss_D: 0.112513 Loss_G: 0.050250 measure: 0.1217, k_t: 0.0426
+[41600/500000] Loss_D: 0.116805 Loss_G: 0.048063 measure: 0.1302, k_t: 0.0425
+[41650/500000] Loss_D: 0.118509 Loss_G: 0.054698 measure: 0.1265, k_t: 0.0424
+[41700/500000] Loss_D: 0.098035 Loss_G: 0.052972 measure: 0.1031, k_t: 0.0423
+[41750/500000] Loss_D: 0.104259 Loss_G: 0.047168 measure: 0.1122, k_t: 0.0424
+[41800/500000] Loss_D: 0.107476 Loss_G: 0.054069 measure: 0.1106, k_t: 0.0425
+[41850/500000] Loss_D: 0.103249 Loss_G: 0.064124 measure: 0.1171, k_t: 0.0424
+[41900/500000] Loss_D: 0.101916 Loss_G: 0.055818 measure: 0.1080, k_t: 0.0424
+[41950/500000] Loss_D: 0.106499 Loss_G: 0.065527 measure: 0.1202, k_t: 0.0425
+[42000/500000] Loss_D: 0.105795 Loss_G: 0.057736 measure: 0.1119, k_t: 0.0425
+[*] Samples saved: logs/CelebA_0409_000055/42000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/42000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/42000_D_fake.png
+[42050/500000] Loss_D: 0.105011 Loss_G: 0.057472 measure: 0.1112, k_t: 0.0427
+[42100/500000] Loss_D: 0.120696 Loss_G: 0.056573 measure: 0.1281, k_t: 0.0426
+[42150/500000] Loss_D: 0.122055 Loss_G: 0.055418 measure: 0.1312, k_t: 0.0426
+[42200/500000] Loss_D: 0.116222 Loss_G: 0.067652 measure: 0.1272, k_t: 0.0426
+[42250/500000] Loss_D: 0.109356 Loss_G: 0.062517 measure: 0.1185, k_t: 0.0426
+[42300/500000] Loss_D: 0.114809 Loss_G: 0.071724 measure: 0.1307, k_t: 0.0426
+[42350/500000] Loss_D: 0.116831 Loss_G: 0.068375 measure: 0.1282, k_t: 0.0426
+[42400/500000] Loss_D: 0.119763 Loss_G: 0.064313 measure: 0.1256, k_t: 0.0423
+[42450/500000] Loss_D: 0.104147 Loss_G: 0.074105 measure: 0.1277, k_t: 0.0419
+[42500/500000] Loss_D: 0.117411 Loss_G: 0.072613 measure: 0.1328, k_t: 0.0417
+[*] Samples saved: logs/CelebA_0409_000055/42500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/42500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/42500_D_fake.png
+[42550/500000] Loss_D: 0.110487 Loss_G: 0.064041 measure: 0.1206, k_t: 0.0416
+[42600/500000] Loss_D: 0.118513 Loss_G: 0.073521 measure: 0.1343, k_t: 0.0415
+[42650/500000] Loss_D: 0.106892 Loss_G: 0.071984 measure: 0.1269, k_t: 0.0416
+[42700/500000] Loss_D: 0.112442 Loss_G: 0.079088 measure: 0.1369, k_t: 0.0414
+[42750/500000] Loss_D: 0.120833 Loss_G: 0.066042 measure: 0.1278, k_t: 0.0411
+[42800/500000] Loss_D: 0.107685 Loss_G: 0.058394 measure: 0.1134, k_t: 0.0409
+[42850/500000] Loss_D: 0.111684 Loss_G: 0.058972 measure: 0.1160, k_t: 0.0410
+[42900/500000] Loss_D: 0.116969 Loss_G: 0.054483 measure: 0.1243, k_t: 0.0410
+[42950/500000] Loss_D: 0.108053 Loss_G: 0.056284 measure: 0.1115, k_t: 0.0410
+[43000/500000] Loss_D: 0.105082 Loss_G: 0.050193 measure: 0.1105, k_t: 0.0409
+[*] Samples saved: logs/CelebA_0409_000055/43000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/43000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/43000_D_fake.png
+[43050/500000] Loss_D: 0.110252 Loss_G: 0.053169 measure: 0.1155, k_t: 0.0409
+[43100/500000] Loss_D: 0.111501 Loss_G: 0.048907 measure: 0.1213, k_t: 0.0410
+[43150/500000] Loss_D: 0.118469 Loss_G: 0.054301 measure: 0.1267, k_t: 0.0411
+[43200/500000] Loss_D: 0.112230 Loss_G: 0.053019 measure: 0.1186, k_t: 0.0411
+[43250/500000] Loss_D: 0.105491 Loss_G: 0.055053 measure: 0.1089, k_t: 0.0412
+[43300/500000] Loss_D: 0.107237 Loss_G: 0.057780 measure: 0.1126, k_t: 0.0412
+[43350/500000] Loss_D: 0.112335 Loss_G: 0.064183 measure: 0.1217, k_t: 0.0414
+[43400/500000] Loss_D: 0.109900 Loss_G: 0.052572 measure: 0.1155, k_t: 0.0414
+[43450/500000] Loss_D: 0.110676 Loss_G: 0.051146 measure: 0.1181, k_t: 0.0415
+[43500/500000] Loss_D: 0.109077 Loss_G: 0.052386 measure: 0.1145, k_t: 0.0416
+[*] Samples saved: logs/CelebA_0409_000055/43500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/43500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/43500_D_fake.png
+[43550/500000] Loss_D: 0.110527 Loss_G: 0.061803 measure: 0.1184, k_t: 0.0416
+[43600/500000] Loss_D: 0.110997 Loss_G: 0.056937 measure: 0.1136, k_t: 0.0417
+[43650/500000] Loss_D: 0.099949 Loss_G: 0.054870 measure: 0.1060, k_t: 0.0417
+[43700/500000] Loss_D: 0.109849 Loss_G: 0.065155 measure: 0.1214, k_t: 0.0416
+[43750/500000] Loss_D: 0.104031 Loss_G: 0.054189 measure: 0.1073, k_t: 0.0416
+[43800/500000] Loss_D: 0.113562 Loss_G: 0.051849 measure: 0.1217, k_t: 0.0415
+[43850/500000] Loss_D: 0.113691 Loss_G: 0.058636 measure: 0.1167, k_t: 0.0416
+[43900/500000] Loss_D: 0.106391 Loss_G: 0.061310 measure: 0.1158, k_t: 0.0416
+[43950/500000] Loss_D: 0.108026 Loss_G: 0.052167 measure: 0.1131, k_t: 0.0415
+[44000/500000] Loss_D: 0.099232 Loss_G: 0.057417 measure: 0.1082, k_t: 0.0415
+[*] Samples saved: logs/CelebA_0409_000055/44000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/44000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/44000_D_fake.png
+[44050/500000] Loss_D: 0.110480 Loss_G: 0.060474 measure: 0.1170, k_t: 0.0414
+[44100/500000] Loss_D: 0.113715 Loss_G: 0.055768 measure: 0.1183, k_t: 0.0413
+[44150/500000] Loss_D: 0.103303 Loss_G: 0.056843 measure: 0.1097, k_t: 0.0414
+[44200/500000] Loss_D: 0.107811 Loss_G: 0.050572 measure: 0.1143, k_t: 0.0415
+[44250/500000] Loss_D: 0.116270 Loss_G: 0.052588 measure: 0.1251, k_t: 0.0415
+[44300/500000] Loss_D: 0.116875 Loss_G: 0.066756 measure: 0.1266, k_t: 0.0415
+[44350/500000] Loss_D: 0.109784 Loss_G: 0.055090 measure: 0.1130, k_t: 0.0416
+[44400/500000] Loss_D: 0.113339 Loss_G: 0.074668 measure: 0.1329, k_t: 0.0415
+[44450/500000] Loss_D: 0.116293 Loss_G: 0.056496 measure: 0.1215, k_t: 0.0415
+[44500/500000] Loss_D: 0.104038 Loss_G: 0.048876 measure: 0.1102, k_t: 0.0413
+[*] Samples saved: logs/CelebA_0409_000055/44500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/44500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/44500_D_fake.png
+[44550/500000] Loss_D: 0.118276 Loss_G: 0.063959 measure: 0.1244, k_t: 0.0413
+[44600/500000] Loss_D: 0.103971 Loss_G: 0.083486 measure: 0.1372, k_t: 0.0413
+[44650/500000] Loss_D: 0.109597 Loss_G: 0.062090 measure: 0.1182, k_t: 0.0411
+[44700/500000] Loss_D: 0.117389 Loss_G: 0.126490 measure: 0.1878, k_t: 0.0408
+[44750/500000] Loss_D: 0.110429 Loss_G: 0.075627 measure: 0.1324, k_t: 0.0407
+[44800/500000] Loss_D: 0.106638 Loss_G: 0.060965 measure: 0.1155, k_t: 0.0405
+[44850/500000] Loss_D: 0.115658 Loss_G: 0.049505 measure: 0.1270, k_t: 0.0405
+[44900/500000] Loss_D: 0.120868 Loss_G: 0.049873 measure: 0.1345, k_t: 0.0405
+[44950/500000] Loss_D: 0.110836 Loss_G: 0.052433 measure: 0.1170, k_t: 0.0405
+[45000/500000] Loss_D: 0.114728 Loss_G: 0.050241 measure: 0.1249, k_t: 0.0407
+[*] Samples saved: logs/CelebA_0409_000055/45000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/45000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/45000_D_fake.png
+[45050/500000] Loss_D: 0.114697 Loss_G: 0.054284 measure: 0.1211, k_t: 0.0407
+[45100/500000] Loss_D: 0.109217 Loss_G: 0.055948 measure: 0.1117, k_t: 0.0409
+[45150/500000] Loss_D: 0.108444 Loss_G: 0.061721 measure: 0.1172, k_t: 0.0409
+[45200/500000] Loss_D: 0.110240 Loss_G: 0.065821 measure: 0.1223, k_t: 0.0409
+[45250/500000] Loss_D: 0.101569 Loss_G: 0.055926 measure: 0.1079, k_t: 0.0409
+[45300/500000] Loss_D: 0.111303 Loss_G: 0.047809 measure: 0.1221, k_t: 0.0406
+[45350/500000] Loss_D: 0.108455 Loss_G: 0.057919 measure: 0.1133, k_t: 0.0405
+[45400/500000] Loss_D: 0.119789 Loss_G: 0.053658 measure: 0.1293, k_t: 0.0404
+[45450/500000] Loss_D: 0.103564 Loss_G: 0.055498 measure: 0.1084, k_t: 0.0402
+[45500/500000] Loss_D: 0.113768 Loss_G: 0.062495 measure: 0.1206, k_t: 0.0401
+[*] Samples saved: logs/CelebA_0409_000055/45500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/45500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/45500_D_fake.png
+[45550/500000] Loss_D: 0.128100 Loss_G: 0.051318 measure: 0.1439, k_t: 0.0401
+[45600/500000] Loss_D: 0.112934 Loss_G: 0.057218 measure: 0.1156, k_t: 0.0402
+[45650/500000] Loss_D: 0.122455 Loss_G: 0.059109 measure: 0.1281, k_t: 0.0401
+[45700/500000] Loss_D: 0.127360 Loss_G: 0.045622 measure: 0.1482, k_t: 0.0401
+[45750/500000] Loss_D: 0.118351 Loss_G: 0.053982 measure: 0.1268, k_t: 0.0402
+[45800/500000] Loss_D: 0.116977 Loss_G: 0.053585 measure: 0.1251, k_t: 0.0403
+[45850/500000] Loss_D: 0.112288 Loss_G: 0.050995 measure: 0.1205, k_t: 0.0403
+[45900/500000] Loss_D: 0.119903 Loss_G: 0.063514 measure: 0.1247, k_t: 0.0402
+[45950/500000] Loss_D: 0.109495 Loss_G: 0.050121 measure: 0.1171, k_t: 0.0403
+[46000/500000] Loss_D: 0.112278 Loss_G: 0.057511 measure: 0.1148, k_t: 0.0403
+[*] Samples saved: logs/CelebA_0409_000055/46000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/46000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/46000_D_fake.png
+[46050/500000] Loss_D: 0.108833 Loss_G: 0.055473 measure: 0.1111, k_t: 0.0403
+[46100/500000] Loss_D: 0.117513 Loss_G: 0.054255 measure: 0.1253, k_t: 0.0403
+[46150/500000] Loss_D: 0.118465 Loss_G: 0.060940 measure: 0.1214, k_t: 0.0400
+[46200/500000] Loss_D: 0.108342 Loss_G: 0.050699 measure: 0.1149, k_t: 0.0400
+[46250/500000] Loss_D: 0.094693 Loss_G: 0.053640 measure: 0.1021, k_t: 0.0398
+[46300/500000] Loss_D: 0.104174 Loss_G: 0.050648 measure: 0.1086, k_t: 0.0400
+[46350/500000] Loss_D: 0.110808 Loss_G: 0.057707 measure: 0.1143, k_t: 0.0400
+[46400/500000] Loss_D: 0.119453 Loss_G: 0.051900 measure: 0.1304, k_t: 0.0399
+[46450/500000] Loss_D: 0.117671 Loss_G: 0.054330 measure: 0.1254, k_t: 0.0398
+[46500/500000] Loss_D: 0.112524 Loss_G: 0.051569 measure: 0.1203, k_t: 0.0398
+[*] Samples saved: logs/CelebA_0409_000055/46500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/46500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/46500_D_fake.png
+[46550/500000] Loss_D: 0.113302 Loss_G: 0.054175 measure: 0.1190, k_t: 0.0398
+[46600/500000] Loss_D: 0.113652 Loss_G: 0.054435 measure: 0.1193, k_t: 0.0397
+[46650/500000] Loss_D: 0.105007 Loss_G: 0.058924 measure: 0.1126, k_t: 0.0397
+[46700/500000] Loss_D: 0.101527 Loss_G: 0.056158 measure: 0.1080, k_t: 0.0396
+[46750/500000] Loss_D: 0.111820 Loss_G: 0.064794 measure: 0.1220, k_t: 0.0395
+[46800/500000] Loss_D: 0.106567 Loss_G: 0.065786 measure: 0.1204, k_t: 0.0396
+[46850/500000] Loss_D: 0.113700 Loss_G: 0.058695 measure: 0.1167, k_t: 0.0396
+[46900/500000] Loss_D: 0.104936 Loss_G: 0.052920 measure: 0.1076, k_t: 0.0397
+[46950/500000] Loss_D: 0.114376 Loss_G: 0.053937 measure: 0.1208, k_t: 0.0398
+[47000/500000] Loss_D: 0.119238 Loss_G: 0.054934 measure: 0.1272, k_t: 0.0398
+[*] Samples saved: logs/CelebA_0409_000055/47000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/47000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/47000_D_fake.png
+[47050/500000] Loss_D: 0.114673 Loss_G: 0.056029 measure: 0.1193, k_t: 0.0398
+[47100/500000] Loss_D: 0.103183 Loss_G: 0.051811 measure: 0.1061, k_t: 0.0399
+[47150/500000] Loss_D: 0.106389 Loss_G: 0.059061 measure: 0.1134, k_t: 0.0399
+[47200/500000] Loss_D: 0.117155 Loss_G: 0.069283 measure: 0.1292, k_t: 0.0399
+[47250/500000] Loss_D: 0.106074 Loss_G: 0.065132 measure: 0.1195, k_t: 0.0398
+[47300/500000] Loss_D: 0.119074 Loss_G: 0.057138 measure: 0.1249, k_t: 0.0397
+[47350/500000] Loss_D: 0.133612 Loss_G: 0.073128 measure: 0.1414, k_t: 0.0397
+[47400/500000] Loss_D: 0.103442 Loss_G: 0.059557 measure: 0.1125, k_t: 0.0396
+[47450/500000] Loss_D: 0.103524 Loss_G: 0.054494 measure: 0.1073, k_t: 0.0397
+[47500/500000] Loss_D: 0.115081 Loss_G: 0.056844 measure: 0.1192, k_t: 0.0398
+[*] Samples saved: logs/CelebA_0409_000055/47500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/47500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/47500_D_fake.png
+[47550/500000] Loss_D: 0.130391 Loss_G: 0.056818 measure: 0.1422, k_t: 0.0398
+[47600/500000] Loss_D: 0.108637 Loss_G: 0.057049 measure: 0.1125, k_t: 0.0398
+[47650/500000] Loss_D: 0.100816 Loss_G: 0.061679 measure: 0.1133, k_t: 0.0398
+[47700/500000] Loss_D: 0.113234 Loss_G: 0.060508 measure: 0.1183, k_t: 0.0398
+[47750/500000] Loss_D: 0.117776 Loss_G: 0.053018 measure: 0.1268, k_t: 0.0398
+[47800/500000] Loss_D: 0.114589 Loss_G: 0.049071 measure: 0.1257, k_t: 0.0399
+[47850/500000] Loss_D: 0.103804 Loss_G: 0.049296 measure: 0.1094, k_t: 0.0399
+[47900/500000] Loss_D: 0.106283 Loss_G: 0.050515 measure: 0.1119, k_t: 0.0398
+[47950/500000] Loss_D: 0.102666 Loss_G: 0.047570 measure: 0.1093, k_t: 0.0396
+[48000/500000] Loss_D: 0.103996 Loss_G: 0.051692 measure: 0.1074, k_t: 0.0395
+[*] Samples saved: logs/CelebA_0409_000055/48000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/48000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/48000_D_fake.png
+[48050/500000] Loss_D: 0.104502 Loss_G: 0.048988 measure: 0.1107, k_t: 0.0394
+[48100/500000] Loss_D: 0.120984 Loss_G: 0.055517 measure: 0.1292, k_t: 0.0395
+[48150/500000] Loss_D: 0.114560 Loss_G: 0.048963 measure: 0.1258, k_t: 0.0394
+[48200/500000] Loss_D: 0.109175 Loss_G: 0.058886 measure: 0.1146, k_t: 0.0394
+[48250/500000] Loss_D: 0.114989 Loss_G: 0.060473 measure: 0.1192, k_t: 0.0393
+[48300/500000] Loss_D: 0.114353 Loss_G: 0.050277 measure: 0.1242, k_t: 0.0393
+[48350/500000] Loss_D: 0.109870 Loss_G: 0.057373 measure: 0.1134, k_t: 0.0389
+[48400/500000] Loss_D: 0.115227 Loss_G: 0.055528 measure: 0.1206, k_t: 0.0390
+[48450/500000] Loss_D: 0.104808 Loss_G: 0.067593 measure: 0.1213, k_t: 0.0390
+[48500/500000] Loss_D: 0.113589 Loss_G: 0.058245 measure: 0.1162, k_t: 0.0390
+[*] Samples saved: logs/CelebA_0409_000055/48500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/48500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/48500_D_fake.png
+[48550/500000] Loss_D: 0.109548 Loss_G: 0.053377 measure: 0.1141, k_t: 0.0391
+[48600/500000] Loss_D: 0.108718 Loss_G: 0.053791 measure: 0.1124, k_t: 0.0392
+[48650/500000] Loss_D: 0.108695 Loss_G: 0.057377 measure: 0.1128, k_t: 0.0392
+[48700/500000] Loss_D: 0.117968 Loss_G: 0.064829 measure: 0.1251, k_t: 0.0392
+[48750/500000] Loss_D: 0.109718 Loss_G: 0.055310 measure: 0.1125, k_t: 0.0392
+[48800/500000] Loss_D: 0.108367 Loss_G: 0.049664 measure: 0.1158, k_t: 0.0393
+[48850/500000] Loss_D: 0.110396 Loss_G: 0.053222 measure: 0.1155, k_t: 0.0392
+[48900/500000] Loss_D: 0.113703 Loss_G: 0.064907 measure: 0.1230, k_t: 0.0392
+[48950/500000] Loss_D: 0.106272 Loss_G: 0.064087 measure: 0.1185, k_t: 0.0391
+[49000/500000] Loss_D: 0.107371 Loss_G: 0.062193 measure: 0.1171, k_t: 0.0390
+[*] Samples saved: logs/CelebA_0409_000055/49000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/49000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/49000_D_fake.png
+[49050/500000] Loss_D: 0.107976 Loss_G: 0.050469 measure: 0.1144, k_t: 0.0390
+[49100/500000] Loss_D: 0.109436 Loss_G: 0.053056 measure: 0.1142, k_t: 0.0390
+[49150/500000] Loss_D: 0.111420 Loss_G: 0.054182 measure: 0.1161, k_t: 0.0392
+[49200/500000] Loss_D: 0.112312 Loss_G: 0.059079 measure: 0.1164, k_t: 0.0391
+[49250/500000] Loss_D: 0.119169 Loss_G: 0.060921 measure: 0.1217, k_t: 0.0391
+[49300/500000] Loss_D: 0.101635 Loss_G: 0.054825 measure: 0.1067, k_t: 0.0391
+[49350/500000] Loss_D: 0.108473 Loss_G: 0.068602 measure: 0.1242, k_t: 0.0390
+[49400/500000] Loss_D: 0.118844 Loss_G: 0.101882 measure: 0.1633, k_t: 0.0385
+[49450/500000] Loss_D: 0.112757 Loss_G: 0.057165 measure: 0.1153, k_t: 0.0383
+[49500/500000] Loss_D: 0.100315 Loss_G: 0.054433 measure: 0.1056, k_t: 0.0381
+[*] Samples saved: logs/CelebA_0409_000055/49500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/49500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/49500_D_fake.png
+[49550/500000] Loss_D: 0.111258 Loss_G: 0.060809 measure: 0.1176, k_t: 0.0379
+[49600/500000] Loss_D: 0.119778 Loss_G: 0.059598 measure: 0.1235, k_t: 0.0378
+[49650/500000] Loss_D: 0.112129 Loss_G: 0.052847 measure: 0.1184, k_t: 0.0379
+[49700/500000] Loss_D: 0.104519 Loss_G: 0.051187 measure: 0.1085, k_t: 0.0379
+[49750/500000] Loss_D: 0.114322 Loss_G: 0.055048 measure: 0.1196, k_t: 0.0380
+[49800/500000] Loss_D: 0.121976 Loss_G: 0.059050 measure: 0.1273, k_t: 0.0381
+[49850/500000] Loss_D: 0.113871 Loss_G: 0.053548 measure: 0.1203, k_t: 0.0380
+[49900/500000] Loss_D: 0.105686 Loss_G: 0.051985 measure: 0.1095, k_t: 0.0379
+[49950/500000] Loss_D: 0.104158 Loss_G: 0.060442 measure: 0.1137, k_t: 0.0378
+[50000/500000] Loss_D: 0.115501 Loss_G: 0.057461 measure: 0.1191, k_t: 0.0379
+[*] Samples saved: logs/CelebA_0409_000055/50000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/50000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/50000_D_fake.png
+[50050/500000] Loss_D: 0.117627 Loss_G: 0.061269 measure: 0.1212, k_t: 0.0380
+[50100/500000] Loss_D: 0.101150 Loss_G: 0.050857 measure: 0.1037, k_t: 0.0377
+[50150/500000] Loss_D: 0.112118 Loss_G: 0.058491 measure: 0.1157, k_t: 0.0377
+[50200/500000] Loss_D: 0.112279 Loss_G: 0.050993 measure: 0.1203, k_t: 0.0376
+[50250/500000] Loss_D: 0.112238 Loss_G: 0.056794 measure: 0.1148, k_t: 0.0376
+[50300/500000] Loss_D: 0.118059 Loss_G: 0.048711 measure: 0.1311, k_t: 0.0376
+[50350/500000] Loss_D: 0.114670 Loss_G: 0.048913 measure: 0.1258, k_t: 0.0374
+[50400/500000] Loss_D: 0.106001 Loss_G: 0.055119 measure: 0.1091, k_t: 0.0370
+[50450/500000] Loss_D: 0.115640 Loss_G: 0.061777 measure: 0.1207, k_t: 0.0371
+[50500/500000] Loss_D: 0.117631 Loss_G: 0.054873 measure: 0.1246, k_t: 0.0370
+[*] Samples saved: logs/CelebA_0409_000055/50500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/50500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/50500_D_fake.png
+[50550/500000] Loss_D: 0.114318 Loss_G: 0.063228 measure: 0.1216, k_t: 0.0370
+[50600/500000] Loss_D: 0.102885 Loss_G: 0.067437 measure: 0.1201, k_t: 0.0369
+[50650/500000] Loss_D: 0.127581 Loss_G: 0.054795 measure: 0.1396, k_t: 0.0370
+[50700/500000] Loss_D: 0.110775 Loss_G: 0.049977 measure: 0.1190, k_t: 0.0370
+[50750/500000] Loss_D: 0.116814 Loss_G: 0.059602 measure: 0.1191, k_t: 0.0371
+[50800/500000] Loss_D: 0.112293 Loss_G: 0.054657 measure: 0.1168, k_t: 0.0371
+[50850/500000] Loss_D: 0.114235 Loss_G: 0.052338 measure: 0.1219, k_t: 0.0370
+[50900/500000] Loss_D: 0.113385 Loss_G: 0.052138 measure: 0.1208, k_t: 0.0371
+[50950/500000] Loss_D: 0.112346 Loss_G: 0.047961 measure: 0.1232, k_t: 0.0373
+[51000/500000] Loss_D: 0.114165 Loss_G: 0.051491 measure: 0.1226, k_t: 0.0373
+[*] Samples saved: logs/CelebA_0409_000055/51000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/51000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/51000_D_fake.png
+[51050/500000] Loss_D: 0.109940 Loss_G: 0.054625 measure: 0.1133, k_t: 0.0373
+[51100/500000] Loss_D: 0.117883 Loss_G: 0.057833 measure: 0.1222, k_t: 0.0372
+[51150/500000] Loss_D: 0.110847 Loss_G: 0.051901 measure: 0.1173, k_t: 0.0373
+[51200/500000] Loss_D: 0.112568 Loss_G: 0.054337 measure: 0.1176, k_t: 0.0373
+[51250/500000] Loss_D: 0.108194 Loss_G: 0.055494 measure: 0.1106, k_t: 0.0373
+[51300/500000] Loss_D: 0.120086 Loss_G: 0.051098 measure: 0.1319, k_t: 0.0372
+[51350/500000] Loss_D: 0.108838 Loss_G: 0.054859 measure: 0.1115, k_t: 0.0374
+[51400/500000] Loss_D: 0.117009 Loss_G: 0.054615 measure: 0.1240, k_t: 0.0375
+[51450/500000] Loss_D: 0.104830 Loss_G: 0.059122 measure: 0.1126, k_t: 0.0376
+[51500/500000] Loss_D: 0.100030 Loss_G: 0.058153 measure: 0.1093, k_t: 0.0376
+[*] Samples saved: logs/CelebA_0409_000055/51500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/51500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/51500_D_fake.png
+[51550/500000] Loss_D: 0.108357 Loss_G: 0.053560 measure: 0.1120, k_t: 0.0377
+[51600/500000] Loss_D: 0.113770 Loss_G: 0.059128 measure: 0.1171, k_t: 0.0378
+[51650/500000] Loss_D: 0.109550 Loss_G: 0.056971 measure: 0.1128, k_t: 0.0378
+[51700/500000] Loss_D: 0.113814 Loss_G: 0.055607 measure: 0.1183, k_t: 0.0378
+[51750/500000] Loss_D: 0.107262 Loss_G: 0.054722 measure: 0.1094, k_t: 0.0378
+[51800/500000] Loss_D: 0.106204 Loss_G: 0.055002 measure: 0.1091, k_t: 0.0378
+[51850/500000] Loss_D: 0.109729 Loss_G: 0.060297 measure: 0.1163, k_t: 0.0379
+[51900/500000] Loss_D: 0.102296 Loss_G: 0.054376 measure: 0.1066, k_t: 0.0379
+[51950/500000] Loss_D: 0.112907 Loss_G: 0.051169 measure: 0.1211, k_t: 0.0380
+[52000/500000] Loss_D: 0.112686 Loss_G: 0.051663 measure: 0.1203, k_t: 0.0380
+[*] Samples saved: logs/CelebA_0409_000055/52000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/52000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/52000_D_fake.png
+[52050/500000] Loss_D: 0.110095 Loss_G: 0.055249 measure: 0.1130, k_t: 0.0379
+[52100/500000] Loss_D: 0.105890 Loss_G: 0.053813 measure: 0.1081, k_t: 0.0380
+[52150/500000] Loss_D: 0.118915 Loss_G: 0.055609 measure: 0.1259, k_t: 0.0380
+[52200/500000] Loss_D: 0.109687 Loss_G: 0.060501 measure: 0.1165, k_t: 0.0377
+[52250/500000] Loss_D: 0.110821 Loss_G: 0.056559 measure: 0.1130, k_t: 0.0378
+[52300/500000] Loss_D: 0.098796 Loss_G: 0.056411 measure: 0.1069, k_t: 0.0378
+[52350/500000] Loss_D: 0.111114 Loss_G: 0.065748 measure: 0.1226, k_t: 0.0379
+[52400/500000] Loss_D: 0.096477 Loss_G: 0.066766 measure: 0.1163, k_t: 0.0379
+[52450/500000] Loss_D: 0.112940 Loss_G: 0.062994 measure: 0.1207, k_t: 0.0379
+[52500/500000] Loss_D: 0.099085 Loss_G: 0.051451 measure: 0.1020, k_t: 0.0379
+[*] Samples saved: logs/CelebA_0409_000055/52500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/52500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/52500_D_fake.png
+[52550/500000] Loss_D: 0.122529 Loss_G: 0.048319 measure: 0.1382, k_t: 0.0378
+[52600/500000] Loss_D: 0.105914 Loss_G: 0.052472 measure: 0.1094, k_t: 0.0379
+[52650/500000] Loss_D: 0.117399 Loss_G: 0.048580 measure: 0.1303, k_t: 0.0378
+[52700/500000] Loss_D: 0.115575 Loss_G: 0.049506 measure: 0.1267, k_t: 0.0377
+[52750/500000] Loss_D: 0.105758 Loss_G: 0.052730 measure: 0.1089, k_t: 0.0376
+[52800/500000] Loss_D: 0.093843 Loss_G: 0.055528 measure: 0.1035, k_t: 0.0376
+[52850/500000] Loss_D: 0.111509 Loss_G: 0.057028 measure: 0.1139, k_t: 0.0377
+[52900/500000] Loss_D: 0.113910 Loss_G: 0.065500 measure: 0.1237, k_t: 0.0377
+[52950/500000] Loss_D: 0.116888 Loss_G: 0.054373 measure: 0.1240, k_t: 0.0377
+[53000/500000] Loss_D: 0.106145 Loss_G: 0.050429 measure: 0.1116, k_t: 0.0376
+[*] Samples saved: logs/CelebA_0409_000055/53000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/53000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/53000_D_fake.png
+[53050/500000] Loss_D: 0.103027 Loss_G: 0.073865 measure: 0.1268, k_t: 0.0377
+[53100/500000] Loss_D: 0.101810 Loss_G: 0.067821 measure: 0.1200, k_t: 0.0375
+[53150/500000] Loss_D: 0.104305 Loss_G: 0.054357 measure: 0.1075, k_t: 0.0374
+[53200/500000] Loss_D: 0.105452 Loss_G: 0.053611 measure: 0.1076, k_t: 0.0375
+[53250/500000] Loss_D: 0.104103 Loss_G: 0.047757 measure: 0.1111, k_t: 0.0376
+[53300/500000] Loss_D: 0.116699 Loss_G: 0.054845 measure: 0.1233, k_t: 0.0375
+[53350/500000] Loss_D: 0.113041 Loss_G: 0.050830 measure: 0.1216, k_t: 0.0375
+[53400/500000] Loss_D: 0.113962 Loss_G: 0.047580 measure: 0.1260, k_t: 0.0376
+[53450/500000] Loss_D: 0.110865 Loss_G: 0.054616 measure: 0.1148, k_t: 0.0377
+[53500/500000] Loss_D: 0.106500 Loss_G: 0.057995 measure: 0.1123, k_t: 0.0378
+[*] Samples saved: logs/CelebA_0409_000055/53500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/53500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/53500_D_fake.png
+[53550/500000] Loss_D: 0.106982 Loss_G: 0.066394 measure: 0.1211, k_t: 0.0378
+[53600/500000] Loss_D: 0.112326 Loss_G: 0.058449 measure: 0.1157, k_t: 0.0378
+[53650/500000] Loss_D: 0.099434 Loss_G: 0.055260 measure: 0.1060, k_t: 0.0379
+[53700/500000] Loss_D: 0.120764 Loss_G: 0.048423 measure: 0.1355, k_t: 0.0379
+[53750/500000] Loss_D: 0.109519 Loss_G: 0.050796 measure: 0.1164, k_t: 0.0379
+[53800/500000] Loss_D: 0.124160 Loss_G: 0.050931 measure: 0.1382, k_t: 0.0379
+[53850/500000] Loss_D: 0.102143 Loss_G: 0.059476 measure: 0.1117, k_t: 0.0379
+[53900/500000] Loss_D: 0.105960 Loss_G: 0.054895 measure: 0.1089, k_t: 0.0379
+[53950/500000] Loss_D: 0.112421 Loss_G: 0.051789 measure: 0.1198, k_t: 0.0380
+[54000/500000] Loss_D: 0.107636 Loss_G: 0.056707 measure: 0.1116, k_t: 0.0381
+[*] Samples saved: logs/CelebA_0409_000055/54000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/54000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/54000_D_fake.png
+[54050/500000] Loss_D: 0.097909 Loss_G: 0.057716 measure: 0.1078, k_t: 0.0382
+[54100/500000] Loss_D: 0.111264 Loss_G: 0.070089 measure: 0.1271, k_t: 0.0382
+[54150/500000] Loss_D: 0.126375 Loss_G: 0.058721 measure: 0.1342, k_t: 0.0380
+[54200/500000] Loss_D: 0.102018 Loss_G: 0.053134 measure: 0.1052, k_t: 0.0381
+[54250/500000] Loss_D: 0.107019 Loss_G: 0.090589 measure: 0.1458, k_t: 0.0378
+[54300/500000] Loss_D: 0.101273 Loss_G: 0.062956 measure: 0.1148, k_t: 0.0372
+[54350/500000] Loss_D: 0.121968 Loss_G: 0.073196 measure: 0.1355, k_t: 0.0372
+[54400/500000] Loss_D: 0.104953 Loss_G: 0.059697 measure: 0.1133, k_t: 0.0370
+[54450/500000] Loss_D: 0.101845 Loss_G: 0.059937 measure: 0.1120, k_t: 0.0370
+[54500/500000] Loss_D: 0.115528 Loss_G: 0.054069 measure: 0.1222, k_t: 0.0372
+[*] Samples saved: logs/CelebA_0409_000055/54500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/54500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/54500_D_fake.png
+[54550/500000] Loss_D: 0.124642 Loss_G: 0.053035 measure: 0.1369, k_t: 0.0373
+[54600/500000] Loss_D: 0.103279 Loss_G: 0.059327 measure: 0.1121, k_t: 0.0372
+[54650/500000] Loss_D: 0.107581 Loss_G: 0.053533 measure: 0.1108, k_t: 0.0373
+[54700/500000] Loss_D: 0.102174 Loss_G: 0.051868 measure: 0.1043, k_t: 0.0373
+[54750/500000] Loss_D: 0.100510 Loss_G: 0.057928 measure: 0.1093, k_t: 0.0374
+[54800/500000] Loss_D: 0.106079 Loss_G: 0.068290 measure: 0.1226, k_t: 0.0372
+[54850/500000] Loss_D: 0.107010 Loss_G: 0.062796 measure: 0.1175, k_t: 0.0373
+[54900/500000] Loss_D: 0.114766 Loss_G: 0.072517 measure: 0.1313, k_t: 0.0373
+[54950/500000] Loss_D: 0.108108 Loss_G: 0.061439 measure: 0.1166, k_t: 0.0373
+[55000/500000] Loss_D: 0.105580 Loss_G: 0.051432 measure: 0.1098, k_t: 0.0374
+[*] Samples saved: logs/CelebA_0409_000055/55000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/55000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/55000_D_fake.png
+[55050/500000] Loss_D: 0.107786 Loss_G: 0.054065 measure: 0.1106, k_t: 0.0373
+[55100/500000] Loss_D: 0.104573 Loss_G: 0.056172 measure: 0.1095, k_t: 0.0372
+[55150/500000] Loss_D: 0.115840 Loss_G: 0.064355 measure: 0.1235, k_t: 0.0370
+[55200/500000] Loss_D: 0.109948 Loss_G: 0.066824 measure: 0.1230, k_t: 0.0371
+[55250/500000] Loss_D: 0.115560 Loss_G: 0.059848 measure: 0.1187, k_t: 0.0370
+[55300/500000] Loss_D: 0.119024 Loss_G: 0.068797 measure: 0.1296, k_t: 0.0369
+[55350/500000] Loss_D: 0.098430 Loss_G: 0.064249 measure: 0.1146, k_t: 0.0369
+[55400/500000] Loss_D: 0.104431 Loss_G: 0.053263 measure: 0.1065, k_t: 0.0370
+[55450/500000] Loss_D: 0.113948 Loss_G: 0.052450 measure: 0.1214, k_t: 0.0370
+[55500/500000] Loss_D: 0.114674 Loss_G: 0.060705 measure: 0.1192, k_t: 0.0371
+[*] Samples saved: logs/CelebA_0409_000055/55500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/55500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/55500_D_fake.png
+[55550/500000] Loss_D: 0.109841 Loss_G: 0.053577 measure: 0.1142, k_t: 0.0370
+[55600/500000] Loss_D: 0.104139 Loss_G: 0.070551 measure: 0.1239, k_t: 0.0370
+[55650/500000] Loss_D: 0.115038 Loss_G: 0.052229 measure: 0.1232, k_t: 0.0369
+[55700/500000] Loss_D: 0.110707 Loss_G: 0.064030 measure: 0.1206, k_t: 0.0370
+[55750/500000] Loss_D: 0.110603 Loss_G: 0.056113 measure: 0.1129, k_t: 0.0370
+[55800/500000] Loss_D: 0.120413 Loss_G: 0.058383 measure: 0.1255, k_t: 0.0371
+[55850/500000] Loss_D: 0.104787 Loss_G: 0.061304 measure: 0.1148, k_t: 0.0371
+[55900/500000] Loss_D: 0.109311 Loss_G: 0.050376 measure: 0.1164, k_t: 0.0371
+[55950/500000] Loss_D: 0.098317 Loss_G: 0.057380 measure: 0.1076, k_t: 0.0371
+[56000/500000] Loss_D: 0.097050 Loss_G: 0.043510 measure: 0.1045, k_t: 0.0371
+[*] Samples saved: logs/CelebA_0409_000055/56000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/56000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/56000_D_fake.png
+[56050/500000] Loss_D: 0.109853 Loss_G: 0.044962 measure: 0.1223, k_t: 0.0366
+[56100/500000] Loss_D: 0.112905 Loss_G: 0.065361 measure: 0.1230, k_t: 0.0360
+[56150/500000] Loss_D: 0.107910 Loss_G: 0.058233 measure: 0.1132, k_t: 0.0359
+[56200/500000] Loss_D: 0.110401 Loss_G: 0.046557 measure: 0.1215, k_t: 0.0356
+[56250/500000] Loss_D: 0.105956 Loss_G: 0.055608 measure: 0.1096, k_t: 0.0356
+[56300/500000] Loss_D: 0.132504 Loss_G: 0.051787 measure: 0.1497, k_t: 0.0356
+[56350/500000] Loss_D: 0.110432 Loss_G: 0.050001 measure: 0.1183, k_t: 0.0357
+[56400/500000] Loss_D: 0.126591 Loss_G: 0.050190 measure: 0.1424, k_t: 0.0359
+[56450/500000] Loss_D: 0.103174 Loss_G: 0.051840 measure: 0.1057, k_t: 0.0360
+[56500/500000] Loss_D: 0.119210 Loss_G: 0.054453 measure: 0.1273, k_t: 0.0361
+[*] Samples saved: logs/CelebA_0409_000055/56500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/56500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/56500_D_fake.png
+[56550/500000] Loss_D: 0.102401 Loss_G: 0.060799 measure: 0.1131, k_t: 0.0362
+[56600/500000] Loss_D: 0.103632 Loss_G: 0.060265 measure: 0.1132, k_t: 0.0362
+[56650/500000] Loss_D: 0.116596 Loss_G: 0.062118 measure: 0.1215, k_t: 0.0363
+[56700/500000] Loss_D: 0.112842 Loss_G: 0.055693 measure: 0.1166, k_t: 0.0364
+[56750/500000] Loss_D: 0.102955 Loss_G: 0.052958 measure: 0.1054, k_t: 0.0363
+[56800/500000] Loss_D: 0.115238 Loss_G: 0.056431 measure: 0.1195, k_t: 0.0363
+[56850/500000] Loss_D: 0.112585 Loss_G: 0.055501 measure: 0.1164, k_t: 0.0363
+[56900/500000] Loss_D: 0.109003 Loss_G: 0.056140 measure: 0.1117, k_t: 0.0362
+[56950/500000] Loss_D: 0.107096 Loss_G: 0.055213 measure: 0.1098, k_t: 0.0362
+[57000/500000] Loss_D: 0.104139 Loss_G: 0.066641 measure: 0.1199, k_t: 0.0361
+[*] Samples saved: logs/CelebA_0409_000055/57000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/57000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/57000_D_fake.png
+[57050/500000] Loss_D: 0.113167 Loss_G: 0.050551 measure: 0.1219, k_t: 0.0361
+[57100/500000] Loss_D: 0.115352 Loss_G: 0.059426 measure: 0.1182, k_t: 0.0361
+[57150/500000] Loss_D: 0.117820 Loss_G: 0.068553 measure: 0.1287, k_t: 0.0361
+[57200/500000] Loss_D: 0.119915 Loss_G: 0.046432 measure: 0.1359, k_t: 0.0360
+[57250/500000] Loss_D: 0.107790 Loss_G: 0.048945 measure: 0.1154, k_t: 0.0358
+[57300/500000] Loss_D: 0.109126 Loss_G: 0.050830 measure: 0.1156, k_t: 0.0358
+[57350/500000] Loss_D: 0.109887 Loss_G: 0.052114 measure: 0.1155, k_t: 0.0357
+[57400/500000] Loss_D: 0.114302 Loss_G: 0.051755 measure: 0.1225, k_t: 0.0358
+[57450/500000] Loss_D: 0.114394 Loss_G: 0.048497 measure: 0.1257, k_t: 0.0359
+[57500/500000] Loss_D: 0.102546 Loss_G: 0.052441 measure: 0.1047, k_t: 0.0360
+[*] Samples saved: logs/CelebA_0409_000055/57500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/57500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/57500_D_fake.png
+[57550/500000] Loss_D: 0.101651 Loss_G: 0.044824 measure: 0.1101, k_t: 0.0360
+[57600/500000] Loss_D: 0.110233 Loss_G: 0.047552 measure: 0.1204, k_t: 0.0361
+[57650/500000] Loss_D: 0.112259 Loss_G: 0.063292 measure: 0.1206, k_t: 0.0363
+[57700/500000] Loss_D: 0.111337 Loss_G: 0.064448 measure: 0.1213, k_t: 0.0363
+[57750/500000] Loss_D: 0.124018 Loss_G: 0.058217 measure: 0.1310, k_t: 0.0363
+[57800/500000] Loss_D: 0.113322 Loss_G: 0.063398 measure: 0.1212, k_t: 0.0363
+[57850/500000] Loss_D: 0.113811 Loss_G: 0.055971 measure: 0.1178, k_t: 0.0362
+[57900/500000] Loss_D: 0.115494 Loss_G: 0.057794 measure: 0.1186, k_t: 0.0363
+[57950/500000] Loss_D: 0.110124 Loss_G: 0.053777 measure: 0.1143, k_t: 0.0363
+[58000/500000] Loss_D: 0.106032 Loss_G: 0.056626 measure: 0.1107, k_t: 0.0365
+[*] Samples saved: logs/CelebA_0409_000055/58000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/58000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/58000_D_fake.png
+[58050/500000] Loss_D: 0.114705 Loss_G: 0.070439 measure: 0.1291, k_t: 0.0365
+[58100/500000] Loss_D: 0.102341 Loss_G: 0.057449 measure: 0.1097, k_t: 0.0365
+[58150/500000] Loss_D: 0.111403 Loss_G: 0.056294 measure: 0.1139, k_t: 0.0363
+[58200/500000] Loss_D: 0.105926 Loss_G: 0.061069 measure: 0.1151, k_t: 0.0362
+[58250/500000] Loss_D: 0.108165 Loss_G: 0.050407 measure: 0.1146, k_t: 0.0362
+[58300/500000] Loss_D: 0.110017 Loss_G: 0.058866 measure: 0.1149, k_t: 0.0364
+[58350/500000] Loss_D: 0.112254 Loss_G: 0.058317 measure: 0.1155, k_t: 0.0364
+[58400/500000] Loss_D: 0.115817 Loss_G: 0.058304 measure: 0.1186, k_t: 0.0364
+[58450/500000] Loss_D: 0.115251 Loss_G: 0.061301 measure: 0.1200, k_t: 0.0363
+[58500/500000] Loss_D: 0.109194 Loss_G: 0.052092 measure: 0.1145, k_t: 0.0362
+[*] Samples saved: logs/CelebA_0409_000055/58500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/58500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/58500_D_fake.png
+[58550/500000] Loss_D: 0.114712 Loss_G: 0.055613 measure: 0.1195, k_t: 0.0362
+[58600/500000] Loss_D: 0.108282 Loss_G: 0.062326 measure: 0.1176, k_t: 0.0363
+[58650/500000] Loss_D: 0.120759 Loss_G: 0.051555 measure: 0.1324, k_t: 0.0362
+[58700/500000] Loss_D: 0.123962 Loss_G: 0.043872 measure: 0.1444, k_t: 0.0361
+[58750/500000] Loss_D: 0.105392 Loss_G: 0.050532 measure: 0.1103, k_t: 0.0361
+[58800/500000] Loss_D: 0.110761 Loss_G: 0.065369 measure: 0.1219, k_t: 0.0361
+[58850/500000] Loss_D: 0.107177 Loss_G: 0.057443 measure: 0.1121, k_t: 0.0362
+[58900/500000] Loss_D: 0.095351 Loss_G: 0.059569 measure: 0.1083, k_t: 0.0362
+[58950/500000] Loss_D: 0.102431 Loss_G: 0.047560 measure: 0.1087, k_t: 0.0362
+[59000/500000] Loss_D: 0.105994 Loss_G: 0.053981 measure: 0.1080, k_t: 0.0363
+[*] Samples saved: logs/CelebA_0409_000055/59000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/59000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/59000_D_fake.png
+[59050/500000] Loss_D: 0.113810 Loss_G: 0.061557 measure: 0.1196, k_t: 0.0365
+[59100/500000] Loss_D: 0.112871 Loss_G: 0.048105 measure: 0.1238, k_t: 0.0365
+[59150/500000] Loss_D: 0.119684 Loss_G: 0.048672 measure: 0.1335, k_t: 0.0362
+[59200/500000] Loss_D: 0.108510 Loss_G: 0.055596 measure: 0.1109, k_t: 0.0360
+[59250/500000] Loss_D: 0.114336 Loss_G: 0.056632 measure: 0.1179, k_t: 0.0361
+[59300/500000] Loss_D: 0.110540 Loss_G: 0.062009 measure: 0.1184, k_t: 0.0362
+[59350/500000] Loss_D: 0.099289 Loss_G: 0.039186 measure: 0.1119, k_t: 0.0364
+[59400/500000] Loss_D: 0.104345 Loss_G: 0.065923 measure: 0.1193, k_t: 0.0359
+[59450/500000] Loss_D: 0.094420 Loss_G: 0.052499 measure: 0.1006, k_t: 0.0357
+[59500/500000] Loss_D: 0.105586 Loss_G: 0.054218 measure: 0.1080, k_t: 0.0358
+[*] Samples saved: logs/CelebA_0409_000055/59500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/59500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/59500_D_fake.png
+[59550/500000] Loss_D: 0.096088 Loss_G: 0.051200 measure: 0.1002, k_t: 0.0358
+[59600/500000] Loss_D: 0.113204 Loss_G: 0.054430 measure: 0.1183, k_t: 0.0359
+[59650/500000] Loss_D: 0.114216 Loss_G: 0.056736 measure: 0.1176, k_t: 0.0360
+[59700/500000] Loss_D: 0.103168 Loss_G: 0.052249 measure: 0.1053, k_t: 0.0359
+[59750/500000] Loss_D: 0.112096 Loss_G: 0.049838 measure: 0.1210, k_t: 0.0359
+[59800/500000] Loss_D: 0.123245 Loss_G: 0.047410 measure: 0.1400, k_t: 0.0359
+[59850/500000] Loss_D: 0.112903 Loss_G: 0.046835 measure: 0.1251, k_t: 0.0360
+[59900/500000] Loss_D: 0.100826 Loss_G: 0.054603 measure: 0.1060, k_t: 0.0360
+[59950/500000] Loss_D: 0.094197 Loss_G: 0.065056 measure: 0.1133, k_t: 0.0359
+[60000/500000] Loss_D: 0.104619 Loss_G: 0.063047 measure: 0.1165, k_t: 0.0358
+[*] Samples saved: logs/CelebA_0409_000055/60000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/60000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/60000_D_fake.png
+[60050/500000] Loss_D: 0.109542 Loss_G: 0.062320 measure: 0.1182, k_t: 0.0357
+[60100/500000] Loss_D: 0.110865 Loss_G: 0.049669 measure: 0.1193, k_t: 0.0358
+[60150/500000] Loss_D: 0.109938 Loss_G: 0.052732 measure: 0.1150, k_t: 0.0358
+[60200/500000] Loss_D: 0.105815 Loss_G: 0.049937 measure: 0.1115, k_t: 0.0358
+[60250/500000] Loss_D: 0.103071 Loss_G: 0.054188 measure: 0.1067, k_t: 0.0359
+[60300/500000] Loss_D: 0.115251 Loss_G: 0.052466 measure: 0.1232, k_t: 0.0359
+[60350/500000] Loss_D: 0.120346 Loss_G: 0.054111 measure: 0.1293, k_t: 0.0359
+[60400/500000] Loss_D: 0.109086 Loss_G: 0.046241 measure: 0.1199, k_t: 0.0360
+[60450/500000] Loss_D: 0.106947 Loss_G: 0.056805 measure: 0.1113, k_t: 0.0359
+[60500/500000] Loss_D: 0.108229 Loss_G: 0.054957 measure: 0.1103, k_t: 0.0359
+[*] Samples saved: logs/CelebA_0409_000055/60500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/60500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/60500_D_fake.png
+[60550/500000] Loss_D: 0.112710 Loss_G: 0.055786 measure: 0.1163, k_t: 0.0359
+[60600/500000] Loss_D: 0.112712 Loss_G: 0.062143 measure: 0.1196, k_t: 0.0358
+[60650/500000] Loss_D: 0.112963 Loss_G: 0.068222 measure: 0.1259, k_t: 0.0358
+[60700/500000] Loss_D: 0.114714 Loss_G: 0.055581 measure: 0.1195, k_t: 0.0359
+[60750/500000] Loss_D: 0.100985 Loss_G: 0.056416 measure: 0.1079, k_t: 0.0357
+[60800/500000] Loss_D: 0.115128 Loss_G: 0.050126 measure: 0.1252, k_t: 0.0356
+[60850/500000] Loss_D: 0.102176 Loss_G: 0.049513 measure: 0.1064, k_t: 0.0358
+[60900/500000] Loss_D: 0.119238 Loss_G: 0.055344 measure: 0.1265, k_t: 0.0357
+[60950/500000] Loss_D: 0.105492 Loss_G: 0.052452 measure: 0.1086, k_t: 0.0357
+[61000/500000] Loss_D: 0.113481 Loss_G: 0.051468 measure: 0.1215, k_t: 0.0356
+[*] Samples saved: logs/CelebA_0409_000055/61000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/61000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/61000_D_fake.png
+[61050/500000] Loss_D: 0.104705 Loss_G: 0.058079 measure: 0.1115, k_t: 0.0357
+[61100/500000] Loss_D: 0.105333 Loss_G: 0.059391 measure: 0.1131, k_t: 0.0357
+[61150/500000] Loss_D: 0.118536 Loss_G: 0.047707 measure: 0.1327, k_t: 0.0358
+[61200/500000] Loss_D: 0.108198 Loss_G: 0.061098 measure: 0.1163, k_t: 0.0355
+[61250/500000] Loss_D: 0.105045 Loss_G: 0.073750 measure: 0.1276, k_t: 0.0353
+[61300/500000] Loss_D: 0.108782 Loss_G: 0.053191 measure: 0.1128, k_t: 0.0353
+[61350/500000] Loss_D: 0.100969 Loss_G: 0.058318 measure: 0.1098, k_t: 0.0354
+[61400/500000] Loss_D: 0.114685 Loss_G: 0.053682 measure: 0.1212, k_t: 0.0353
+[61450/500000] Loss_D: 0.105910 Loss_G: 0.048394 measure: 0.1130, k_t: 0.0353
+[61500/500000] Loss_D: 0.108500 Loss_G: 0.047093 measure: 0.1182, k_t: 0.0353
+[*] Samples saved: logs/CelebA_0409_000055/61500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/61500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/61500_D_fake.png
+[61550/500000] Loss_D: 0.104679 Loss_G: 0.042011 measure: 0.1172, k_t: 0.0351
+[61600/500000] Loss_D: 0.113241 Loss_G: 0.051945 measure: 0.1206, k_t: 0.0348
+[61650/500000] Loss_D: 0.112185 Loss_G: 0.045552 measure: 0.1251, k_t: 0.0349
+[61700/500000] Loss_D: 0.114723 Loss_G: 0.046630 measure: 0.1279, k_t: 0.0348
+[61750/500000] Loss_D: 0.104341 Loss_G: 0.061652 measure: 0.1149, k_t: 0.0347
+[61800/500000] Loss_D: 0.106622 Loss_G: 0.055811 measure: 0.1101, k_t: 0.0347
+[61850/500000] Loss_D: 0.125694 Loss_G: 0.048581 measure: 0.1425, k_t: 0.0348
+[61900/500000] Loss_D: 0.103354 Loss_G: 0.052388 measure: 0.1054, k_t: 0.0349
+[61950/500000] Loss_D: 0.128210 Loss_G: 0.053856 measure: 0.1413, k_t: 0.0351
+[62000/500000] Loss_D: 0.122741 Loss_G: 0.065756 measure: 0.1283, k_t: 0.0352
+[*] Samples saved: logs/CelebA_0409_000055/62000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/62000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/62000_D_fake.png
+[62050/500000] Loss_D: 0.118189 Loss_G: 0.061862 measure: 0.1220, k_t: 0.0351
+[62100/500000] Loss_D: 0.114944 Loss_G: 0.051173 measure: 0.1239, k_t: 0.0350
+[62150/500000] Loss_D: 0.109531 Loss_G: 0.056382 measure: 0.1121, k_t: 0.0348
+[62200/500000] Loss_D: 0.108122 Loss_G: 0.067794 measure: 0.1230, k_t: 0.0348
+[62250/500000] Loss_D: 0.094420 Loss_G: 0.054041 measure: 0.1022, k_t: 0.0348
+[62300/500000] Loss_D: 0.101185 Loss_G: 0.052338 measure: 0.1038, k_t: 0.0349
+[62350/500000] Loss_D: 0.108953 Loss_G: 0.057894 measure: 0.1134, k_t: 0.0349
+[62400/500000] Loss_D: 0.107950 Loss_G: 0.053761 measure: 0.1110, k_t: 0.0349
+[62450/500000] Loss_D: 0.112821 Loss_G: 0.047567 measure: 0.1242, k_t: 0.0349
+[62500/500000] Loss_D: 0.113315 Loss_G: 0.056375 measure: 0.1165, k_t: 0.0349
+[*] Samples saved: logs/CelebA_0409_000055/62500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/62500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/62500_D_fake.png
+[62550/500000] Loss_D: 0.106753 Loss_G: 0.055888 measure: 0.1102, k_t: 0.0350
+[62600/500000] Loss_D: 0.094857 Loss_G: 0.055826 measure: 0.1042, k_t: 0.0350
+[62650/500000] Loss_D: 0.101022 Loss_G: 0.073685 measure: 0.1255, k_t: 0.0351
+[62700/500000] Loss_D: 0.108679 Loss_G: 0.061981 measure: 0.1174, k_t: 0.0349
+[62750/500000] Loss_D: 0.102632 Loss_G: 0.057004 measure: 0.1093, k_t: 0.0348
+[62800/500000] Loss_D: 0.101795 Loss_G: 0.059348 measure: 0.1113, k_t: 0.0349
+[62850/500000] Loss_D: 0.121897 Loss_G: 0.051113 measure: 0.1344, k_t: 0.0349
+[62900/500000] Loss_D: 0.119557 Loss_G: 0.045880 measure: 0.1359, k_t: 0.0350
+[62950/500000] Loss_D: 0.104332 Loss_G: 0.049319 measure: 0.1098, k_t: 0.0349
+[63000/500000] Loss_D: 0.107054 Loss_G: 0.053155 measure: 0.1102, k_t: 0.0348
+[*] Samples saved: logs/CelebA_0409_000055/63000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/63000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/63000_D_fake.png
+[63050/500000] Loss_D: 0.107612 Loss_G: 0.049444 measure: 0.1145, k_t: 0.0347
+[63100/500000] Loss_D: 0.109942 Loss_G: 0.051826 measure: 0.1158, k_t: 0.0349
+[63150/500000] Loss_D: 0.109766 Loss_G: 0.049468 measure: 0.1178, k_t: 0.0350
+[63200/500000] Loss_D: 0.110196 Loss_G: 0.059199 measure: 0.1153, k_t: 0.0351
+[63250/500000] Loss_D: 0.120402 Loss_G: 0.058452 measure: 0.1252, k_t: 0.0351
+[63300/500000] Loss_D: 0.109115 Loss_G: 0.060948 measure: 0.1166, k_t: 0.0351
+[63350/500000] Loss_D: 0.118667 Loss_G: 0.061738 measure: 0.1222, k_t: 0.0351
+[63400/500000] Loss_D: 0.106235 Loss_G: 0.055705 measure: 0.1098, k_t: 0.0351
+[63450/500000] Loss_D: 0.099825 Loss_G: 0.057453 measure: 0.1084, k_t: 0.0351
+[63500/500000] Loss_D: 0.110048 Loss_G: 0.051783 measure: 0.1160, k_t: 0.0351
+[*] Samples saved: logs/CelebA_0409_000055/63500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/63500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/63500_D_fake.png
+[63550/500000] Loss_D: 0.105685 Loss_G: 0.060310 measure: 0.1142, k_t: 0.0353
+[63600/500000] Loss_D: 0.112063 Loss_G: 0.054483 measure: 0.1165, k_t: 0.0352
+[63650/500000] Loss_D: 0.106624 Loss_G: 0.054712 measure: 0.1090, k_t: 0.0352
+[63700/500000] Loss_D: 0.110535 Loss_G: 0.050467 measure: 0.1180, k_t: 0.0352
+[63750/500000] Loss_D: 0.101863 Loss_G: 0.059087 measure: 0.1111, k_t: 0.0352
+[63800/500000] Loss_D: 0.102147 Loss_G: 0.057592 measure: 0.1097, k_t: 0.0352
+[63850/500000] Loss_D: 0.113089 Loss_G: 0.056858 measure: 0.1158, k_t: 0.0353
+[63900/500000] Loss_D: 0.105876 Loss_G: 0.056218 measure: 0.1101, k_t: 0.0353
+[63950/500000] Loss_D: 0.110255 Loss_G: 0.051362 measure: 0.1167, k_t: 0.0354
+[64000/500000] Loss_D: 0.106408 Loss_G: 0.062145 measure: 0.1164, k_t: 0.0354
+[*] Samples saved: logs/CelebA_0409_000055/64000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/64000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/64000_D_fake.png
+[64050/500000] Loss_D: 0.113828 Loss_G: 0.068259 measure: 0.1264, k_t: 0.0353
+[64100/500000] Loss_D: 0.103542 Loss_G: 0.058904 measure: 0.1117, k_t: 0.0353
+[64150/500000] Loss_D: 0.102462 Loss_G: 0.051727 measure: 0.1047, k_t: 0.0353
+[64200/500000] Loss_D: 0.098855 Loss_G: 0.060864 measure: 0.1114, k_t: 0.0352
+[64250/500000] Loss_D: 0.112598 Loss_G: 0.053016 measure: 0.1187, k_t: 0.0349
+[64300/500000] Loss_D: 0.105570 Loss_G: 0.061660 measure: 0.1155, k_t: 0.0350
+[64350/500000] Loss_D: 0.102698 Loss_G: 0.049343 measure: 0.1073, k_t: 0.0351
+[64400/500000] Loss_D: 0.115780 Loss_G: 0.051232 measure: 0.1251, k_t: 0.0351
+[64450/500000] Loss_D: 0.109419 Loss_G: 0.066585 measure: 0.1225, k_t: 0.0350
+[64500/500000] Loss_D: 0.115779 Loss_G: 0.068810 measure: 0.1279, k_t: 0.0349
+[*] Samples saved: logs/CelebA_0409_000055/64500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/64500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/64500_D_fake.png
+[64550/500000] Loss_D: 0.110863 Loss_G: 0.058790 measure: 0.1152, k_t: 0.0348
+[64600/500000] Loss_D: 0.116682 Loss_G: 0.056468 measure: 0.1215, k_t: 0.0347
+[64650/500000] Loss_D: 0.107472 Loss_G: 0.059168 measure: 0.1139, k_t: 0.0348
+[64700/500000] Loss_D: 0.111800 Loss_G: 0.057795 measure: 0.1147, k_t: 0.0348
+[64750/500000] Loss_D: 0.107399 Loss_G: 0.065862 measure: 0.1207, k_t: 0.0349
+[64800/500000] Loss_D: 0.114565 Loss_G: 0.066832 measure: 0.1253, k_t: 0.0349
+[64850/500000] Loss_D: 0.109582 Loss_G: 0.076959 measure: 0.1331, k_t: 0.0349
+[64900/500000] Loss_D: 0.107170 Loss_G: 0.060754 measure: 0.1154, k_t: 0.0349
+[64950/500000] Loss_D: 0.117817 Loss_G: 0.058216 measure: 0.1216, k_t: 0.0349
+[65000/500000] Loss_D: 0.118084 Loss_G: 0.051965 measure: 0.1279, k_t: 0.0349
+[*] Samples saved: logs/CelebA_0409_000055/65000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/65000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/65000_D_fake.png
+[65050/500000] Loss_D: 0.106284 Loss_G: 0.055868 measure: 0.1100, k_t: 0.0350
+[65100/500000] Loss_D: 0.116956 Loss_G: 0.072043 measure: 0.1318, k_t: 0.0349
+[65150/500000] Loss_D: 0.114819 Loss_G: 0.084257 measure: 0.1431, k_t: 0.0349
+[65200/500000] Loss_D: 0.104587 Loss_G: 0.061601 measure: 0.1150, k_t: 0.0347
+[65250/500000] Loss_D: 0.117365 Loss_G: 0.049306 measure: 0.1293, k_t: 0.0349
+[65300/500000] Loss_D: 0.114191 Loss_G: 0.051698 measure: 0.1223, k_t: 0.0349
+[65350/500000] Loss_D: 0.107201 Loss_G: 0.058666 measure: 0.1133, k_t: 0.0351
+[65400/500000] Loss_D: 0.110963 Loss_G: 0.056475 measure: 0.1130, k_t: 0.0352
+[65450/500000] Loss_D: 0.110111 Loss_G: 0.055739 measure: 0.1124, k_t: 0.0351
+[65500/500000] Loss_D: 0.120756 Loss_G: 0.052950 measure: 0.1310, k_t: 0.0352
+[*] Samples saved: logs/CelebA_0409_000055/65500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/65500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/65500_D_fake.png
+[65550/500000] Loss_D: 0.114308 Loss_G: 0.049650 measure: 0.1244, k_t: 0.0353
+[65600/500000] Loss_D: 0.110427 Loss_G: 0.059278 measure: 0.1155, k_t: 0.0354
+[65650/500000] Loss_D: 0.115958 Loss_G: 0.049915 measure: 0.1267, k_t: 0.0354
+[65700/500000] Loss_D: 0.100438 Loss_G: 0.052706 measure: 0.1039, k_t: 0.0353
+[65750/500000] Loss_D: 0.104425 Loss_G: 0.054188 measure: 0.1074, k_t: 0.0352
+[65800/500000] Loss_D: 0.113954 Loss_G: 0.057223 measure: 0.1167, k_t: 0.0349
+[65850/500000] Loss_D: 0.108057 Loss_G: 0.054239 measure: 0.1107, k_t: 0.0348
+[65900/500000] Loss_D: 0.103866 Loss_G: 0.065783 measure: 0.1189, k_t: 0.0349
+[65950/500000] Loss_D: 0.107259 Loss_G: 0.063207 measure: 0.1179, k_t: 0.0348
+[66000/500000] Loss_D: 0.107597 Loss_G: 0.051017 measure: 0.1130, k_t: 0.0349
+[*] Samples saved: logs/CelebA_0409_000055/66000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/66000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/66000_D_fake.png
+[66050/500000] Loss_D: 0.104786 Loss_G: 0.066504 measure: 0.1201, k_t: 0.0350
+[66100/500000] Loss_D: 0.103580 Loss_G: 0.058132 measure: 0.1109, k_t: 0.0349
+[66150/500000] Loss_D: 0.119582 Loss_G: 0.051678 measure: 0.1304, k_t: 0.0350
+[66200/500000] Loss_D: 0.114113 Loss_G: 0.052944 measure: 0.1210, k_t: 0.0351
+[66250/500000] Loss_D: 0.105567 Loss_G: 0.052449 measure: 0.1087, k_t: 0.0352
+[66300/500000] Loss_D: 0.099961 Loss_G: 0.056351 measure: 0.1073, k_t: 0.0352
+[66350/500000] Loss_D: 0.116282 Loss_G: 0.051733 measure: 0.1254, k_t: 0.0352
+[66400/500000] Loss_D: 0.107270 Loss_G: 0.053359 measure: 0.1104, k_t: 0.0353
+[66450/500000] Loss_D: 0.102074 Loss_G: 0.051854 measure: 0.1040, k_t: 0.0353
+[66500/500000] Loss_D: 0.108259 Loss_G: 0.046818 measure: 0.1181, k_t: 0.0353
+[*] Samples saved: logs/CelebA_0409_000055/66500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/66500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/66500_D_fake.png
+[66550/500000] Loss_D: 0.099332 Loss_G: 0.057592 measure: 0.1083, k_t: 0.0353
+[66600/500000] Loss_D: 0.115811 Loss_G: 0.053548 measure: 0.1230, k_t: 0.0354
+[66650/500000] Loss_D: 0.114232 Loss_G: 0.061443 measure: 0.1196, k_t: 0.0354
+[66700/500000] Loss_D: 0.113728 Loss_G: 0.064991 measure: 0.1230, k_t: 0.0353
+[66750/500000] Loss_D: 0.109410 Loss_G: 0.058479 measure: 0.1142, k_t: 0.0353
+[66800/500000] Loss_D: 0.103997 Loss_G: 0.054409 measure: 0.1074, k_t: 0.0353
+[66850/500000] Loss_D: 0.114534 Loss_G: 0.056002 measure: 0.1188, k_t: 0.0353
+[66900/500000] Loss_D: 0.101342 Loss_G: 0.060617 measure: 0.1124, k_t: 0.0354
+[66950/500000] Loss_D: 0.096802 Loss_G: 0.053896 measure: 0.1033, k_t: 0.0355
+[67000/500000] Loss_D: 0.099039 Loss_G: 0.056004 measure: 0.1065, k_t: 0.0352
+[*] Samples saved: logs/CelebA_0409_000055/67000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/67000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/67000_D_fake.png
+[67050/500000] Loss_D: 0.104773 Loss_G: 0.051664 measure: 0.1082, k_t: 0.0353
+[67100/500000] Loss_D: 0.122568 Loss_G: 0.051788 measure: 0.1348, k_t: 0.0352
+[67150/500000] Loss_D: 0.110162 Loss_G: 0.059690 measure: 0.1158, k_t: 0.0352
+[67200/500000] Loss_D: 0.120663 Loss_G: 0.050187 measure: 0.1335, k_t: 0.0352
+[67250/500000] Loss_D: 0.112300 Loss_G: 0.051896 measure: 0.1193, k_t: 0.0352
+[67300/500000] Loss_D: 0.100915 Loss_G: 0.050620 measure: 0.1034, k_t: 0.0353
+[67350/500000] Loss_D: 0.106087 Loss_G: 0.058520 measure: 0.1126, k_t: 0.0353
+[67400/500000] Loss_D: 0.108364 Loss_G: 0.056200 measure: 0.1114, k_t: 0.0351
+[67450/500000] Loss_D: 0.107770 Loss_G: 0.057232 measure: 0.1121, k_t: 0.0353
+[67500/500000] Loss_D: 0.108327 Loss_G: 0.052917 measure: 0.1124, k_t: 0.0352
+[*] Samples saved: logs/CelebA_0409_000055/67500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/67500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/67500_D_fake.png
+[67550/500000] Loss_D: 0.115336 Loss_G: 0.057662 measure: 0.1183, k_t: 0.0347
+[67600/500000] Loss_D: 0.105303 Loss_G: 0.059336 measure: 0.1130, k_t: 0.0347
+[67650/500000] Loss_D: 0.114009 Loss_G: 0.050169 measure: 0.1235, k_t: 0.0347
+[67700/500000] Loss_D: 0.108929 Loss_G: 0.054888 measure: 0.1114, k_t: 0.0347
+[67750/500000] Loss_D: 0.105977 Loss_G: 0.058528 measure: 0.1125, k_t: 0.0348
+[67800/500000] Loss_D: 0.120386 Loss_G: 0.061775 measure: 0.1230, k_t: 0.0348
+[67850/500000] Loss_D: 0.102478 Loss_G: 0.059604 measure: 0.1119, k_t: 0.0348
+[67900/500000] Loss_D: 0.101305 Loss_G: 0.063880 measure: 0.1156, k_t: 0.0348
+[67950/500000] Loss_D: 0.101428 Loss_G: 0.046653 measure: 0.1079, k_t: 0.0349
+[68000/500000] Loss_D: 0.108986 Loss_G: 0.056103 measure: 0.1116, k_t: 0.0349
+[*] Samples saved: logs/CelebA_0409_000055/68000_G.png
+[*] Samples saved: logs/CelebA_0409_000055/68000_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/68000_D_fake.png
+[68050/500000] Loss_D: 0.113195 Loss_G: 0.060490 measure: 0.1181, k_t: 0.0346
+[68100/500000] Loss_D: 0.107648 Loss_G: 0.070775 measure: 0.1258, k_t: 0.0345
+[68150/500000] Loss_D: 0.099623 Loss_G: 0.053898 measure: 0.1046, k_t: 0.0342
+[68200/500000] Loss_D: 0.102111 Loss_G: 0.066773 measure: 0.1190, k_t: 0.0343
+[68250/500000] Loss_D: 0.103678 Loss_G: 0.058188 measure: 0.1110, k_t: 0.0343
+[68300/500000] Loss_D: 0.112333 Loss_G: 0.057347 measure: 0.1145, k_t: 0.0344
+[68350/500000] Loss_D: 0.112217 Loss_G: 0.057570 measure: 0.1147, k_t: 0.0344
+[68400/500000] Loss_D: 0.109306 Loss_G: 0.063780 measure: 0.1195, k_t: 0.0346
+[68450/500000] Loss_D: 0.098015 Loss_G: 0.064649 measure: 0.1148, k_t: 0.0345
+[68500/500000] Loss_D: 0.109203 Loss_G: 0.068987 measure: 0.1248, k_t: 0.0343
+[*] Samples saved: logs/CelebA_0409_000055/68500_G.png
+[*] Samples saved: logs/CelebA_0409_000055/68500_D_real.png
+[*] Samples saved: logs/CelebA_0409_000055/68500_D_fake.png
+[68550/500000] Loss_D: 0.118950 Loss_G: 0.065422 measure: 0.1260, k_t: 0.0343
+[68600/500000] Loss_D: 0.113852 Loss_G: 0.053850 measure: 0.1197, k_t: 0.0343
+[68650/500000] Loss_D: 0.100250 

@@ -1,0 +1,26 @@
+2018-04-20 14:28:26.918918: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+2018-04-20 14:28:30.227666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Tesla K20Xm major: 3 minor: 5 memoryClockRate(GHz): 0.732
+pciBusID: 0000:20:00.0
+totalMemory: 5.57GiB freeMemory: 5.49GiB
+2018-04-20 14:28:30.472375: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 1 with properties: 
+name: Tesla K20Xm major: 3 minor: 5 memoryClockRate(GHz): 0.732
+pciBusID: 0000:8b:00.0
+totalMemory: 5.57GiB freeMemory: 5.49GiB
+2018-04-20 14:28:30.472495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Device peer to peer matrix
+2018-04-20 14:28:30.472591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1051] DMA: 0 1 
+2018-04-20 14:28:30.472617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 0:   Y N 
+2018-04-20 14:28:30.472636: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 1:   N Y 
+2018-04-20 14:28:30.472694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K20Xm, pci bus id: 0000:20:00.0, compute capability: 3.5)
+2018-04-20 14:28:30.472721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Tesla K20Xm, pci bus id: 0000:8b:00.0, compute capability: 3.5)
+  0%|          | 0/500000 [00:00<?, ?it/s]2018-04-20 14:31:03.658724: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.35GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:04.841507: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.54GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:05.109594: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:05.109649: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.21GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:05.305764: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.07GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:05.470416: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.02GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:05.910405: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.13GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:06.520725: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.13GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:07.102887: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.09GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2018-04-20 14:31:07.222048: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.54GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+  0%|          | 1/500000 [00:21<2955:21:07, 21.28s/it]  0%|          | 2/500000 [00:25<1761:53:35, 12.69s/it]  0%|          | 3/500000 [00:29<1342:45:08,  9.67s/it]  0%|          | 4/500000 [00:32<1133:08:39,  8.16s/it]slurmstepd: error: *** JOB 4468105 ON bhg0007 CANCELLED AT 2018-04-20T14:31:28 ***
