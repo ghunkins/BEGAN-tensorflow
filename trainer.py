@@ -408,6 +408,20 @@ class Trainer(object):
             print('Shape:', im.shape)
             print('Max:', np.max(im), 'Min:', np.min(im))
             encode = self.encode(im)
+
+
+            decodes = []
+            for idx, ratio in enumerate(np.linspace(0, 1, 10)):
+                z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
+                z_decode = self.decode(z)
+                decodes.append(z_decode)
+
+            decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
+            for idx, img in enumerate(decodes):
+                img = np.concatenate([[im], img, [im]], 0)
+                save_image(img, os.path.join('.', 'test{}_interp_D_{}.png'.format(0, idx)), nrow=10 + 2)
+
+
             #print(encode)
             decode = self.decode(encode)
             save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')

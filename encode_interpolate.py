@@ -21,19 +21,19 @@ def test(config):
     setattr(config, 'batch_size', 1)
 
     if config.test_type == 'encode':
-        dataset = config.test_data_path or config.dataset             # e.g. 'CelebA'
-        dataset_path = os.path.join(config.data_dir, dataset)       # get path for dataset
+        dataset = config.test_data_path or config.dataset            # e.g. 'CelebA'
+        dataset_path = os.path.join(config.data_dir, dataset)        # get path for dataset
         data_loader = get_loader(                                    # get a fake loader
             dataset_path, config.batch_size, config.input_scale_size,
             config.data_format, config.split)
-        trainer = Trainer(config, data_loader)                       # initialize Trainer
+        trainer = Trainer(config, data_loader)                      # initialize Trainer
 
         dataset_path = os.path.join(config.data_dir, dataset)       # get path for dataset
 
         trainer.encode_save(dataset_path, size)                     # call encode save
 
     elif config.test_type == 'interpolate':
-        dataset1 = config.test_data_path or config.dataset           # e.g. 'CelebA'
+        dataset1 = config.test_data_path or config.dataset          # e.g. 'CelebA'
         dataset2 = config.dataset2                                  # e.g. 'CelebB'
         data_loader = get_loader(                                   # get a fake loader
             dataset1, config.batch_size, config.input_scale_size,   
