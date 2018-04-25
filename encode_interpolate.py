@@ -18,6 +18,7 @@ def test(config):
         raise Exception("[!] Training is not supported for this method.")
 
     size = config.input_scale_size
+    setattr(config, 'batch_size', 1)
 
     if config.test_type == 'encode':
         dataset = config.test_data_path or config.dataset             # e.g. 'CelebA'
