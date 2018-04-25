@@ -347,6 +347,9 @@ class Trainer(object):
         for step in range(3):
             real1_batch = self.get_image_from_loader()
             real2_batch = self.get_image_from_loader()
+            print('Real1batch type:', type(real1_batch))
+            print('Real1batch size:', real1_batch.size)
+            print('Max:', real1_batch.max, 'Min:', real1_batch.min)
 
             save_image(real1_batch, os.path.join(root_path, 'test{}_real1.png'.format(step)))
             save_image(real2_batch, os.path.join(root_path, 'test{}_real2.png'.format(step)))
@@ -401,7 +404,9 @@ class Trainer(object):
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
-            encode = self.encode(tf.convert_to_tensor(im, dtype=tf.float32))
+            print im
+            encode = self.encode(im)
+            print encode
             decode = self.decode(encode)
             save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             decode = decode.astype(dtype=np.uint8)
