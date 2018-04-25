@@ -386,7 +386,7 @@ class Trainer(object):
             im = np.expand_dims(im, axis=0)
             encode = self.encode(im)
             decode = self.decode(encode)
-            print('Type:', type(decode))
+            print('Type:', type(decode), 'Shape:', decode.shape)
             save_image_simple(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
 
