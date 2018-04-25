@@ -382,7 +382,7 @@ class Trainer(object):
         for i, pic_path in enumerate(paths):
             im = Image.open(pic_path)
             im = im.resize((scale_size, scale_size), Image.NEAREST)
-            im = np.array(im)
+            im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
             encode = self.encode(im)
             decode = self.decode(encode)
