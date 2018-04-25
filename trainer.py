@@ -388,8 +388,9 @@ class Trainer(object):
                 face_rect = DETECTOR(gray, 2)[0]
                 (x, y, w, h) = rect_to_bb(face_rect)
                 im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
-            except:
+            except Exception as e:
                 print('[!] Warning: face detection and cropping failed.')
+                print(e)
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
@@ -398,7 +399,7 @@ class Trainer(object):
             print('Shape:', im.shape)
             print('Max:', np.max(im), 'Min:', np.min(im))
             encode = self.encode(im)
-            
+
             decodes = []
             for idx, ratio in enumerate(np.linspace(0, 1, 10)):
                 z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
