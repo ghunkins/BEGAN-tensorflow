@@ -386,6 +386,7 @@ class Trainer(object):
             #try:
             im = cv2.imread(pic_path)
             gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+            im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
             face_rect = DETECTOR(gray, 2)[0]
             (x, y, w, h) = rect_to_bb(face_rect)
             #np_im = np.array(im)
