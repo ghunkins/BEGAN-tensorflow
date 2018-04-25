@@ -381,44 +381,47 @@ class Trainer(object):
             os.mkdir('encode')
 
         for i, pic_path in enumerate(paths):
-            #im = Image.open(pic_path)
-            im_filename = pic_path.split('/')[0][:-4]
-            #try:
-            im = cv2.imread(pic_path)
-            gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-            im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-            face_rect = DETECTOR(gray, 2)[0]
-            (x, y, w, h) = rect_to_bb(face_rect)
-            #np_im = np.array(im)
-            im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
-            im = Image.fromarray(im)
-            #except Exception as e:
-               # print('[!] Warning: face detection and cropping failed.')
-                #print(e)
-            im = im.resize((scale_size, scale_size), Image.NEAREST)
-            im = np.array(im, dtype=np.float32)
-            im = np.expand_dims(im, axis=0)
-            print(pic_path)
-            print('Type:', type(im))
-            print('Shape:', im.shape)
-            print('Max:', np.max(im), 'Min:', np.min(im))
-            encode = self.encode(im)
+            try:
+                im = cv2.imread(pic_path)
+                im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+                im_filename = pic_path.split('/')[0][:-4]
+                try:
+                    im = cv2.imread(pic_path)
+                    gray = cv2.cvtColor(im, cv2.COLOR_RGB2GRAY)
+                    face_rect = DETECTOR(gray, 2)[0]
+                    (x, y, w, h) = rect_to_bb(face_rect)
+                    im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
+                    im = Image.fromarray(im)
+                except Exception as e:
+                    print('[!] Warning: face detection and cropping failed.')
+                    print(e)
+                im = im.resize((scale_size, scale_size), Image.NEAREST)
+                im = np.array(im, dtype=np.float32)
+                im = np.expand_dims(im, axis=0)
+                print(pic_path)
+                print('Type:', type(im))
+                print('Shape:', im.shape)
+                print('Max:', np.max(im), 'Min:', np.min(im))
+                encode = self.encode(im)
 
-            decodes = []
-            for idx, ratio in enumerate(np.linspace(0, 1, 10)):
-                z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
-                z_decode = self.decode(z)
-                decodes.append(z_decode)
+                # decodes = []
+                # for idx, ratio in enumerate(np.linspace(0, 1, 10)):
+                #     z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
+                #     z_decode = self.decode(z)
+                #     decodes.append(z_decode)
 
-            decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
-            for idx, img in enumerate(decodes):
-                img = np.concatenate([im, img, im], 0)
-                save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format(im_filename, idx)), nrow=10 + 2)
+                # decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
+                # for idx, img in enumerate(decodes):
+                #     img = np.concatenate([im, img, im], 0)
+                #     save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format(im_filename, idx)), nrow=10 + 2)
 
-            decode = self.decode(encode)
-            save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
-            decode = decode.astype(dtype=np.uint8)
-            save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+                decode = self.decode(encode)
+                # save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+                decode = decode.astype(dtype=np.uint8)
+                save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            except Exception as e:
+                print('[!] Encoding failed.')
+                print(e)
 
 
     def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
