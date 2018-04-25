@@ -348,8 +348,8 @@ class Trainer(object):
             real1_batch = self.get_image_from_loader()
             real2_batch = self.get_image_from_loader()
             print('Real1batch type:', type(real1_batch))
-            print('Real1batch size:', real1_batch.size)
-            print('Max:', real1_batch.max, 'Min:', real1_batch.min)
+            print('Real1batch shape:', real1_batch.shape)
+            print('Max:', np.max(real1_batch), 'Min:', np.min(real1_batch))
 
             save_image(real1_batch, os.path.join(root_path, 'test{}_real1.png'.format(step)))
             save_image(real2_batch, os.path.join(root_path, 'test{}_real2.png'.format(step)))
