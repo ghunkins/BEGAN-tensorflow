@@ -408,14 +408,14 @@ class Trainer(object):
             print('Shape:', im.shape)
             print('Max:', np.max(im), 'Min:', np.min(im))
             encode = self.encode(im)
-            print(encode)
+            #print(encode)
             decode = self.decode(encode)
             save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             decode = decode.astype(dtype=np.uint8)
-            print(decode)
-            print('Type:', type(decode), 'Shape:', decode.shape)
+            #print(decode)
+            #print('Type:', type(decode), 'Shape:', decode.shape)
             save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
-            print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            #print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
 
 
     def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
