@@ -401,6 +401,7 @@ class Trainer(object):
             # x = queue.eval(session=self.sess)
 
             im = Image.open(pic_path)
+            im_filename = pic_path.split('/')[0][:-4]
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
@@ -419,8 +420,8 @@ class Trainer(object):
 
             decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
             for idx, img in enumerate(decodes):
-                #img = np.concatenate([[im], img, [im]], 0)
-                save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format('wow', idx)), nrow=10 + 2)
+                img = np.concatenate([im, img, im], 0)
+                save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format(im_filename, idx)), nrow=10 + 2)
 
 
             #print(encode)
