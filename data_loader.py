@@ -44,7 +44,7 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
         queue = tf.image.crop_to_bounding_box(queue, 50, 25, 128, 128)
         queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
     else:
-        queue = tf.image.crop_to_bounding_box(queue, 0, 25, 170, 170)
+        queue = tf.image.crop_to_bounding_box(queue, 0, 25, 150, 170)
         queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
 
     if data_format == 'NCHW':
