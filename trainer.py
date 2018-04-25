@@ -404,9 +404,9 @@ class Trainer(object):
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
-            print im
+            print(im)
             encode = self.encode(im)
-            print encode
+            print(encode)
             decode = self.decode(encode)
             save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             decode = decode.astype(dtype=np.uint8)
