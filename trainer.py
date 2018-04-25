@@ -382,17 +382,17 @@ class Trainer(object):
 
         for i, pic_path in enumerate(paths):
             try:
-                im = cv2.imread(pic_path)
-                im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-                im_filename = pic_path.split('/')[0][:-4]
                 try:
-                    im = cv2.imread(pic_path)
-                    gray = cv2.cvtColor(im, cv2.COLOR_RGB2GRAY)
+                    im_bgr = cv2.imread(pic_path)
+                    gray = cv2.cvtColor(im_bgr, cv2.COLOR_BGR2GRAY)
+                    im = cv2.cvtColor(im_bgr, cv2.COLOR_BGR2RGB)
                     face_rect = DETECTOR(gray, 2)[0]
                     (x, y, w, h) = rect_to_bb(face_rect)
                     im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
                     im = Image.fromarray(im)
                 except Exception as e:
+                    im_bgr = cv2.imread(pic_path)
+                    im = cv2.cvtColor(im_bgr, cv2.COLOR_BGR2RGB)
                     print('[!] Warning: face detection and cropping failed.')
                     print(e)
                 im = im.resize((scale_size, scale_size), Image.NEAREST)
