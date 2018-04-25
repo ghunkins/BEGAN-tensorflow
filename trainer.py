@@ -387,10 +387,9 @@ class Trainer(object):
             encode = self.encode(im)
             decode = self.decode(encode)
             print('Type:', type(decode), 'Shape:', decode.shape)
-            save_image_simple(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
-
-        
+            
 
     def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
         for ext in ["jpg", "png"]:
