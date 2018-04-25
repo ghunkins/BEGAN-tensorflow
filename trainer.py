@@ -383,16 +383,16 @@ class Trainer(object):
         for i, pic_path in enumerate(paths):
             im = Image.open(pic_path)
             im_filename = pic_path.split('/')[0][:-4]
-            try:
-                gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-                face_rect = DETECTOR(gray, 2)[0]
-                (x, y, w, h) = rect_to_bb(face_rect)
-                np_im = np.array(im)
-                np_im = np_im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
-                im = Image.fromarray(im)
-            except Exception as e:
-                print('[!] Warning: face detection and cropping failed.')
-                print(e)
+            #try:
+            gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+            face_rect = DETECTOR(gray, 2)[0]
+            (x, y, w, h) = rect_to_bb(face_rect)
+            np_im = np.array(im)
+            np_im = np_im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
+            im = Image.fromarray(im)
+            #except Exception as e:
+               # print('[!] Warning: face detection and cropping failed.')
+                #print(e)
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
