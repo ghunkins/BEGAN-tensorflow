@@ -373,6 +373,10 @@ class Trainer(object):
     def encode_save(self, data_path, scale_size):
         for ext in ["jpg", "png"]:
             paths = glob("{}/*.{}".format(data_path, ext))      # paths is a list of pictures
+            if ext == "jpg":
+                tf_decode = tf.image.decode_jpeg
+            elif ext == "png":
+                tf_decode = tf.image.decode_png
             if len(paths) != 0:                                 # 
                 break
 
@@ -380,17 +384,31 @@ class Trainer(object):
             os.mkdir('encode')
 
         for i, pic_path in enumerate(paths):
-            im = Image.open(pic_path)
-            im = im.resize((scale_size, scale_size), Image.NEAREST)
-            im = np.array(im, dtype=np.float32)
-            im = np.expand_dims(im, axis=0)
-            encode = self.encode(im)
+            with Image.open(pic_path) as img:
+                w, h = img.size
+                shape = [h, w, 3]
+
+            filename_queue = tf.train.string_input_producer(list(paths), shuffle=False, seed=0)
+            reader = tf.WholeFileReader()
+            filename, data = reader.read(filename_queue)
+            image = tf_decode(data, channels=3)
+            image.set_shape(shape)
+            queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
+            queue = tf.to_float(queue)
+            x = queue.eval(session=self.sess)
+
+            # im = Image.open(pic_path)
+            # im = im.resize((scale_size, scale_size), Image.NEAREST)
+            # im = np.array(im, dtype=np.float32)
+            # im = np.expand_dims(im, axis=0)
+            encode = self.encode(x)
             decode = self.decode(encode)
-            decode = decode.astype(dtype=np.uint8)
-            print(decode)
-            print('Type:', type(decode), 'Shape:', decode.shape)
-            save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
-            print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            #decode = decode.astype(dtype=np.uint8)
+            #print(decode)
+            #print('Type:', type(decode), 'Shape:', decode.shape)
+            #save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+            #print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
 
 
     def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
