@@ -8,4 +8,4 @@
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
-python main.py --dataset=old --load_path=CelebA_0410_131056 --use_gpu=True --is_train=False
+python main.py --dataset=CelebA --load_path=CelebA_0410_131056 --use_gpu=True --is_train=False --split valid
