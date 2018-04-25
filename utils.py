@@ -20,6 +20,9 @@ def prepare_dirs_and_logger(config):
 
     logger.addHandler(handler)
 
+    # THIS IS CONFUSING
+    # WHAT THE ACTUAL FUCK
+
     if config.load_path:
         if config.load_path.startswith(config.log_dir):
             config.model_dir = config.load_path
@@ -32,7 +35,10 @@ def prepare_dirs_and_logger(config):
         config.model_name = "{}_{}".format(config.dataset, get_time())
 
     if not hasattr(config, 'model_dir'):
-        config.model_dir = os.path.join(config.log_dir, config.model_name)
+        if config.is_train:
+            config.model_dir = os.path.join(config.log_dir, config.model_name)
+        else:
+            config.model_dir = os.path.join(config.log_dir, config.model_dir)
     config.data_path = os.path.join(config.data_dir, config.dataset)
 
     for path in [config.log_dir, config.data_dir, config.model_dir]:
