@@ -50,6 +50,6 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
     elif data_format == 'NHWC':
         pass
     else:
-        raise Exception("[!] Unkown data_format: {}".format(data_format))
+        raise Exception("[!] Unknown data_format: {}".format(data_format))
 
     return tf.to_float(queue)

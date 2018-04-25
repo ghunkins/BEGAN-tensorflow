@@ -7,13 +7,14 @@ except ImportError:
     from io import StringIO
 import scipy.misc
 import numpy as np
+from PIL import Image
 from glob import glob
 from tqdm import trange
 from itertools import chain
 from collections import deque
 
 from models import *
-from utils import save_image
+from utils import save_image, save_image_simple
 
 def next(loader):
     return loader.next()[0].data.numpy()
@@ -323,6 +324,22 @@ class Trainer(object):
             img = np.concatenate([[real1_batch[idx]], img, [real2_batch[idx]]], 0)
             save_image(img, os.path.join(root_path, 'test{}_interp_D_{}.png'.format(step, idx)), nrow=10 + 2)
 
+    def interpolate_D_midpoint(self, real1_batch, real2_batch, ratio=0.5, step=0, root_path="."):
+        real1_encode = self.encode(real1_batch)
+        real2_encode = self.encode(real2_batch)
+
+        decodes = []
+        for idx, ratio in enumerate([ratio]):
+            z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(real1_encode, real2_encode)])
+            z_decode = self.decode(z)
+            decodes.append(z_decode)
+
+        decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
+        for idx, img in enumerate(decodes):
+            save_image_simple(img, 'test{}_interp_D_{}.png'.format(step, idx))
+            img = np.concatenate([[real1_batch[idx]], img, [real2_batch[idx]]], 0)
+            save_image(img, os.path.join(root_path, 'test{}_interp_D_{}.png'.format(step, idx)), nrow=10 + 2)
+
     def test(self):
         root_path = "./"#self.model_dir
 
@@ -352,6 +369,54 @@ class Trainer(object):
             save_image(all_G_z, '{}/G_z{}.png'.format(root_path, step))
 
         save_image(all_G_z, '{}/all_G_z.png'.format(root_path), nrow=16)
+
+    def encode_save(self, data_path, scale_size):
+        for ext in ["jpg", "png"]:
+            paths = glob("{}/*.{}".format(data_path, ext))      # paths is a list of pictures
+            if len(paths) != 0:                                 # 
+                break
+
+        if not os.path.isdir("./encode"):
+            os.mkdir('encode')
+
+        for i, pic_path in enumerate(paths):
+            im = Image.open(pic_path)
+            im = im.resize((scale_size, scale_size), Image.NEAREST)
+            im = np.array(im)
+            im = np.expand_dims(im, axis=0)
+            encode = self.encode(im)
+            decode = self.decode(encode)
+            save_image_simple(decode, './encode/' + os.path.basename(path)[:-4] + '_encode.jpg')
+
+        
+
+    def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
+        for ext in ["jpg", "png"]:
+            paths1 = glob("{}/*.{}".format(data_path1, ext))      # paths is a list of pictures
+            paths2 = glob("{}/*.{}".format(data_path2, ext))      # paths is a list of pictures
+            if len(paths1) != 0:
+                break
+
+        if not os.path.isdir("./interpolate"):
+            os.mkdir('interpolate')
+
+        for i, pic_path in enumerate(paths1):
+            im1 = Image.open(pic_path)
+            im2 = Image.open(paths2[i])
+            im1 = im1.resize((scale_size, scale_size), Image.NEAREST)
+            im2 = im2.resize((scale_size, scale_size), Image.NEAREST)
+            im1 = np.array(im1)
+            im2 = np.array(im2)
+            im1 = np.expand_dims(im1, axis=0)
+            im2 = np.expand_dims(im2, axis=0)
+            real1_encode = self.encode(im1)
+            real2_encode = self.encode(im2)
+            z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(real1_encode, real2_encode)])
+            decode = self.decode(z)
+            basename1 = os.path.basename(pic_path)[:-4]
+            basename2 = os.path.basename(paths2[i])[:-4]
+            save_image_simple(decode, './interpolate/' + '_'.join([basename1, basename2, 'interpolate.jpg']))
+
 
     def get_image_from_loader(self):
         x = self.data_loader.eval(session=self.sess)

@@ -1,1 +1,1 @@
-rsync --ignore-existing --progress -r ghunkins@bh25fen.circ.rochester.edu:/scratch/ghunkins/BEGAN-tensorflow/logs/* .
+rsync --ignore-existing --progress -r ghunkins@bh25fen.circ.rochester.edu:/scratch/ghunkins/BEGAN-tensorflow/logs/* logs

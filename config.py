@@ -23,6 +23,7 @@ net_arg.add_argument('--z_num', type=int, default=64, choices=[64, 128])
 # Data
 data_arg = add_argument_group('Data')
 data_arg.add_argument('--dataset', type=str, default='CelebA')
+data_arg.add_argument('--dataset2', type=str, default='')
 data_arg.add_argument('--split', type=str, default='train')
 data_arg.add_argument('--batch_size', type=int, default=16)
 data_arg.add_argument('--grayscale', type=str2bool, default=False)
@@ -57,6 +58,8 @@ misc_arg.add_argument('--test_data_path', type=str, default=None,
 misc_arg.add_argument('--sample_per_image', type=int, default=64,
                       help='# of sample per image during test sample generation')
 misc_arg.add_argument('--random_seed', type=int, default=123)
+misc_arg.add_argument('--test_type', type=str, default='encode')
+
 
 def get_config():
     config, unparsed = parser.parse_known_args()
