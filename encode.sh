@@ -8,5 +8,5 @@
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
-python test.py --dataset=old --load_path=CelebA_0422_215559 --input_scale_size=128 \
+python encode_interpolate.py --dataset=old --load_path=CelebA_0422_215559 --input_scale_size=128 \
 --use_gpu=True --is_train=False
