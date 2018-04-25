@@ -387,7 +387,9 @@ class Trainer(object):
                 gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
                 face_rect = DETECTOR(gray, 2)[0]
                 (x, y, w, h) = rect_to_bb(face_rect)
-                im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
+                np_im = np.array(im)
+                np_im = np_im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
+                im = Image.fromarray(im)
             except Exception as e:
                 print('[!] Warning: face detection and cropping failed.')
                 print(e)
