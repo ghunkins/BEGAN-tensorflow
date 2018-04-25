@@ -1,17 +1,14 @@
 from __future__ import print_function
 
 import os
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
-import scipy.misc
+import dlib
+import cv2
 import numpy as np
 from PIL import Image
 from glob import glob
 from tqdm import trange
-from itertools import chain
 from collections import deque
+from imutils.face_utils import rect_to_bb
 
 from models import *
 from utils import save_image, save_image_simple
@@ -374,12 +371,9 @@ class Trainer(object):
         save_image(all_G_z, '{}/all_G_z.png'.format(root_path), nrow=16)
 
     def encode_save(self, data_path, scale_size):
+        DETECTOR = dlib.get_frontal_face_detector()
         for ext in ["jpg", "png"]:
             paths = glob("{}/*.{}".format(data_path, ext))      # paths is a list of pictures
-            # if ext == "jpg":
-            #     tf_decode = tf.image.decode_jpeg
-            # elif ext == "png":
-            #     tf_decode = tf.image.decode_png
             if len(paths) != 0:                                 # 
                 break
 
@@ -387,21 +381,15 @@ class Trainer(object):
             os.mkdir('encode')
 
         for i, pic_path in enumerate(paths):
-            # with Image.open(pic_path) as img:
-            #     w, h = img.size
-            #     shape = [h, w, 3]
-
-            # filename_queue = tf.train.string_input_producer(list(paths), shuffle=False, seed=0)
-            # reader = tf.WholeFileReader()
-            # filename, data = reader.read(filename_queue)
-            # image = tf_decode(data, channels=3)
-            # image.set_shape(shape)
-            # queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
-            # queue = tf.to_float(queue)
-            # x = queue.eval(session=self.sess)
-
             im = Image.open(pic_path)
             im_filename = pic_path.split('/')[0][:-4]
+            try:
+                gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+                face_rect = DETECTOR(gray, 2)[0]
+                (x, y, w, h) = rect_to_bb(face_rect)
+                im = im[max(y-50, 0):(y+h-10), max(x-25, 0):(x+w+25)]
+            except:
+                print('[!] Warning: face detection and cropping failed.')
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
@@ -410,8 +398,7 @@ class Trainer(object):
             print('Shape:', im.shape)
             print('Max:', np.max(im), 'Min:', np.min(im))
             encode = self.encode(im)
-
-
+            
             decodes = []
             for idx, ratio in enumerate(np.linspace(0, 1, 10)):
                 z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
@@ -423,18 +410,14 @@ class Trainer(object):
                 img = np.concatenate([im, img, im], 0)
                 save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format(im_filename, idx)), nrow=10 + 2)
 
-
-            #print(encode)
             decode = self.decode(encode)
             save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
             decode = decode.astype(dtype=np.uint8)
-            #print(decode)
-            #print('Type:', type(decode), 'Shape:', decode.shape)
             save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
-            #print(os.path.basename(pic_path)[:-4] + '_encode.jpg')
 
 
     def interpolate_encode_save(self, data_path1, data_path2, scale_size, ratio=0.5):
+        DETECTOR = dlib.get_frontal_face_detector()
         for ext in ["jpg", "png"]:
             paths1 = glob("{}/*.{}".format(data_path1, ext))      # paths is a list of pictures
             paths2 = glob("{}/*.{}".format(data_path2, ext))      # paths is a list of pictures
