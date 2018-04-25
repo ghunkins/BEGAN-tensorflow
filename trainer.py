@@ -404,6 +404,7 @@ class Trainer(object):
             im = im.resize((scale_size, scale_size), Image.NEAREST)
             im = np.array(im, dtype=np.float32)
             im = np.expand_dims(im, axis=0)
+            print(pic_path)
             print('Type:', type(im))
             print('Shape:', im.shape)
             print('Max:', np.max(im), 'Min:', np.min(im))
@@ -419,7 +420,7 @@ class Trainer(object):
             decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
             for idx, img in enumerate(decodes):
                 #img = np.concatenate([[im], img, [im]], 0)
-                save_image(img, os.path.join('.', 'test{}_interp_D_{}.png'.format(0, idx)), nrow=10 + 2)
+                save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format('wow', idx)), nrow=10 + 2)
 
 
             #print(encode)
