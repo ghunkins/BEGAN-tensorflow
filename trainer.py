@@ -374,13 +374,15 @@ class Trainer(object):
         DETECTOR = dlib.get_frontal_face_detector()
         for ext in ["jpg", "png"]:
             paths = glob("{}/*.{}".format(data_path, ext))      # paths is a list of pictures
-            if len(paths) != 0:                                 # 
+            if len(paths) != 0:                                 # break
                 break
 
         if not os.path.isdir("./encode"):
             os.mkdir('encode')
 
+        paths.sort()
         for i, pic_path in enumerate(paths):
+            basename = os.path.basename(pic_path)[:-4]
             try:
                 try:
                     im_bgr = cv2.imread(pic_path)
@@ -404,23 +406,12 @@ class Trainer(object):
                 print('Max:', np.max(im), 'Min:', np.min(im))
                 encode = self.encode(im)
 
-                # decodes = []
-                # for idx, ratio in enumerate(np.linspace(0, 1, 10)):
-                #     z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode, encode)])
-                #     z_decode = self.decode(z)
-                #     decodes.append(z_decode)
-
-                # decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
-                # for idx, img in enumerate(decodes):
-                #     img = np.concatenate([im, img, im], 0)
-                #     save_image(img, os.path.join('./encode', 'test{}_interp_D_{}.png'.format(im_filename, idx)), nrow=10 + 2)
-
                 decode = self.decode(encode)
                 # save_image(decode, './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
                 decode = decode.astype(dtype=np.uint8)
-                save_image_simple(decode[0, :, :, :], './encode/' + os.path.basename(pic_path)[:-4] + '_encode.jpg')
+                save_image_simple(decode[0, :, :, :], './encode/{}_encode.jpg'.format(basename))
             except Exception as e:
-                print('[!] Encoding failed.')
+                print('[!] Encoding failed on {}.'.format(basename))
                 print(e)
 
 
@@ -435,22 +426,61 @@ class Trainer(object):
         if not os.path.isdir("./interpolate"):
             os.mkdir('interpolate')
 
+        paths1.sort()
+        paths2.sort()
+
         for i, pic_path in enumerate(paths1):
-            im1 = Image.open(pic_path)
-            im2 = Image.open(paths2[i])
-            im1 = im1.resize((scale_size, scale_size), Image.NEAREST)
-            im2 = im2.resize((scale_size, scale_size), Image.NEAREST)
-            im1 = np.array(im1)
-            im2 = np.array(im2)
-            im1 = np.expand_dims(im1, axis=0)
-            im2 = np.expand_dims(im2, axis=0)
-            real1_encode = self.encode(im1)
-            real2_encode = self.encode(im2)
-            z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(real1_encode, real2_encode)])
-            decode = self.decode(z)
-            basename1 = os.path.basename(pic_path)[:-4]
-            basename2 = os.path.basename(paths2[i])[:-4]
-            save_image_simple(decode, './interpolate/' + '_'.join([basename1, basename2, 'interpolate.jpg']))
+            basename = os.path.basename(pic_path)[:-4]
+            try:
+                try:
+                    im_bgr1 = cv2.imread(pic_path)
+                    im_bgr2 = cv2.imread(paths2[i])
+                    gray1 = cv2.cvtColor(im_bgr1, cv2.COLOR_BGR2GRAY)
+                    gray2 = cv2.cvtColor(im_bgr2, cv2.COLOR_BGR2GRAY)
+                    im1 = cv2.cvtColor(im_bgr1, cv2.COLOR_BGR2RGB)
+                    im2 = cv2.cvtColor(im_bgr2, cv2.COLOR_BGR2RGB)
+                    face_rect1 = DETECTOR(gray1, 2)[0]
+                    face_rect2 = DETECTOR(gray2, 2)[0]
+                    (x1, y1, w1, h1) = rect_to_bb(face_rect1)
+                    (x2, y2, w2, h2) = rect_to_bb(face_rect2)
+                    im1 = im1[max(y1-50, 0):(y1+h1-10), max(x1-25, 0):(x1+w1+25)]
+                    im2 = im2[max(y2-50, 0):(y2+h2-10), max(x2-25, 0):(x2+w2+25)]
+                    im1 = Image.fromarray(im1)
+                    im2 = Image.fromarray(im2)
+                except Exception as e:
+                    im_bgr1 = cv2.imread(pic_path)
+                    im_bgr2 = cv2.imread(paths2[i])
+                    im1 = cv2.cvtColor(im_bgr1, cv2.COLOR_BGR2RGB)
+                    im2 = cv2.cvtColor(im_bgr2, cv2.COLOR_BGR2RGB)
+                    print('[!] Warning: face detection and cropping failed.')
+                    print(e)
+                im1 = im1.resize((scale_size, scale_size), Image.NEAREST)
+                im2 = im2.resize((scale_size, scale_size), Image.NEAREST)
+                im1 = np.array(im1, dtype=np.float32)
+                im2 = np.array(im2, dtype=np.float32)
+                im1 = np.expand_dims(im1, axis=0)
+                im2 = np.expand_dims(im2, axis=0)
+                encode1 = self.encode(im1)
+                encode2 = self.encode(im2)
+
+                decodes = []
+                for idx, ratio in enumerate([ratio]):
+                    z = np.stack([slerp(ratio, r1, r2) for r1, r2 in zip(encode1, encode2)])
+                    z_decode = self.decode(z)
+                    decodes.append(z_decode)
+
+                decodes = np.stack(decodes).transpose([1, 0, 2, 3, 4])
+                decodes = decodes.astype(dtype=np.uint8)
+                save_image_simple(decodes[0, 0, :, :, :], './interpolate/{}.jpg'.format(basename))
+                _im1 = (im1[0, :, :, :]).astype(dtype=np.uint8)
+                _im2 = (im2[0, :, :, :]).astype(dtype=np.uint8)
+                concat = np.concatenate([_im1, decodes[0, 0, :, :, :], _im2], axis=1)
+                save_image_simple(concat, './interpolate/{}_interp.jpg'.format(basename))
+            except KeyboardInterrupt:
+                raise
+            except Exception as e:
+                print('[!] Encoding failed on {}.'.format(basename))
+                print(e)
 
 
     def get_image_from_loader(self):
