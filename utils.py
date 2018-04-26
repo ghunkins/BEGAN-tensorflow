@@ -39,7 +39,11 @@ def prepare_dirs_and_logger(config):
             config.model_dir = os.path.join(config.log_dir, config.model_name)
         else:
             config.model_dir = os.path.join(config.log_dir, config.load_path)
+
     config.data_path = os.path.join(config.data_dir, config.dataset)
+    print(config.data_path)
+    print(config.log_dir)
+    print(config.model_dir)
 
     for path in [config.log_dir, config.data_dir, config.model_dir]:
         if not os.path.exists(path):
