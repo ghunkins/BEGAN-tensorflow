@@ -3,8 +3,8 @@
 #SBATCH -t 0-01:00:00
 #SBATCH --job-name=began
 #SBATCH --mem=30GB 
-#SBATCH --output=interp_%j.txt
-#SBATCH -e interp_%j.txt
+#SBATCH --output=interp_out_%j.txt
+#SBATCH -e interp_err_%j.txt
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
