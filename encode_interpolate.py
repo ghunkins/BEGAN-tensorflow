@@ -33,15 +33,16 @@ def test(config):
         trainer.encode_save(dataset_path, size)                     # call encode save
 
     elif config.test_type == 'interpolate':
-        dataset1 = config.test_data_path or config.dataset          # e.g. 'CelebA'
+        dataset1 = config.dataset                                   # e.g. 'CelebA'
         dataset2 = config.dataset2                                  # e.g. 'CelebB'
-        data_loader = get_loader(                                   # get a fake loader
-            dataset1, config.batch_size, config.input_scale_size,   
-            config.data_format, config.split)
-        trainer = Trainer(config, data_loader)                      # initialize Trainer
 
         dataset1_path = os.path.join(config.data_dir, dataset1)     # get path for dataset 1
         dataset2_path = os.path.join(config.data_dir, dataset2)     # get path for dataset 2
+
+        data_loader = get_loader(                                   # get a fake loader
+            dataset1_path, config.batch_size, config.input_scale_size,   
+            config.data_format, config.split)
+        trainer = Trainer(config, data_loader)                      # initialize Trainer
 
         trainer.interpolate_encode_save(dataset1_path, dataset2_path, size)           # call encode interpolate save
         
