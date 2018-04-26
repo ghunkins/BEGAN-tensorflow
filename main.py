@@ -16,7 +16,8 @@ def main(config):
     else:
         setattr(config, 'batch_size', 64)
         if config.test_data_path is None:
-            data_path = config.data_path
+            #data_path = config.data_path
+            pass
         else:
             data_path = config.test_data_path
 
