@@ -177,7 +177,7 @@ class Trainer(object):
             print(type(x))
             print(x.size)
         except:
-            print "Did not work."
+            print("Did not work.")
 
         self.z = tf.random_uniform(
                 (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
