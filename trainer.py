@@ -183,7 +183,8 @@ class Trainer(object):
             print(mom_x.get_shape())
             z_dad = self.encode(dad_x)
             z_mom = self.encode(mom_x)
-        except:
+        except Exception as e:
+            print(e)
             print("Did not work.")
 
 
