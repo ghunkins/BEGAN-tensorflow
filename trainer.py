@@ -96,17 +96,17 @@ class Trainer(object):
         self.summary_writer = tf.summary.FileWriter(self.model_dir)
 
         sv = tf.train.Supervisor(logdir=self.model_dir,
-                                is_chief=True,
-                                saver=self.saver,
-                                summary_op=None,
-                                summary_writer=self.summary_writer,
-                                save_model_secs=300,
-                                global_step=self.step,
-                                ready_for_local_init_op=None)
+                                 is_chief=True,
+                                 saver=self.saver,
+                                 summary_op=None,
+                                 summary_writer=self.summary_writer,
+                                 save_model_secs=300,
+                                 global_step=self.step,
+                                 ready_for_local_init_op=None)
 
         gpu_options = tf.GPUOptions(allow_growth=True)
         sess_config = tf.ConfigProto(allow_soft_placement=True,
-                                    gpu_options=gpu_options)
+                                     gpu_options=gpu_options)
 
         self.sess = sv.prepare_or_wait_for_session(config=sess_config)
 
@@ -118,19 +118,23 @@ class Trainer(object):
             self.build_test_model()
 
     def train(self):
+        # create random vector
         z_fixed = np.random.uniform(-1, 1, size=(self.batch_size, self.z_num))
-
+        # save a fixed batch
         x_fixed = self.get_image_from_loader()
         save_image(x_fixed, '{}/x_fixed.png'.format(self.model_dir))
 
         prev_measure = 1
         measure_history = deque([0]*self.lr_update_step, self.lr_update_step)
 
+        # loop through from initial step to final step
         for step in trange(self.start_step, self.max_step):
+            # define base fetch dictionary to give to sess.run()
             fetch_dict = {
                 "k_update": self.k_update,
                 "measure": self.measure,
             }
+            # add to fetch dictionary if mod steps 
             if step % self.log_step == 0:
                 fetch_dict.update({
                     "summary": self.summary_op,
@@ -138,11 +142,12 @@ class Trainer(object):
                     "d_loss": self.d_loss,
                     "k_t": self.k_t,
                 })
+            # run the training !!!!
             result = self.sess.run(fetch_dict)
-
+            # append the measure history
             measure = result['measure']
             measure_history.append(measure)
-
+            # if mod log_step, record the summary to terminal
             if step % self.log_step == 0:
                 self.summary_writer.add_summary(result['summary'], step)
                 self.summary_writer.flush()
@@ -154,6 +159,7 @@ class Trainer(object):
                 print("[{}/{}] Loss_D: {:.6f} Loss_G: {:.6f} measure: {:.4f}, k_t: {:.4f}". \
                       format(step, self.max_step, d_loss, g_loss, measure, k_t))
 
+            # and then if every 10 * log_step mod, autoencode and generate an example
             if step % (self.log_step * 10) == 0:
                 x_fake = self.generate(z_fixed, self.model_dir, idx=step)
                 self.autoencode(x_fixed, self.model_dir, idx=step, x_fake=x_fake)
@@ -257,8 +263,6 @@ class Trainer(object):
         for key, img in items.items():
             if img is None:
                 continue
-            #if img.shape[3] in [1, 3]:
-            #    img = img.transpose([0, 3, 1, 2])
 
             x_path = os.path.join(path, '{}_D_{}.png'.format(idx, key))
             x = self.sess.run(self.AE_x, {self.x: img})
@@ -266,8 +270,6 @@ class Trainer(object):
             print("[*] Samples saved: {}".format(x_path))
 
     def encode(self, inputs):
-        #if inputs.shape[3] in [1, 3]:
-        #    inputs = inputs.transpose([0, 3, 1, 2])
         return self.sess.run(self.D_z, {self.x: inputs})
 
     def decode(self, z):
@@ -301,11 +303,6 @@ class Trainer(object):
         save_image(batch_generated, os.path.join(root_path, 'test{}_interp_G.png'.format(step)), nrow=10)
 
     def interpolate_D(self, real1_batch, real2_batch, step=0, root_path="."):
-        # =============
-        #tf_real1_batch = to_nchw_numpy(real1_batch)
-        #nchw_to_nhwc
-        #tf_real2_batch = to_nchw_numpy(real2_batch)
-        # =============
         real1_encode = self.encode(real1_batch)
         real2_encode = self.encode(real2_batch)
 
