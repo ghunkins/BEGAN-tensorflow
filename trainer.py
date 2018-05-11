@@ -91,7 +91,11 @@ class Trainer(object):
 
         self.is_train = config.is_train
         self.is_posttrain = config.is_posttrain
-        self.build_model()
+
+        if self.is_posttrain:
+            self.build_posttrain_model()
+        else:
+            self.build_model()
 
         self.saver = tf.train.Saver()
         self.summary_writer = tf.summary.FileWriter(self.model_dir)
@@ -110,9 +114,6 @@ class Trainer(object):
                                      gpu_options=gpu_options)
 
         self.sess = sv.prepare_or_wait_for_session(config=sess_config)
-
-        if self.is_posttrain:
-            self.build_posttrain_model()
 
         if not self.is_train:
             # dirty way to bypass graph finilization error
@@ -252,30 +253,24 @@ class Trainer(object):
         x = norm_img(self.x)
         try:
             dad_x = x[:, :, :128, :]
-            kid_x = x[:, :, 128:256, :]
             mom_x = x[:, :, 256:, :]
-            print(type(x))
-            print(dad_x.get_shape())
-            print(kid_x.get_shape())
-            print(mom_x.get_shape())
-            z_dad = self.encode(dad_x)
-            z_mom = self.encode(mom_x)
+            x = x[:, :, 128:256, :]
         except Exception as e:
             print(e)
             print("Did not work.")
 
-        self.z = tf.random_uniform(
-                (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
         self.k_t = tf.Variable(0., trainable=False, name='k_t')
+
+        d_out, self.D_z, self.D_var = DiscriminatorCNN(
+                tf.concat([dad_x, mom_x], 0), self.channel, self.z_num, self.repeat_num,
+                self.conv_hidden_num, self.data_format)
+        AE_dad, AE_mom = tf.split(d_out, 2)
+
+        self.z = AE_x = slerp(0.5, AE_dad, AE_mom)
 
         G, self.G_var = GeneratorCNN(
                 self.z, self.conv_hidden_num, self.channel,
                 self.repeat_num, self.data_format, reuse=False)
-
-        d_out, self.D_z, self.D_var = DiscriminatorCNN(
-                tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
-                self.conv_hidden_num, self.data_format)
-        AE_G, AE_x = tf.split(d_out, 2)
 
         self.G = denorm_img(G, self.data_format)
         self.AE_G, self.AE_x = denorm_img(AE_G, self.data_format), denorm_img(AE_x, self.data_format)
