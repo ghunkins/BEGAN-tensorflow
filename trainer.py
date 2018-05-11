@@ -174,8 +174,8 @@ class Trainer(object):
         self.x = self.data_loader
         x = norm_img(self.x)
         try:
-            print type(x)
-            print x.size
+            print(type(x))
+            print(x.size)
         except:
             print "Did not work."
 
