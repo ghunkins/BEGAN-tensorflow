@@ -181,8 +181,12 @@ class Trainer(object):
             print(dad_x.get_shape())
             print(kid_x.get_shape())
             print(mom_x.get_shape())
+            z_dad = self.encode(dad_x)
+            z_mom = self.encode(mom_x)
         except:
             print("Did not work.")
+
+
 
 
         self.z = tf.random_uniform(
