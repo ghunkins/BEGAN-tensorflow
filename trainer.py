@@ -47,6 +47,15 @@ def slerp(val, low, high):
         return (1.0-val) * low + val * high # L'Hopital's rule/LERP
     return np.sin((1.0-val)*omega) / so * low + np.sin(val*omega) / so * high
 
+def slerp_tf(val, low, high):
+    dot = tf.tensordot(low/tf.norm(low), high/tf.norm(high))
+    omega = tf.acos(tf.clip_by_value(dot, -1, 1))
+    so = tf.sin(omega)
+    if so == 0:
+        return (1.0-val) * low + val * high # L'Hopital's rule/LERP
+    return tf.sin((1.0-val)*omega) / so * low + tf.sin(val*omega) / so * high
+
+
 class Trainer(object):
     def __init__(self, config, data_loader):
         self.config = config
@@ -266,8 +275,7 @@ class Trainer(object):
                 self.conv_hidden_num, self.data_format)
         AE_dad, AE_mom = tf.split(d_out, 2)
 
-        with sess.as_default():
-            self.z = AE_x = tf.constant(slerp(0.5, AE_dad.eval(), AE_mom.eval()))
+        self.z = AE_x = slerp_tf(0.5, AE_dad, AE_mom)
 
         G, self.G_var = GeneratorCNN(
                 self.z, self.conv_hidden_num, self.channel,
