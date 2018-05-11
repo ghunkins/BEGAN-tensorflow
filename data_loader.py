@@ -9,7 +9,6 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
     if dataset_name in ['CelebA'] and split:
         root = os.path.join(root, 'splits', split)
 
-    print root
     for ext in ["jpg", "png"]:
         paths = glob("{}/*.{}".format(root, ext))
         if ext == "jpg":
@@ -22,6 +21,7 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
     with Image.open(paths[0]) as img:
         w, h = img.size
         shape = [h, w, 3]
+        print 'Loader Shape', shape
 
     filename_queue = tf.train.string_input_producer(list(paths), shuffle=False, seed=seed)
     reader = tf.WholeFileReader()
@@ -44,8 +44,9 @@ def get_loader(root, batch_size, scale_size, data_format, split=None, is_graysca
         queue = tf.image.crop_to_bounding_box(queue, 50, 25, 128, 128)
         queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
     else:
-        queue = tf.image.crop_to_bounding_box(queue, 0, 25, 150, 170)
-        queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
+        #queue = tf.image.crop_to_bounding_box(queue, 0, 25, 150, 170)
+        #queue = tf.image.resize_nearest_neighbor(queue, [scale_size, scale_size])
+        pass
 
     if data_format == 'NCHW':
         queue = tf.transpose(queue, [0, 3, 1, 2])
