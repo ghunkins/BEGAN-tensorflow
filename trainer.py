@@ -175,7 +175,7 @@ class Trainer(object):
         x = norm_img(self.x)
         try:
             print(type(x))
-            print(x.size)
+            print(x.get_shape())
         except:
             print("Did not work.")
 
