@@ -271,9 +271,9 @@ class Trainer(object):
         self.k_t = tf.Variable(0., trainable=False, name='k_t')
 
         d_out, self.D_z, self.D_var = DiscriminatorCNN(
-                tf.concat([dad_x, mom_x], 0), self.channel, self.z_num, self.repeat_num,
+                tf.concat([x, dad_x, mom_x], 0), self.channel, self.z_num, self.repeat_num,
                 self.conv_hidden_num, self.data_format)
-        AE_dad, AE_mom = tf.split(d_out, 2)
+        AE_G, AE_dad, AE_mom = tf.split(d_out, 3)
 
         self.z = AE_x = slerp_tf(0.5, AE_dad, AE_mom)
 
