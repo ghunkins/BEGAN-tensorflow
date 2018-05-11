@@ -266,7 +266,8 @@ class Trainer(object):
                 self.conv_hidden_num, self.data_format)
         AE_dad, AE_mom = tf.split(d_out, 2)
 
-        self.z = AE_x = tf.constant(slerp(0.5, AE_dad.eval(), AE_mom.eval()))
+        with sess.as_default():
+            self.z = AE_x = tf.constant(slerp(0.5, AE_dad.eval(), AE_mom.eval()))
 
         G, self.G_var = GeneratorCNN(
                 self.z, self.conv_hidden_num, self.channel,
