@@ -174,10 +174,16 @@ class Trainer(object):
         self.x = self.data_loader
         x = norm_img(self.x)
         try:
+            dad_x = x[:, :, :128, :]
+            kid_x = x[:, :, 128:256, :]
+            mom_x = x[:, :, 256:, :]
             print(type(x))
-            print(x.get_shape())
+            print(dad_x.get_shape())
+            print(kid_x.get_shape())
+            print(mom_x.get_shape())
         except:
             print("Did not work.")
+
 
         self.z = tf.random_uniform(
                 (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
