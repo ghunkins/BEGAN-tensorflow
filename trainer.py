@@ -284,7 +284,7 @@ class Trainer(object):
             self.z_combo = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_z, mom_z)])
             print(self.z_combo)
             print(self.z_combo[:4, :] == self.z_combo[4:, :])
-            self.z_combo = self.z_combo[:4]
+            self.z_combo = tf.convert_to_tensor(self.z_combo[:4])
             #self.z_combo = z[0]
             try:
                 print('type z_combo:', type(self.z_combo))
