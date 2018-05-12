@@ -268,7 +268,8 @@ class Trainer(object):
     def build_post_train_model(self):
         with tf.variable_scope('post_train') as vs:
             z_optimizer = tf.train.AdamOptimizer(0.0001)
-            x = norm_img(self.x)
+            x = get_image_from_loader()
+            #x = norm_img(self.x)
             dad_x = x[:, :, :128, :]
             mom_x = x[:, :, 256:, :]
             kid_x = x[:, :, 128:256, :]
