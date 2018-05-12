@@ -48,7 +48,7 @@ def slerp(val, low, high):
     return np.sin((1.0-val)*omega) / so * low + np.sin(val*omega) / so * high
 
 def slerp_tf(val, low, high):
-    dot = tf.reduce_sum(tf.multiply(low/tf.norm(low), high/tf.norm(high)), 1)
+    dot = tf.reduce_sum(tf.multiply(low/tf.norm(low), high/tf.norm(high)), 1, keep_dims=True)
     omega = tf.acos(tf.clip_by_value(dot, -1, 1))
     so = tf.sin(omega)
     if so == 0:
@@ -281,7 +281,7 @@ class Trainer(object):
             mom_x = x[:, :, 256:, :]
             kid_x = x[:, :, 128:256, :]
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
-            self.z_combo = slerp_tf(0.5, dad_z, mom_z)
+            self.z_combo = slerp(0.5, dad_z, mom_z)
             try:
                 print('type z_combo:', type(self.z_combo))
                 print('shape z_combo:', self.z_combo.shape)
