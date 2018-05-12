@@ -281,7 +281,7 @@ class Trainer(object):
             mom_x = x[:, :, 256:, :]
             kid_x = x[:, :, 128:256, :]
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
-            self.z_combo = slerp(0.5, dad_z, mom_z)
+            self.z_combo = slerp(0.5, r1, r2) for r1, r2 in zip(dad_z, mom_z)
             try:
                 print('type z_combo:', type(self.z_combo))
                 print('shape z_combo:', self.z_combo.shape)
