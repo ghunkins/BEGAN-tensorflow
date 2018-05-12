@@ -272,7 +272,7 @@ class Trainer(object):
             x = self.get_image_from_loader()
             try:
                 print('type x:', type(x))
-                print('shape x:' x.shape)
+                print('shape x:', x.shape)
             except:
                 pass
             #x = norm_img(self.x)
