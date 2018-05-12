@@ -283,7 +283,7 @@ class Trainer(object):
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
             self.z_combo = slerp_tf(0.5, dad_z, mom_z)
 
-        G_kid = GeneratorCNN(
+        G_kid, _ = GeneratorCNN(
             self.z_combo, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
 
         with tf.variable_scope('post_train') as vs:
