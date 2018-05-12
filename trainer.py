@@ -305,7 +305,7 @@ class Trainer(object):
             pass
 
         with tf.variable_scope('post_train') as vs:
-            self.z_combo_loss = tf.reduce_mean(tf.abs(kid_x - G_kid))
+            self.z_combo_loss = tf.reduce_mean(tf.abs(tf.convert_to_tensor(kid_x) - G_kid))
             self.z_combo_optim = z_optimizer.minimize(self.z_combo_loss, var_list=[self.z_combo])
 
         test_variables = tf.contrib.framework.get_variables(vs)
