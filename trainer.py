@@ -282,9 +282,23 @@ class Trainer(object):
             kid_x = x[:, :, 128:256, :]
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
             self.z_combo = slerp_tf(0.5, dad_z, mom_z)
+            try:
+                print('type z_combo:', type(z_combo))
+                print('shape z_combo:', z_combo.shape)
+            except:
+                pass
+
 
         G_kid, _ = GeneratorCNN(
             self.z_combo, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
+
+        try:
+            print('type G_kid:', type(G_kid))
+            print('type kid_x:', type(kid_x))
+            print('shape G_kid:', G_kid.shape)
+            print('shape kid_x:', kid_x.shape)
+        except:
+            pass
 
         with tf.variable_scope('post_train') as vs:
             self.z_combo_loss = tf.reduce_mean(tf.abs(kid_x - G_kid))
