@@ -283,8 +283,8 @@ class Trainer(object):
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
             self.z_combo = slerp_tf(0.5, dad_z, mom_z)
             try:
-                print('type z_combo:', type(z_combo))
-                print('shape z_combo:', z_combo.shape)
+                print('type z_combo:', type(self.z_combo))
+                print('shape z_combo:', self.z_combo.shape)
             except:
                 pass
 
