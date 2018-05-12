@@ -101,10 +101,7 @@ class Trainer(object):
         self.is_train = config.is_train
         self.is_posttrain = config.is_posttrain
 
-        if self.is_posttrain:
-            self.build_posttrain_model()
-        else:
-            self.build_model()
+        self.build_model()
 
         self.saver = tf.train.Saver()
         self.summary_writer = tf.summary.FileWriter(self.model_dir)
@@ -130,6 +127,12 @@ class Trainer(object):
             g._finalized = False
 
             self.build_test_model()
+
+        if self.is_posttrain:
+            g = tf.get_default_graph()
+            g._finalized = False
+            self.build_post_train_model()
+
 
     def train(self):
         # create random vector
@@ -187,20 +190,6 @@ class Trainer(object):
     def build_model(self):
         self.x = self.data_loader
         x = norm_img(self.x)
-        try:
-            dad_x = x[:, :, :128, :]
-            kid_x = x[:, :, 128:256, :]
-            mom_x = x[:, :, 256:, :]
-            print(type(x))
-            print(dad_x.get_shape())
-            print(kid_x.get_shape())
-            print(mom_x.get_shape())
-            #z_dad = self.encode(dad_x)
-            #z_mom = self.encode(mom_x)
-            x = dad_x
-        except Exception as e:
-            print(e)
-            print("Did not work.")
 
         self.z = tf.random_uniform(
                 (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
@@ -214,72 +203,6 @@ class Trainer(object):
                 tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
                 self.conv_hidden_num, self.data_format)
         AE_G, AE_x = tf.split(d_out, 2)
-
-        self.G = denorm_img(G, self.data_format)
-        self.AE_G, self.AE_x = denorm_img(AE_G, self.data_format), denorm_img(AE_x, self.data_format)
-
-        if self.optimizer == 'adam':
-            optimizer = tf.train.AdamOptimizer
-        else:
-            raise Exception("[!] Caution! Paper didn't use {} opimizer other than Adam".format(config.optimizer))
-
-        g_optimizer, d_optimizer = optimizer(self.g_lr), optimizer(self.d_lr)
-
-        self.d_loss_real = tf.reduce_mean(tf.abs(AE_x - x))
-        self.d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
-
-        self.d_loss = self.d_loss_real - self.k_t * self.d_loss_fake
-        self.g_loss = tf.reduce_mean(tf.abs(AE_G - G))
-
-        d_optim = d_optimizer.minimize(self.d_loss, var_list=self.D_var)
-        g_optim = g_optimizer.minimize(self.g_loss, global_step=self.step, var_list=self.G_var)
-
-        self.balance = self.gamma * self.d_loss_real - self.g_loss
-        self.measure = self.d_loss_real + tf.abs(self.balance)
-
-        with tf.control_dependencies([d_optim, g_optim]):
-            self.k_update = tf.assign(
-                self.k_t, tf.clip_by_value(self.k_t + self.lambda_k * self.balance, 0, 1))
-
-        self.summary_op = tf.summary.merge([
-            tf.summary.image("G", self.G),
-            tf.summary.image("AE_G", self.AE_G),
-            tf.summary.image("AE_x", self.AE_x),
-
-            tf.summary.scalar("loss/d_loss", self.d_loss),
-            tf.summary.scalar("loss/d_loss_real", self.d_loss_real),
-            tf.summary.scalar("loss/d_loss_fake", self.d_loss_fake),
-            tf.summary.scalar("loss/g_loss", self.g_loss),
-            tf.summary.scalar("misc/measure", self.measure),
-            tf.summary.scalar("misc/k_t", self.k_t),
-            tf.summary.scalar("misc/d_lr", self.d_lr),
-            tf.summary.scalar("misc/g_lr", self.g_lr),
-            tf.summary.scalar("misc/balance", self.balance),
-        ])
-
-    def build_posttrain_model(self):
-        self.x = self.data_loader
-        x = norm_img(self.x)
-        try:
-            dad_x = x[:, :, :128, :]
-            mom_x = x[:, :, 256:, :]
-            x = x[:, :, 128:256, :]
-        except Exception as e:
-            print(e)
-            print("Did not work.")
-
-        self.k_t = tf.Variable(0., trainable=False, name='k_t')
-
-        d_out, self.D_z, self.D_var = DiscriminatorCNN(
-                tf.concat([x, dad_x, mom_x], 0), self.channel, self.z_num, self.repeat_num,
-                self.conv_hidden_num, self.data_format)
-        AE_G, AE_dad, AE_mom = tf.split(d_out, 3)
-
-        self.z = AE_x = slerp_tf(0.5, AE_dad, AE_mom)
-
-        G, self.G_var = GeneratorCNN(
-                self.z, self.conv_hidden_num, self.channel,
-                self.repeat_num, self.data_format, reuse=False)
 
         self.G = denorm_img(G, self.data_format)
         self.AE_G, self.AE_x = denorm_img(AE_G, self.data_format), denorm_img(AE_x, self.data_format)
@@ -341,6 +264,32 @@ class Trainer(object):
 
         test_variables = tf.contrib.framework.get_variables(vs)
         self.sess.run(tf.variables_initializer(test_variables))
+
+    def build_post_train_model(self):
+        with tf.variable_scope('post_train') as vs:
+            z_optimizer = tf.train.AdamOptimizer(0.0001)
+            x = norm_img(self.x)
+            dad_x = x[:, :, :128, :]
+            mom_x = x[:, :, 256:, :]
+            kid_x = x[:, :, 128:256, :]
+            dad_z, mom_z = [encode(_x) for _x in [dad_x, mom_x]]
+            self.z_combo = slerp_tf(0.5, dad_z, mom_z)
+
+        G_kid = GeneratorCNN(
+            self.z_combo, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
+
+        with tf.variable_scope('post_train') as vs:
+            self.z_combo_loss = tf.reduce_mean(tf.abs(kid_x - G_kid))
+            self.z_combo_optim = z_optimizer.minimize(self.z_combo_loss, var_list=[self.z_combo])
+
+        test_variables = tf.contrib.framework.get_variables(vs)
+        self.sess.run(tf.variables_initializer(test_variables))
+
+    def post_train(self, posttrain_epoch=500):
+        tf_real_batch = to_nchw_numpy(real_batch)
+        for i in trange(posttrain_epoch):
+            z_r_loss, _ = self.sess.run([self.z_combo_loss, self.z_combo_optim], {self.x: tf_real_batch})
+        z = self.sess.run(self.z_r)
 
     def generate(self, inputs, root_path=None, path=None, idx=None, save=True):
         x = self.sess.run(self.G, {self.z: inputs})
