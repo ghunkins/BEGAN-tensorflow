@@ -270,6 +270,11 @@ class Trainer(object):
         with tf.variable_scope('post_train') as vs:
             z_optimizer = tf.train.AdamOptimizer(0.0001)
             x = self.get_image_from_loader()
+            try:
+                print('type x:', type(x))
+                print('shape x:' x.shape)
+            except:
+                pass
             #x = norm_img(self.x)
             dad_x = x[:, :, :128, :]
             mom_x = x[:, :, 256:, :]
