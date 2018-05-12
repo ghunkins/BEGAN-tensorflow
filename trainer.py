@@ -282,6 +282,9 @@ class Trainer(object):
             kid_x = x[:, :, 128:256, :]
             dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
             self.z_combo = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_z, mom_z)])
+            print(self.z_combo)
+            print(self.z_combo[:4, :] == self.z_combo[4:, :])
+            self.z_combo = self.z_combo[:4]
             #self.z_combo = z[0]
             try:
                 print('type z_combo:', type(self.z_combo))
