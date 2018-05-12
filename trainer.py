@@ -190,6 +190,7 @@ class Trainer(object):
     def build_model(self):
         self.x = self.data_loader
         x = norm_img(self.x)
+        x = x[:, :, :128, :]
 
         self.z = tf.random_uniform(
                 (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
