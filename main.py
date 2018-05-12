@@ -12,7 +12,10 @@ def main(config):
     tf.set_random_seed(config.random_seed)
 
     if config.is_train:
-        data_path = config.data_path
+        if config.is_posttrain and config.posttrain_data_path:
+            data_path = config.posttrain_data_path
+        else:
+            data_path = config.data_path
     else:
         setattr(config, 'batch_size', 64)
         if config.test_data_path is None:
@@ -28,7 +31,12 @@ def main(config):
 
     if config.is_train:
         save_config(config)
-        trainer.train()
+        if config.is_posttrain:
+            if not config.load_path:
+                raise Exception("[!] You should specify `load_path` to load a pretrained model")
+            trainer.post_train()
+        else:
+            trainer.train()
     else:
         if not config.load_path:
             raise Exception("[!] You should specify `load_path` to load a pretrained model")
