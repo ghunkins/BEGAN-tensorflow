@@ -266,6 +266,7 @@ class Trainer(object):
         self.sess.run(tf.variables_initializer(test_variables))
 
     def build_post_train_model(self):
+        print('in post_train')
         with tf.variable_scope('post_train') as vs:
             z_optimizer = tf.train.AdamOptimizer(0.0001)
             x = self.get_image_from_loader()
@@ -285,10 +286,13 @@ class Trainer(object):
 
         test_variables = tf.contrib.framework.get_variables(vs)
         self.sess.run(tf.variables_initializer(test_variables))
+        print('finished with post_train')
 
     def post_train(self, posttrain_epoch=500):
+        print('In post_train')
         tf_real_batch = to_nchw_numpy(real_batch)
         for i in trange(posttrain_epoch):
+            print(i)
             z_r_loss, _ = self.sess.run([self.z_combo_loss, self.z_combo_optim], {self.x: tf_real_batch})
         z = self.sess.run(self.z_r)
 
