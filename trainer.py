@@ -201,7 +201,7 @@ class Trainer(object):
 
         d_out, self.D_z, self.D_var = DiscriminatorCNN(
                 tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
-                self.conv_hidden_num, self.data_format)
+                self.conv_hidden_num, self.data_format, reuse=False)
         AE_G, AE_x = tf.split(d_out, 2)
 
         self.G = denorm_img(G, self.data_format)
