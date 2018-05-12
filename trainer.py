@@ -48,7 +48,7 @@ def slerp(val, low, high):
     return np.sin((1.0-val)*omega) / so * low + np.sin(val*omega) / so * high
 
 def slerp_tf(val, low, high):
-    dot = tf.reduce_sum(tf.multiply(low/tf.norm(low), high/tf.norm(high)), 1, keep_dims=True)
+    dot = tf.reduce_sum(tf.multiply(low/tf.norm(low), high/tf.norm(high)), 0, keep_dims=True)
     omega = tf.acos(tf.clip_by_value(dot, -1, 1))
     so = tf.sin(omega)
     if so == 0:
