@@ -333,7 +333,7 @@ class Trainer(object):
             # losses to ensure auto-encoding works!
             # d_loss_real --> mean(| AE_x - x |)
             # d_loss_fake --> mean(| AE_G - G |)
-            d_loss_real = tf.reduce_mean(tf.abs(AE_x - x))
+            d_loss_real = tf.reduce_mean(tf.abs(AE_x - self.kid_x))
             d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
 
             # weight discriminator loss!
