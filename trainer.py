@@ -314,6 +314,8 @@ class Trainer(object):
             # to maintain balance between D loss and G loss
             self.child_loss = tf.Variable(0., trainable=False, name='child_loss')
 
+            print('Mom x:', self.mom_x.shape)
+            print('Dad x:', self.dad_x.shape)
             # encoding
             dad_encode = self.encode(self.dad_x)
             mom_encode = self.encode(self.mom_x)
