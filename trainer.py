@@ -205,6 +205,9 @@ class Trainer(object):
         # d_out --> output of discriminator
         # D_z   --> encoded output (z)
         # D_var --> discriminator variables
+        d_out, self.D_z, self.D_var = DiscriminatorCNN(
+                tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
+                self.conv_hidden_num, self.data_format, reuse=False)
         # cut output into 2 --> G and X
         AE_G, AE_x = tf.split(d_out, 2)
 
