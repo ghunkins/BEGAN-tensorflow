@@ -205,9 +205,6 @@ class Trainer(object):
         # d_out --> output of discriminator
         # D_z   --> encoded output (z)
         # D_var --> discriminator variables
-        d_out, self.D_z, self.D_var = DiscriminatorCNN(
-                tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
-                self.conv_hidden_num, self.data_format, reuse=False)
         # cut output into 2 --> G and X
         AE_G, AE_x = tf.split(d_out, 2)
 
@@ -317,21 +314,16 @@ class Trainer(object):
             print('Mom x:', self.mom_x.shape)
             print('Dad x:', self.dad_x.shape)
             # encoding
-            dad_encode = self.encode(self.dad_x)
-            mom_encode = self.encode(self.mom_x)
+            dad_encode = self.encode(self.dad_x)[:4, :]
+            mom_encode = self.encode(self.mom_x)[:4, :]
             print('Mom encode:', mom_encode.shape)
             print('Dad encode:', dad_encode.shape)
             #encode = slerp(0.5, dad_encode, mom_encode)
             self.encoded = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
             print('Encode size:', self.encoded.shape)
 
-        # but accept z_r as the input
-        G, _ = GeneratorCNN(
-            self.encoded, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
-
-        with tf.variable_scope('post_train') as vs:
             # generate from slerp, decode slerp, and autoencode raw data
-            #G = self.generate(sencode, save=False)
+            G = self.generate(self.encoded, save=False)
             AE_x = self.decode(self.encoded)
             AE_G = self.autoencode_nosave(self.kid_x)
 
