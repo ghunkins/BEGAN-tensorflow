@@ -453,8 +453,8 @@ class Trainer(object):
             #dad_encode = self.encode(dad_x)
             #mom_encode = self.encode(mom_x)
 
-            _, dad_encode = np.split(self.encode(self.dad_x), 2)
-            _, mom_encode = np.split(self.encode(self.mom_x), 2)
+            _, dad_encode = np.split(self.encode(dad_x), 2)
+            _, mom_encode = np.split(self.encode(mom_x), 2)
             
             z_parents = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
 
