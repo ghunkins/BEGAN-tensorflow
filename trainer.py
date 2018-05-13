@@ -377,8 +377,9 @@ class Trainer(object):
             #                             self.input_scale_size, self.input_scale_size, 3], tf.float32)
             #self.z_parents = z_parents = tf.get_variable("z_parents", [self.batch_size, self.z_num], tf.float32)
 
-            kid_x = tf.placeholder('float')
-            z_parents = tf.placeholder('float')
+            kid_x = tf.placeholder('float', shape=(self.batch_size, self.input_scale_size,
+                                                   self.input_scale_size, 3), name='kid_x')
+            z_parents = tf.placeholder('float', shape=(self.batch_size, self.z_num), name='z_parents')
             self.kid_x = kid_x
             self.z_parents = z_parents
 
