@@ -339,6 +339,8 @@ class Trainer(object):
             # losses to ensure auto-encoding works!
             # d_loss_real --> mean(| AE_x - x |)
             # d_loss_fake --> mean(| AE_G - G |)
+            print('AE_x', AE_x.shape)
+            print('kid_x', self.kid_x.shape)
             d_loss_real = tf.reduce_mean(tf.abs(AE_x - self.kid_x))
             print('AE_G', AE_G.shape)
             print('G', G.shape)
