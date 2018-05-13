@@ -322,11 +322,16 @@ class Trainer(object):
             print('Mom encode:', mom_encode.shape)
             print('Dad encode:', dad_encode.shape)
             #encode = slerp(0.5, dad_encode, mom_encode)
-            encode = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
+            self.encoded = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
             print('Encode size:', encode.shape)
-            
+
+        # but accept z_r as the input
+        G, _ = GeneratorCNN(
+            self.encoded, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
+
+        with tf.variable_scope('post_train') as vs:
             # generate from slerp, decode slerp, and autoencode raw data
-            G = self.generate(encode, save=False)
+            #G = self.generate(sencode, save=False)
             AE_x = self.decode(encode)
             AE_G = self.autoencode_nosave(self.kid_x)
 
