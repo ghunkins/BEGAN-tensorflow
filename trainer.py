@@ -445,7 +445,7 @@ class Trainer(object):
 
         for step in trange(epoch):
             batch = self.get_image_from_loader()
-
+            batch = norm_img(batch)
             dad_x = batch[:, :, :128, :]
             kid_x = batch[:, :, 128:256, :]
             mom_x = batch[:, :, 256:, :]
