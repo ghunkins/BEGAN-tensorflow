@@ -462,11 +462,11 @@ class Trainer(object):
             }
 
             feed_dict = {
-                'kid_x': kid_x,
-                'z_parents': z_parents
+                'kid_x:0': kid_x,
+                'z_parents:0': z_parents
             }
 
-            result = self.sess.run(fetch_dict, feed_dict)
+            result = self.sess.run(fetch_dict, feed_dict=feed_dict)
 
             if step % self.log_step == 0:
                 g_loss = result['g_loss_child']
