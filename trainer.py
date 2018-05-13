@@ -462,7 +462,7 @@ class Trainer(object):
             }
 
             feed_dict = {
-                'kid_x:0': kid_x,
+                'kid_x': kid_x,
                 'z_parents:0': z_parents
             }
 
