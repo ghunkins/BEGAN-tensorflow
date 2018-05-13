@@ -317,8 +317,8 @@ class Trainer(object):
             print('Mom x:', self.mom_x.shape)
             print('Dad x:', self.dad_x.shape)
             # encoding
-            dad_encode = self.encode(self.dad_x)[:4, :]
-            mom_encode = self.encode(self.mom_x)[:4, :]
+            dad_encode = self.encode(self.dad_x)
+            mom_encode = self.encode(self.mom_x)
             print('Mom encode:', mom_encode.shape)
             print('Dad encode:', dad_encode.shape)
             #encode = slerp(0.5, dad_encode, mom_encode)
