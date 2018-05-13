@@ -8,4 +8,4 @@
 #SBATCH --gres=gpu:2
 
 source activate BEGAN
-python main.py --batch_size 4 --input_scale_size=128 --load_path=CelebA_0422_215559_COPY
+python main.py --batch_size 4 --input_scale_size=128 --is_posttrain=True --posttrain_data_path=data/stitched --load_path=CelebA_0422_215559_COPY
