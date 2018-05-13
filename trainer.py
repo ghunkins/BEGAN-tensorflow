@@ -303,6 +303,7 @@ class Trainer(object):
             # initialize data
             x = self.data_loader
             x = norm_img(x)
+            x = x.eval()
             self.dad_x = x[:, :, :128, :]
             self.kid_x = x[:, :, 128:256, :]
             self.mom_x = x[:, :, 256:, :]
@@ -359,7 +360,7 @@ class Trainer(object):
         # save a fixed batch
         x_fixed = self.get_image_from_loader()
         save_image(x_fixed, '{}/x_fixed_child.png'.format(self.model_dir))
-        
+
         for step in trange(epoch):
             fetch_dict = {
                 "train_child_loss": self.train_child_loss,
