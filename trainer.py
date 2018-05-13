@@ -340,8 +340,8 @@ class Trainer(object):
             # d_loss_real --> mean(| AE_x - x |)
             # d_loss_fake --> mean(| AE_G - G |)
             d_loss_real = tf.reduce_mean(tf.abs(AE_x - self.kid_x))
-            print('AE_G', tf.shape(AE_G))
-            print('G', tf.shape(G))
+            print('AE_G', AE_G.shape)
+            print('G', G.shape)
             d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
 
             # weight discriminator loss!
