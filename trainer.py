@@ -427,9 +427,16 @@ class Trainer(object):
             # g_optim --> optimize g_loss by updating generator variables
             g_optim = g_optimizer.minimize(self.g_loss_child, global_step=self.step, var_list=G_var)
 
+            # define a single balanced loss equation
+            # balance --> gamma * d_loss_real - g_loss
+            balance = self.gamma * d_loss_real - self.g_loss_child
+            # measures --> d_loss_real + | balance |
+            measure = d_loss_real + tf.abs(balance)
+
             with tf.control_dependencies([d_optim, g_optim]):
                 # run the update to call
-                self.train_child_loss = tf.assign(self.child_loss, self.g_loss_child + self.d_loss_child)
+                self.train_child_loss = tf.assign(
+                    self.k_t, tf.clip_by_value(self.k_t + self.lambda_k * balance, 0, 1))
 
         # get variables from the variable scope
         variables = tf.contrib.framework.get_variables(vs)
