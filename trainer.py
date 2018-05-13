@@ -303,7 +303,7 @@ class Trainer(object):
             # initialize data
             x = self.data_loader
             x = norm_img(x)
-            x = x.eval()
+            x = x.eval(session=self.sess)
             self.dad_x = x[:, :, :128, :]
             self.kid_x = x[:, :, 128:256, :]
             self.mom_x = x[:, :, 256:, :]
