@@ -373,9 +373,9 @@ class Trainer(object):
         # AND NEEDS TO MOVE TO TF
         with tf.variable_scope('post_train') as vs:
             # initialize data
-            self.kid_x = tf.get_variable("kid_x", [self.batch_size,
+            self.kid_x = kid_x = tf.get_variable("kid_x", [self.batch_size,
                                          self.input_scale_size, self.input_scale_size, 3], tf.float32)
-            self.z_parents = tf.get_variable("z_parents", [self.batch_size, self.z_num], tf.float32)
+            self.z_parents = z_parents = tf.get_variable("z_parents", [self.batch_size, self.z_num], tf.float32)
 
         # self.z has to be the interpolated
         G, G_var = GeneratorCNN(
