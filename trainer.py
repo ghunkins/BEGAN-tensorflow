@@ -379,7 +379,7 @@ class Trainer(object):
 
             self.kid_x = tf.placeholder('float', shape=(self.batch_size, self.input_scale_size,
                                                    self.input_scale_size, 3), name='kid_x')
-            self.z_parents = tf.placeholder('float', shape=(self.batch_size*2, self.z_num), name='z_parents')
+            self.z_parents = tf.placeholder('float', shape=(self.batch_size, self.z_num), name='z_parents')
             #self.kid_x = kid_x
             #self.z_parents = z_parents
 
@@ -450,8 +450,11 @@ class Trainer(object):
             kid_x = batch[:, :, 128:256, :]
             mom_x = batch[:, :, 256:, :]
 
-            dad_encode = self.encode(dad_x)
-            mom_encode = self.encode(mom_x)
+            #dad_encode = self.encode(dad_x)
+            #mom_encode = self.encode(mom_x)
+
+            _, dad_encode = np.split(self.encode(self.dad_x), 2)
+            _, mom_encode = np.split(self.encode(self.mom_x), 2)
             
             z_parents = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
 
