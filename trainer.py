@@ -437,13 +437,29 @@ class Trainer(object):
         save_image(x_fixed, '{}/x_fixed_child.png'.format(self.model_dir))
 
         for step in trange(epoch):
+            batch = self.get_image_from_loader()
+
+            dad_x = batch[:, :, :128, :]
+            kid_x = batch[:, :, 128:256, :]
+            mom_x = batch[:, :, 256:, :]
+
+            dad_encode = self.encode(dad_x)
+            mom_encode = self.encode(mom_x)
+            
+            z_parents = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
+
             fetch_dict = {
                 "train_child_loss": self.train_child_loss,
                 "g_loss_child": self.g_loss_child,
                 "d_loss_child": self.d_loss_child
             }
 
-            result = self.sess.run(self.train_child_loss)
+            feed_dict = {
+                'kid_x': kid_x,
+                'z_parents': z_parents
+            }
+
+            result = self.sess.run(fetch_dict, feed_dict)
 
             if step % self.log_step == 0:
                 g_loss = result['g_loss_child']
