@@ -328,7 +328,8 @@ class Trainer(object):
             # generate from slerp, decode slerp, and autoencode raw data
             G = self.generate(self.encoded, save=False)
             AE_x = self.decode(self.encoded)
-            AE_G = self.autoencode_nosave(self.kid_x)
+            #AE_G = self.autoencode_nosave(self.kid_x)
+            AE_G = self.decode(self.encode(self.kid_x))
 
             # denorm images
             G = denorm_img(G, self.data_format)
