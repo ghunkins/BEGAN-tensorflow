@@ -317,7 +317,8 @@ class Trainer(object):
             # encoding
             dad_encode = self.encode(self.dad_x)
             mom_encode = self.encode(self.mom_x)
-            encode = slerp(0.5, dad_encode, mom_encode)
+            #encode = slerp(0.5, dad_encode, mom_encode)
+            encode = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
             
             # generate from slerp, decode slerp, and autoencode raw data
             G = self.generate(encode, save=False)
