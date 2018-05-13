@@ -317,7 +317,7 @@ class Trainer(object):
             print('Mom x:', self.mom_x.shape)
             print('Dad x:', self.dad_x.shape)
             # encoding
-            dad_encode = self.encode(self.dad_x)
+            dad_encode = self.encode(tf.concat([self.dad_x, self.dad_x], 0))
             mom_encode = self.encode(self.mom_x)
             print('Mom encode:', mom_encode.shape)
             print('Dad encode:', dad_encode.shape)
