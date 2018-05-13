@@ -478,8 +478,8 @@ class Trainer(object):
                 print("[{}/{}] Loss_D: {:.6f} Loss_G: {:.6f} Combined: {:.6f}". \
                       format(step, epoch, d_loss, g_loss, total_loss))
 
-                #x_fake = self.generate(z_fixed, self.model_dir, idx=step)
-                #self.autoencode(x_fixed, self.model_dir, idx=step, x_fake=x_fake)
+                x_fake = self.generate(z_fixed, self.model_dir, idx=step)
+                self.autoencode(x_fixed[:, :, 128:256, :], self.model_dir, idx=step, x_fake=x_fake)
 
     def generate(self, inputs, root_path=None, path=None, idx=None, save=True):
         x = self.sess.run(self.G, {self.z: inputs})
