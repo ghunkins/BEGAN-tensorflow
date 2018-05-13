@@ -131,8 +131,7 @@ class Trainer(object):
         if self.is_posttrain:
             g = tf.get_default_graph()
             g._finalized = False
-            self.build_post_train_model()
-
+            self.build_post_train()
 
     def train(self):
         # create random vector
@@ -141,7 +140,9 @@ class Trainer(object):
         x_fixed = self.get_image_from_loader()
         save_image(x_fixed, '{}/x_fixed.png'.format(self.model_dir))
 
+        # use prev_measure to keep track of status during train loop
         prev_measure = 1
+        # use queue for faster appending of measures for training history
         measure_history = deque([0]*self.lr_update_step, self.lr_update_step)
 
         # loop through from initial step to final step
@@ -181,61 +182,83 @@ class Trainer(object):
                 x_fake = self.generate(z_fixed, self.model_dir, idx=step)
                 self.autoencode(x_fixed, self.model_dir, idx=step, x_fake=x_fake)
 
+            # update the learning rate if necessary (decrease every X iterations)
             if step % self.lr_update_step == self.lr_update_step - 1:
                 self.sess.run([self.g_lr_update, self.d_lr_update])
-                #cur_measure = np.mean(measure_history)
-                #if cur_measure > prev_measure * 0.99:
-                #prev_measure = cur_measure
 
     def build_model(self):
+        # get the next batch from the data loader
         self.x = self.data_loader[:, :, :128, :]
+        # normalize image into space for model (from [0, 255] --> [-1, 1])
         x = norm_img(self.x)
-        #x = x[:, :, :128, :]
-
+        # get a random uniform vector for z
         self.z = tf.random_uniform(
                 (tf.shape(x)[0], self.z_num), minval=-1.0, maxval=1.0)
+        # set-up a non-trainable k_t variable
+        # to maintain balance between D loss and G loss
         self.k_t = tf.Variable(0., trainable=False, name='k_t')
-
+        # G     --> output of the generator
+        # G_var --> generator variables 
         G, self.G_var = GeneratorCNN(
                 self.z, self.conv_hidden_num, self.channel,
                 self.repeat_num, self.data_format, reuse=False)
-
+        # d_out --> output of discriminator
+        # D_z   --> encoded output (z)
+        # D_var --> discriminator variables
         d_out, self.D_z, self.D_var = DiscriminatorCNN(
                 tf.concat([G, x], 0), self.channel, self.z_num, self.repeat_num,
                 self.conv_hidden_num, self.data_format, reuse=False)
+        # cut output into 2 --> G and X
         AE_G, AE_x = tf.split(d_out, 2)
 
+        # convert back to image space (from [-1, 1] --> [0, 255])
         self.G = denorm_img(G, self.data_format)
         self.AE_G, self.AE_x = denorm_img(AE_G, self.data_format), denorm_img(AE_x, self.data_format)
 
+        # Adam optimizer
         if self.optimizer == 'adam':
             optimizer = tf.train.AdamOptimizer
         else:
             raise Exception("[!] Caution! Paper didn't use {} opimizer other than Adam".format(config.optimizer))
 
+        # initialize generator and discriminator optimizers
         g_optimizer, d_optimizer = optimizer(self.g_lr), optimizer(self.d_lr)
 
+        # losses to ensure auto-encoding works!
+        # d_loss_real --> mean(| AE_x - x |)
+        # d_loss_fake --> mean(| AE_G - G |)
         self.d_loss_real = tf.reduce_mean(tf.abs(AE_x - x))
         self.d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
 
+        # weight discriminator loss!
         self.d_loss = self.d_loss_real - self.k_t * self.d_loss_fake
+        # g_loss --> mean(| AE_G - G |)
         self.g_loss = tf.reduce_mean(tf.abs(AE_G - G))
 
+        # d_optim --> optimize d_loss by update discriminator variables
         d_optim = d_optimizer.minimize(self.d_loss, var_list=self.D_var)
+        # g_optim --> optimize g_loss by updating generator variables
         g_optim = g_optimizer.minimize(self.g_loss, global_step=self.step, var_list=self.G_var)
 
+        # define a single balanced loss equation
+        # balance --> gamma * d_loss_real - g_loss
         self.balance = self.gamma * self.d_loss_real - self.g_loss
+        # measures --> d_loss_real + | balance |
         self.measure = self.d_loss_real + tf.abs(self.balance)
 
+        # run d_optim and g_optim (weight updates!)
         with tf.control_dependencies([d_optim, g_optim]):
+            # update k using new values obtained from
+            # the weight updates
             self.k_update = tf.assign(
                 self.k_t, tf.clip_by_value(self.k_t + self.lambda_k * self.balance, 0, 1))
 
+        # define a summary so as to keep track
+        # of the training progress
         self.summary_op = tf.summary.merge([
             tf.summary.image("G", self.G),
             tf.summary.image("AE_G", self.AE_G),
             tf.summary.image("AE_x", self.AE_x),
-
             tf.summary.scalar("loss/d_loss", self.d_loss),
             tf.summary.scalar("loss/d_loss_real", self.d_loss_real),
             tf.summary.scalar("loss/d_loss_fake", self.d_loss_fake),
@@ -249,76 +272,112 @@ class Trainer(object):
 
 
     def build_test_model(self):
+        # define a variable scope
         with tf.variable_scope("test") as vs:
-            # Extra ops for interpolation
+            # get an optimizer
             z_optimizer = tf.train.AdamOptimizer(0.0001)
-
+            # initialize z_r as a tensorflow variable
             self.z_r = tf.get_variable("z_r", [self.batch_size, self.z_num], tf.float32)
+            # assign z_r to z on update
             self.z_r_update = tf.assign(self.z_r, self.z)
 
+        # reuse the generator architecture
+        # but accept z_r as the input
         G_z_r, _ = GeneratorCNN(
                 self.z_r, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
 
+        # use previous variable scope
         with tf.variable_scope("test") as vs:
+            # z_r_loss --> mean(|x - G_z_r|)
             self.z_r_loss = tf.reduce_mean(tf.abs(self.x - G_z_r))
+            # minimize z_r_loss by updating z_r
             self.z_r_optim = z_optimizer.minimize(self.z_r_loss, var_list=[self.z_r])
 
+        # get variables from the variable scope
         test_variables = tf.contrib.framework.get_variables(vs)
+        # initialize the variables
         self.sess.run(tf.variables_initializer(test_variables))
 
-    def build_post_train_model(self):
-        print('in post_train')
+    def build_post_train(self):
         with tf.variable_scope('post_train') as vs:
-            z_optimizer = tf.train.AdamOptimizer(0.0001)
-            x = self.get_image_from_loader()
-            try:
-                print('type x:', type(x))
-                print('shape x:', x.shape)
-            except:
-                pass
-            #x = norm_img(self.x)
-            dad_x = x[:, :, :128, :]
-            mom_x = x[:, :, 256:, :]
-            kid_x = x[:, :, 128:256, :]
-            dad_z, mom_z = [self.encode(_x) for _x in [dad_x, mom_x]]
-            self.z_combo = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_z, mom_z)])
-            print(self.z_combo)
-            print(self.z_combo[:4, :] == self.z_combo[4:, :])
-            self.z_combo = tf.convert_to_tensor(self.z_combo[:4])
-            #self.z_combo = z[0]
-            try:
-                print('type z_combo:', type(self.z_combo))
-                print('shape z_combo:', self.z_combo.shape)
-            except:
-                pass
+            # initialize data
+            x = self.data_loader
+            x = norm_img(x)
+            self.dad_x = x[:, :, :128, :]
+            self.kid_x = x[:, :, 128:256, :]
+            self.mom_x = x[:, :, 256:, :]
+            # initialize generator and discriminator optimizers
+            optimizer = tf.train.AdamOptimizer
+            g_optimizer, d_optimizer = optimizer(self.g_lr), optimizer(self.d_lr)
+            # set-up a non-trainable k_t variable
+            # to maintain balance between D loss and G loss
+            self.child_loss = tf.Variable(0., trainable=False, name='child_loss')
 
+            # encoding
+            dad_encode = self.encode(self.dad_x)
+            mom_encode = self.encode(self.mom_x)
+            encode = slerp(0.5, dad_encode, mom_encode)
+            
+            # generate from slerp, decode slerp, and autoencode raw data
+            G = self.generate(encode, save=False)
+            AE_x = self.decode(encode)
+            AE_G = self.autoencode_nosave(self.kid_x)
 
-        G_kid, _ = GeneratorCNN(
-            self.z_combo, self.conv_hidden_num, self.channel, self.repeat_num, self.data_format, reuse=True)
+            # denorm images
+            G = denorm_img(G, self.data_format)
+            AE_x = denorm_img(AE_x, self.data_format)
+            AE_G = denorm_img(AE_G, self.data_format)
 
-        try:
-            print('type G_kid:', type(G_kid))
-            print('type kid_x:', type(kid_x))
-            print('shape G_kid:', G_kid.shape)
-            print('shape kid_x:', kid_x.shape)
-        except:
-            pass
+            # losses to ensure auto-encoding works!
+            # d_loss_real --> mean(| AE_x - x |)
+            # d_loss_fake --> mean(| AE_G - G |)
+            d_loss_real = tf.reduce_mean(tf.abs(AE_x - x))
+            d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
 
-        with tf.variable_scope('post_train') as vs:
-            self.z_combo_loss = tf.reduce_mean(tf.abs(tf.convert_to_tensor(kid_x) - G_kid))
-            self.z_combo_optim = z_optimizer.minimize(self.z_combo_loss, var_list=[self.z_combo])
+            # weight discriminator loss!
+            self.d_loss_child = d_loss_real - self.k_t * d_loss_fake
+            # g_loss --> mean(| AE_G - G |)
+            self.g_loss_child = tf.reduce_mean(tf.abs(AE_G - G))
 
-        test_variables = tf.contrib.framework.get_variables(vs)
-        self.sess.run(tf.variables_initializer(test_variables))
-        print('finished with post_train')
+            # d_optim --> optimize d_loss by update discriminator variables
+            d_optim = d_optimizer.minimize(self.d_loss_child, var_list=self.D_var)
+            # g_optim --> optimize g_loss by updating generator variables
+            g_optim = g_optimizer.minimize(self.g_loss_child, global_step=self.step, var_list=self.G_var)
 
-    def post_train(self, posttrain_epoch=500):
-        print('In post_train')
-        tf_real_batch = to_nchw_numpy(real_batch)
-        for i in trange(posttrain_epoch):
-            print(i)
-            z_r_loss, _ = self.sess.run([self.z_combo_loss, self.z_combo_optim], {self.x: tf_real_batch})
-        z = self.sess.run(self.z_r)
+            with tf.control_dependencies([d_optim, g_optim]):
+                # run the update to call
+                self.train_child_loss = tf.assign(self.child_loss, self.g_loss_child + self.d_loss_child)
+
+        # get variables from the variable scope
+        variables = tf.contrib.framework.get_variables(vs)
+        # initialize the variables
+        self.sess.run(tf.variables_initializer(variables))
+
+    def post_train(self, epoch=5000):
+        # create random vector
+        z_fixed = np.random.uniform(-1, 1, size=(self.batch_size, self.z_num))
+        # save a fixed batch
+        x_fixed = self.get_image_from_loader()
+        save_image(x_fixed, '{}/x_fixed_child.png'.format(self.model_dir))
+        
+        for step in trange(epoch):
+            fetch_dict = {
+                "train_child_loss": self.train_child_loss,
+                "g_loss_child": self.g_loss_child,
+                "d_loss_child": self.d_loss_child
+            }
+
+            result = self.sess.run(self.train_child_loss)
+
+            if step % self.log_step == 0:
+                g_loss = result['g_loss_child']
+                d_loss = result['d_loss_child']
+                total_loss = result['train_child_loss']
+                print("[{}/{}] Loss_D: {:.6f} Loss_G: {:.6f} Combined: {:.6f}". \
+                      format(step, epoch, d_loss, g_loss, total_loss))
+
+                x_fake = self.generate(z_fixed, self.model_dir, idx=step)
+                self.autoencode(x_fixed, self.model_dir, idx=step, x_fake=x_fake)
 
     def generate(self, inputs, root_path=None, path=None, idx=None, save=True):
         x = self.sess.run(self.G, {self.z: inputs})
@@ -327,6 +386,9 @@ class Trainer(object):
             save_image(x, path)
             print("[*] Samples saved: {}".format(path))
         return x
+
+    def autoencode_nosave(self, inputs):
+        return self.sess.run(self.AE_x, {self.x: inputs})
 
     def autoencode(self, inputs, path, idx=None, x_fake=None):
         items = {
