@@ -298,38 +298,106 @@ class Trainer(object):
         # initialize the variables
         self.sess.run(tf.variables_initializer(test_variables))
 
+
+
+    # def build_post_train(self):
+    #     with tf.variable_scope('post_train') as vs:
+    #         # initialize data
+    #         x = self.data_loader
+    #         x = norm_img(x)
+    #         x = x.eval(session=self.sess)
+    #         self.dad_x = x[:, :, :128, :]
+    #         self.kid_x = x[:, :, 128:256, :]
+    #         self.mom_x = x[:, :, 256:, :]
+    #         # initialize generator and discriminator optimizers
+    #         optimizer = tf.train.AdamOptimizer
+    #         g_optimizer, d_optimizer = optimizer(self.g_lr), optimizer(self.d_lr)
+    #         # set-up a non-trainable k_t variable
+    #         # to maintain balance between D loss and G loss
+    #         self.child_loss = tf.Variable(0., trainable=False, name='child_loss')
+
+    #         print('Mom x:', self.mom_x.shape)
+    #         print('Dad x:', self.dad_x.shape)
+
+    #         _, dad_encode = np.split(self.encode(self.dad_x), 2)
+    #         _, mom_encode = np.split(self.encode(self.mom_x), 2)
+    #         print('Mom encode:', mom_encode.shape)
+    #         print('Dad encode:', dad_encode.shape)
+    #         #encode = slerp(0.5, dad_encode, mom_encode)
+    #         self.encoded = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
+    #         print('Encode size:', self.encoded.shape)
+
+    #         # generate from slerp, decode slerp, and autoencode raw data
+    #         G = self.generate(self.encoded, save=False)
+    #         AE_x = self.decode(np.concatenate([_, self.encoded]))
+    #         #AE_G = self.autoencode_nosave(self.kid_x)
+    #         AE_G = self.decode(self.encode(self.kid_x))
+
+    #         # denorm images
+    #         G = denorm_img(G, self.data_format)
+    #         AE_x = denorm_img(AE_x, self.data_format)
+    #         AE_G = denorm_img(AE_G, self.data_format)
+
+    #         # losses to ensure auto-encoding works!
+    #         # d_loss_real --> mean(| AE_x - x |)
+    #         # d_loss_fake --> mean(| AE_G - G |)
+    #         print('AE_x', AE_x.shape)
+    #         print('kid_x', self.kid_x.shape)
+    #         d_loss_real = tf.reduce_mean(tf.abs(AE_x - self.kid_x))
+    #         print('AE_G', AE_G.shape)
+    #         print('G', G.shape)
+    #         d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
+
+    #         # weight discriminator loss!
+    #         self.d_loss_child = d_loss_real - self.k_t * d_loss_fake
+    #         # g_loss --> mean(| AE_G - G |)
+    #         self.g_loss_child = tf.reduce_mean(tf.abs(AE_G - G))
+
+    #         # d_optim --> optimize d_loss by update discriminator variables
+    #         d_optim = d_optimizer.minimize(self.d_loss_child, var_list=self.D_var)
+    #         # g_optim --> optimize g_loss by updating generator variables
+    #         g_optim = g_optimizer.minimize(self.g_loss_child, global_step=self.step, var_list=self.G_var)
+
+    #         with tf.control_dependencies([d_optim, g_optim]):
+    #             # run the update to call
+    #             self.train_child_loss = tf.assign(self.child_loss, self.g_loss_child + self.d_loss_child)
+
+    #     # get variables from the variable scope
+    #     variables = tf.contrib.framework.get_variables(vs)
+    #     # initialize the variables
+    #     self.sess.run(tf.variables_initializer(variables))
+
     def build_post_train(self):
+
+        # THE PROBLEM: EVERYTHING HERE IS NUMPY BASED
+        # AND NEEDS TO MOVE TO TF
         with tf.variable_scope('post_train') as vs:
             # initialize data
-            x = self.data_loader
-            x = norm_img(x)
-            x = x.eval(session=self.sess)
-            self.dad_x = x[:, :, :128, :]
-            self.kid_x = x[:, :, 128:256, :]
-            self.mom_x = x[:, :, 256:, :]
+            self.kid_x = tf.get_variable("kid_x", [self.batch_size,
+                                         self.input_scale_size, self.input_scale_size, 3], tf.float32)
+            self.z_parents = tf.get_variable("z_parents", [self.batch_size, self.z_num], tf.float32)
+
+        # self.z has to be the interpolated
+        G, G_var = GeneratorCNN(
+                self.z_parents, self.conv_hidden_num, self.channel,
+                self.repeat_num, self.data_format, reuse=True)
+        # d_out --> output of discriminator
+        # D_z   --> encoded output (z)
+        # D_var --> discriminator variables
+        d_out, D_z, D_var = DiscriminatorCNN(
+                tf.concat([G, self.kid_x], 0), self.channel, self.z_num, self.repeat_num,
+                self.conv_hidden_num, self.data_format, reuse=True)
+
+        with tf.variable_scope('post_train') as vs:
+            # cut output into 2 --> G and X
+            AE_G, AE_x = tf.split(d_out, 2)
+
             # initialize generator and discriminator optimizers
             optimizer = tf.train.AdamOptimizer
             g_optimizer, d_optimizer = optimizer(self.g_lr), optimizer(self.d_lr)
             # set-up a non-trainable k_t variable
             # to maintain balance between D loss and G loss
             self.child_loss = tf.Variable(0., trainable=False, name='child_loss')
-
-            print('Mom x:', self.mom_x.shape)
-            print('Dad x:', self.dad_x.shape)
-
-            _, dad_encode = np.split(self.encode(self.dad_x), 2)
-            _, mom_encode = np.split(self.encode(self.mom_x), 2)
-            print('Mom encode:', mom_encode.shape)
-            print('Dad encode:', dad_encode.shape)
-            #encode = slerp(0.5, dad_encode, mom_encode)
-            self.encoded = np.stack([slerp(0.5, r1, r2) for r1, r2 in zip(dad_encode, mom_encode)])
-            print('Encode size:', self.encoded.shape)
-
-            # generate from slerp, decode slerp, and autoencode raw data
-            G = self.generate(self.encoded, save=False)
-            AE_x = self.decode(np.concatenate([_, self.encoded]))
-            #AE_G = self.autoencode_nosave(self.kid_x)
-            AE_G = self.decode(self.encode(self.kid_x))
 
             # denorm images
             G = denorm_img(G, self.data_format)
@@ -339,11 +407,7 @@ class Trainer(object):
             # losses to ensure auto-encoding works!
             # d_loss_real --> mean(| AE_x - x |)
             # d_loss_fake --> mean(| AE_G - G |)
-            print('AE_x', AE_x.shape)
-            print('kid_x', self.kid_x.shape)
             d_loss_real = tf.reduce_mean(tf.abs(AE_x - self.kid_x))
-            print('AE_G', AE_G.shape)
-            print('G', G.shape)
             d_loss_fake = tf.reduce_mean(tf.abs(AE_G - G))
 
             # weight discriminator loss!
@@ -352,9 +416,9 @@ class Trainer(object):
             self.g_loss_child = tf.reduce_mean(tf.abs(AE_G - G))
 
             # d_optim --> optimize d_loss by update discriminator variables
-            d_optim = d_optimizer.minimize(self.d_loss_child, var_list=self.D_var)
+            d_optim = d_optimizer.minimize(self.d_loss_child, var_list=D_var)
             # g_optim --> optimize g_loss by updating generator variables
-            g_optim = g_optimizer.minimize(self.g_loss_child, global_step=self.step, var_list=self.G_var)
+            g_optim = g_optimizer.minimize(self.g_loss_child, global_step=self.step, var_list=G_var)
 
             with tf.control_dependencies([d_optim, g_optim]):
                 # run the update to call
