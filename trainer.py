@@ -377,11 +377,11 @@ class Trainer(object):
             #                             self.input_scale_size, self.input_scale_size, 3], tf.float32)
             #self.z_parents = z_parents = tf.get_variable("z_parents", [self.batch_size, self.z_num], tf.float32)
 
-            kid_x = tf.placeholder('float', shape=(self.batch_size, self.input_scale_size,
+            self.kid_x = tf.placeholder('float', shape=(self.batch_size, self.input_scale_size,
                                                    self.input_scale_size, 3), name='kid_x')
-            z_parents = tf.placeholder('float', shape=(self.batch_size, self.z_num), name='z_parents')
-            self.kid_x = kid_x
-            self.z_parents = z_parents
+            self.z_parents = tf.placeholder('float', shape=(self.batch_size, self.z_num), name='z_parents')
+            #self.kid_x = kid_x
+            #self.z_parents = z_parents
 
 
         # self.z has to be the interpolated
@@ -462,8 +462,8 @@ class Trainer(object):
             }
 
             feed_dict = {
-                'kid_x': kid_x,
-                'z_parents:0': z_parents
+                self.kid_x: kid_x,
+                self.z_parents: z_parents
             }
 
             result = self.sess.run(fetch_dict, feed_dict=feed_dict)
